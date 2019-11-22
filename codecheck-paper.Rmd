@@ -68,6 +68,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - invited reproducibility paper track, cf. https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors
 
 # Annotated Examples
+<!-- see examples.md -->
 
 - **the default implementation**
 - critically discuss our/the default implementation vs. the principles
