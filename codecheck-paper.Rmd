@@ -1,0 +1,95 @@
+---
+title: "CODE CHECK"
+author:
+- affiliation: Department of Applied Mathematics and Theoretical Physics, University of Cambridge, Cambridge, Cambridgeshire, GB
+  corresponding: sje30@cam.ac.uk
+  email: sje30@cam.ac.uk
+  name: Stephen Eglen
+  orcid: 0000-0001-8607-8025
+- affiliation: Institute for Geoinformatics, University of M"unster, M"unster, Germany
+  email: daniel.nuest@uni-muenster.de
+  name: Daniel Nüst
+  orcid: 0000-0002-0024-5046
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+abstract: |
+          | ...
+#author_summary: |
+#  TBD
+bibliography: bibliography.bib
+#output: rticles::plos_article
+#csl: plos.csl
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- Let's stick to one sentence per line! -->
+<!-- Citations: @Figueredo:2009dg, citep: [@Figueredo:2009dg], multiple citep: [@Figueredo:2009dg; @other_2018] -->
+<!-- add " {-}" after headings to remove numbering -->
+
+# Background
+
+- role of data and code, data science
+- reproducible resarch
+- data enclaves
+- CASCAID
+- ROpenSci/PyOpenSci
+
+**main contributions**
+
+- a concept for integrating a minimal code review into common scholarly communication processes around peer review
+- set of shared principles (recognition value) that allow researchers to quickly understand the level of evaluation across journals/publishers/conferences, and allows helps these stakeholders to establish workflow checking in their domain/solution/product
+- a common language and rubric for classifying different levels of code and data evaluation as part of a peer-review
+
+# What is CODE CHECK?
+
+- **Principles**: https://codecheck.org.uk/
+- relation to "proper" citation of data and software, and depositing of data and software in suitable repos _besides_ the bundle for CODE CHECK: do it, only provide the concrete analysis script for the check
+- **Why is it useful?**
+  - reduce the barrier to evaluating non-text parts of research
+  - acknowledges different skill sets and existing high load on reviewers
+  - CC breaks problem that publishers staff expertise today is not likely to suffice
+  - engaging ECRs is a perfet fit (they are up-to-date in methods, are introduced to peer review)
+  - relation to research compendia? point it out for authors unsure about how to structure their workflow
+  - CrossRef and Publons and ORCID have features around reviews
+  - shifting burden from reviewer to author (but not too much)
+
+# CODE CHECK implementation concepts
+
+- need to get wording straight: process/implementation/workflow (DN: suggest to use "workflow" for research-analysis workflow)
+- https://codecheck.org.uk/process/
+- _dimensions_ along which a check can vary
+- independent/pre-submission (Peer_Coding) by author + colleagues
+- AGILE
+- premier (OA) publisher
+- community OA / scholarly society with public peer review
+- invited reproducibility paper track, cf. https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors
+
+# Annotated Examples
+
+- **the default implementation**
+- critically discuss our/the default implementation vs. the principles
+- HPC example
+
+# Open problems
+
+- need publishers build up data science experts who can conduct checks?
+- integration of software/data citation checks benefitial?
+- bot-support and tools (linter)
+- Does nudging towards better practices work (highlight the successes) or is any check with opt-in doomed to fail?
+
+# Acknowledgements
+
+Collaborators and potential collaborators:
+
+- eLife
+- GigaScience
+- AH, SciData
+- Mozilla
+- PLOS?
+
+# Contribution
+
+..

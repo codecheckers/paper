@@ -1,2 +1,3 @@
-# paper
-Manuscript about CODE CHECK
+# CODE CHECK Paper
+
+**https://codecheck.org.uk/**
