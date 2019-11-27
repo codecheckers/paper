@@ -80,6 +80,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - integration of software/data citation checks benefitial?
 - bot-support and tools (linter)
 - Does nudging towards better practices work (highlight the successes) or is any check with opt-in doomed to fail?
+- Do we need more than one codechecker? Is there a similar diversity as in a peer review where more opinions are needed?
 
 # Acknowledgements
 
