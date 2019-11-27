@@ -55,6 +55,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - relation to research compendia? point it out for authors unsure about how to structure their workflow
   - CrossRef and Publons and ORCID have features around reviews
   - shifting burden from reviewer to author (but not too much)
+- keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 
 # CODE CHECK implementation concepts
 
