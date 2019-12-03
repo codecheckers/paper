@@ -67,6 +67,10 @@ knitr::opts_chunk$set(echo = TRUE)
 - premier (OA) publisher
 - community OA / scholarly society with public peer review
 - invited reproducibility paper track, cf. https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors
+- on giving credit: public databases
+  - https://www.reviewercredits.com/
+  - Publons
+  - ORCID
 
 # Annotated Examples
 <!-- see examples.md -->
