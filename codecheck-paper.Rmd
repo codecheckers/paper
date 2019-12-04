@@ -57,6 +57,10 @@ knitr::opts_chunk$set(echo = TRUE)
   - shifting burden from reviewer to author (but not too much)
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 
+# Related work
+
+- _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
+
 # CODE CHECK implementation concepts
 
 - need to get wording straight: process/implementation/workflow (DN: suggest to use "workflow" for research-analysis workflow)
@@ -71,7 +75,10 @@ knitr::opts_chunk$set(echo = TRUE)
   - https://www.reviewercredits.com/
   - Publons
   - ORCID
-
+- compare with existing processes that are publicly documented
+  - AJPS Verification Policy: https://ajps.org/ajps-verification-policy/
+  - ...
+  
 # Annotated Examples
 <!-- see examples.md -->
 
