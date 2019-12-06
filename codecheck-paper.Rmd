@@ -60,6 +60,8 @@ knitr::opts_chunk$set(echo = TRUE)
 # Related work
 
 - _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
+- community standards for software, cf. slide 6 in https://figshare.com/articles/_/5675104
+  - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
 
 # CODE CHECK implementation concepts
 
