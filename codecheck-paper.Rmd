@@ -36,6 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - data enclaves
 - CASCAID
 - ROpenSci/PyOpenSci
+- time capsules > https://twitter.com/DougBlank/status/1135904909663068165?s=09
 
 **main contributions**
 
@@ -64,6 +65,8 @@ knitr::opts_chunk$set(echo = TRUE)
   - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
 - journals doing code reviews
   - _"We know of 16 journals that take this valuable step (ie TOP Level 3): AEA as already mentioned, plus others in polisci, psychology, biostats, and org chem: see Data Rep Policies here https://t.co/plOF8j6ADU "_ (https://twitter.com/EvoMellor/status/1202692360456589339?s=09); see also whole thread!
+- open science platforms/cloud services > https://www.nature.com/articles/d41586-019-03366-x
+- live code in articles > o2r, eLife RDS https://www.nature.com/articles/d41586-019-00724-7, ...
 
 # CODE CHECK implementation concepts
 
