@@ -86,7 +86,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - compare with existing processes that are publicly documented
   - AJPS Verification Policy: https://ajps.org/ajps-verification-policy/
   - ...
-  
+- flexible level of detail? a check can be enhanced to (potentially semi-automatically) check for good practices
+  - "A group of us in the @force11rescomm Software Citation Implementation Working Group produced a "Software Citation Checklist for Authors" https://t.co/4Noe66FsoX providing guidelines on how to cite software and describing why it is important and what software should be cited" via https://twitter.com/alegonbel/status/1207664922932453376?s=09)
+
 # Annotated Examples
 <!-- see examples.md -->
 
