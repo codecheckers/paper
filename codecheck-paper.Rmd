@@ -66,9 +66,15 @@ knitr::opts_chunk$set(echo = TRUE)
   - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
 - journals doing code reviews
   - _"We know of 16 journals that take this valuable step (ie TOP Level 3): AEA as already mentioned, plus others in polisci, psychology, biostats, and org chem: see Data Rep Policies here https://t.co/plOF8j6ADU "_ (https://twitter.com/EvoMellor/status/1202692360456589339?s=09); see also whole thread!
+  - https://medium.com/@NeurIPSConf/call-for-papers-689294418f43
+  - https://www.journals.elsevier.com/information-systems/editorial-board/
+  - SIGMOD Reproducibility Review?
+  - Biostatistics "AER" (https://academic.oup.com/biostatistics/article/10/3/405/293660)
 - open science platforms/cloud services > https://www.nature.com/articles/d41586-019-03366-x
 - live code in articles > o2r, eLife RDS https://www.nature.com/articles/d41586-019-00724-7, ...
 - Artefact Evaluation - https://www.artifact-eval.org/about.html
+- continuous analysis - https://www.nature.com/articles/nbt.3780
+- 
 
 # CODE CHECK implementation concepts
 
