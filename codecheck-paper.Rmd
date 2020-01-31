@@ -57,6 +57,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - CrossRef and Publons and ORCID have features around reviews
   - shifting burden from reviewer to author (but not too much)
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
+- **report** must fulfil some requirements to make clear what is really checked and not mislead - readers will have very different understandings of a green checkmark!
 
 # Related work
 
@@ -110,7 +111,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - bot-support and tools (linter)
 - Does nudging towards better practices work (highlight the successes) or is any check with opt-in doomed to fail?
 - Do we need more than one codechecker? Is there a similar diversity as in a peer review where more opinions are needed?
-- can CODE CHECK work for preprints? how?
+- can CODE CHECK work for preprints? how? is a re-check required?
+- risk: is the hurdle too low? are "levels" of checks are solution to increase transparency of check's level of detail
 
 # Acknowledgements
 
