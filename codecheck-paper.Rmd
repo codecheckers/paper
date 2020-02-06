@@ -106,6 +106,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - **the default implementation**
 - critically discuss our/the default implementation vs. the principles
 - HPC example
+- if we see the corpus of examles as a scientific dataset, it should be published in a citable way (maybe even submit to a data journal)
 
 # Open problems
 
