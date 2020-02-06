@@ -76,6 +76,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - live code in articles > o2r, eLife RDS https://www.nature.com/articles/d41586-019-00724-7, ...
 - Artefact Evaluation - https://www.artifact-eval.org/about.html
 - continuous analysis - https://www.nature.com/articles/nbt.3780
+- "A Universal Identifier for Computational Results" > https://www.sciencedirect.com/science/article/pii/S1877050911001256
+- Discussion about using Docker containers during JOSS reviews > https://github.com/openjournals/joss/issues/498#issuecomment-462046912
 
 # CODE CHECK implementation concepts
 
