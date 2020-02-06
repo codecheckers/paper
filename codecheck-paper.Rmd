@@ -119,6 +119,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - code check in the context of innovations and disruptions in scientific publishing
   - https://doi.org/10.1042/ETLS20180172
   - https://doi.org/10.3390/publications7020034
+- see https://github.com/codecheckers/discussion
 
 # Acknowledgements
 
