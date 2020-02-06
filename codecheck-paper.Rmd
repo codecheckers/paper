@@ -58,6 +58,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - shifting burden from reviewer to author (but not too much)
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 - **report** must fulfil some requirements to make clear what is really checked and not mislead - readers will have very different understandings of a green checkmark!
+- reproducibility is hard https://twitter.com/annakrystalli/status/1144176149859377152?ref_src=twsrc%5Etfw > code check gives at least some benefits
 
 # Related work
 
@@ -79,6 +80,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - continuous analysis - https://www.nature.com/articles/nbt.3780
 - "A Universal Identifier for Computational Results" > https://www.sciencedirect.com/science/article/pii/S1877050911001256
 - Discussion about using Docker containers during JOSS reviews > https://github.com/openjournals/joss/issues/498#issuecomment-462046912
+- https://scigen.report, an independent site for registering reproductions, via https://annakrystalli.me/talks/ro-reprohack.html#32
+  - example https://scigen.report/reviews/get?doi=10.1063/1.1823034
+  - seems to be closed infrastructure
 
 # CODE CHECK implementation concepts
 
