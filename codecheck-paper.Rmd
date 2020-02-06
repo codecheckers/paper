@@ -61,6 +61,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Related work
 
+- https://paperpile.com/shared/rVNwBS
 - https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07 - work by Amy J. Ko: https://faculty.washington.edu/ajko/publications
   - is CODE CHECK's process too small, too incremental a change?
 - _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
