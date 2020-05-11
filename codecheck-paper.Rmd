@@ -37,6 +37,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - CASCAID
 - ROpenSci/PyOpenSci
 - time capsules > https://twitter.com/DougBlank/status/1135904909663068165?s=09
+- science is changing: https://theconversation.com/what-you-need-to-know-about-how-coronavirus-is-changing-science-137641
 
 **main contributions**
 
