@@ -40,3 +40,9 @@ codecheck-paper.docx
 codecheck-paper.html
 
 codecheck-paper.pdf
+
+.venv/
+
+.local/
+
+.rstudio/
