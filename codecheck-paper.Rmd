@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - reproducible resarch
 - data enclaves
 - CASCAID
-- ROpenSci/PyOpenSci
+- ROpenSci/PyOpenSci (and how their software review differs, though they also collaborate with journals, https://devguide.ropensci.org/softwarereviewintro.html)
 - time capsules > https://twitter.com/DougBlank/status/1135904909663068165?s=09
 - science is changing: https://theconversation.com/what-you-need-to-know-about-how-coronavirus-is-changing-science-137641
 
