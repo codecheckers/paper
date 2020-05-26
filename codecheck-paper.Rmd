@@ -60,6 +60,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 - **report** must fulfil some requirements to make clear what is really checked and not mislead - readers will have very different understandings of a green checkmark!
 - reproducibility is hard https://twitter.com/annakrystalli/status/1144176149859377152?ref_src=twsrc%5Etfw > code check gives at least some benefits
+- what are the requirements / level or reproducibility required or checked?
+  - [Stodden et al., 2013](https://stodden.net/icerm_report.pdf): five-level hierarchy of research - reviewable, replicable, confirmable, auditable, and open or reproducible
+  - [Whitaker 2017](https://figshare.com/articles/Showing_your_working_A_guide_to_reproducible_neuroimaging_analyses/4244996/2): reproducible, generalisable, replicability, robustness
 
 # Related work
 
