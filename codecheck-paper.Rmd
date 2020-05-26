@@ -69,6 +69,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - https://paperpile.com/shared/rVNwBS
 - https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07 - work by Amy J. Ko: https://faculty.washington.edu/ajko/publications
   - is CODE CHECK's process too small, too incremental a change?
+- overview of peer review (if not a reference itself, it gives plenty of references): http://juser.fz-juelich.de/record/865096/files/Peer%20Review%20and%20Bibliometrics.pdf
 - _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
 - community standards for software, cf. slide 6 in https://figshare.com/articles/_/5675104
   - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
