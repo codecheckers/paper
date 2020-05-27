@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - reproducible resarch
 - data enclaves
 - CASCAID
-- ROpenSci/PyOpenSci
+- ROpenSci/PyOpenSci (and how their software review differs, though they also collaborate with journals, https://devguide.ropensci.org/softwarereviewintro.html)
 - time capsules > https://twitter.com/DougBlank/status/1135904909663068165?s=09
 - science is changing: https://theconversation.com/what-you-need-to-know-about-how-coronavirus-is-changing-science-137641
 
@@ -60,12 +60,22 @@ knitr::opts_chunk$set(echo = TRUE)
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 - **report** must fulfil some requirements to make clear what is really checked and not mislead - readers will have very different understandings of a green checkmark!
 - reproducibility is hard https://twitter.com/annakrystalli/status/1144176149859377152?ref_src=twsrc%5Etfw > code check gives at least some benefits
+- what are the requirements / level or reproducibility required or checked?
+  - [Stodden et al., 2013](https://stodden.net/icerm_report.pdf): five-level hierarchy of research - reviewable, replicable, confirmable, auditable, and open or reproducible
+  - [Whitaker 2017](https://figshare.com/articles/Showing_your_working_A_guide_to_reproducible_neuroimaging_analyses/4244996/2): reproducible, generalisable, replicability, robustness
 
 # Related work
 
 - https://paperpile.com/shared/rVNwBS
+- Are "Replicated Computations Results (RCR) Report" a thing? apparently so (using ACM terminology)
+  - https://dl.acm.org/doi/10.1145/3185337
+  - http://users.iems.northwestern.edu/~nelsonb/Publications/Nelson_RCRgreenSim.pdf
+  - https://dl.acm.org/doi/epdf/10.1145/3341094
+    - citation for replicated workflow lists it as "to appear"
+  - getting proper papers for reproductions != CODECHECK approach where we want credit as reviewers
 - https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07 - work by Amy J. Ko: https://faculty.washington.edu/ajko/publications
   - is CODE CHECK's process too small, too incremental a change?
+- overview of peer review and bibliometrics (if not a reference itself, it gives plenty of references): http://juser.fz-juelich.de/record/865096/files/Peer%20Review%20and%20Bibliometrics.pdf
 - _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
 - community standards for software, cf. slide 6 in https://figshare.com/articles/_/5675104
   - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
@@ -84,6 +94,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - https://scigen.report, an independent site for registering reproductions, via https://annakrystalli.me/talks/ro-reprohack.html#32
   - example https://scigen.report/reviews/get?doi=10.1063/1.1823034
   - seems to be closed infrastructure
+- new journal _ReScienceX_ (about experiments) also seems to have an ECR angle, https://www.nature.com/articles/d41586-020-01328-2
 
 # CODE CHECK implementation concepts
 
@@ -125,6 +136,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - code check in the context of innovations and disruptions in scientific publishing
   - https://doi.org/10.1042/ETLS20180172
   - https://doi.org/10.3390/publications7020034
+- should every code be checkd, or should the labour be capped by only checking "important" works or at important stages; if yes, isn't peer review such a stage?
 - see https://github.com/codecheckers/discussion
 
 # Acknowledgements
