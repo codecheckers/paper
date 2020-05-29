@@ -116,6 +116,8 @@ knitr::opts_chunk$set(echo = TRUE)
   - ...
 - flexible level of detail? a check can be enhanced to (potentially semi-automatically) check for good practices
   - "A group of us in the @force11rescomm Software Citation Implementation Working Group produced a "Software Citation Checklist for Authors" https://t.co/4Noe66FsoX providing guidelines on how to cite software and describing why it is important and what software should be cited" via https://twitter.com/alegonbel/status/1207664922932453376?s=09)
+- focus on ECR as codecheckers
+  - ECR are the one's breaking new ground in schol comm, cf. the percentages of career stages submitting registered reports on slide 20 > https://osf.io/2vjus/ 
 
 # Annotated Examples
 <!-- see examples.md -->
@@ -140,6 +142,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - https://doi.org/10.3390/publications7020034
 - should every code be checkd, or should the labour be capped by only checking "important" works or at important stages; if yes, isn't peer review such a stage?
 - see https://github.com/codecheckers/discussion
+- can we establish code checks as a type of review within the schol comm metadata (or should we?) > we should not, put them on the same level as reviews!
 
 # Acknowledgements
 
@@ -153,4 +156,4 @@ Collaborators and potential collaborators:
 
 # Contribution
 
-..
+SE ...; DN ...; see [CRediT](https://casrai.org/credit/).
