@@ -129,6 +129,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - need publishers build up data science experts who can conduct checks?
 - integration of software/data citation checks benefitial?
 - bot-support and tools (linter)
+- how can open platforms be used to enable a review in private (cf. https://www.cambridge.org/core/blog/2019/08/19/how-to-make-the-data-and-code-for-your-manuscript-available-to-peer-reviewers-before-making-it-public/), if that is desired
 - Does nudging towards better practices work (highlight the successes) or is any check with opt-in doomed to fail?
 - Do we need more than one codechecker? Is there a similar diversity as in a peer review where more opinions are needed?
 - can CODE CHECK work for preprints? how? is a re-check required?
