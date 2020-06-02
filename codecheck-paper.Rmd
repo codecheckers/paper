@@ -38,6 +38,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - ROpenSci/PyOpenSci (and how their software review differs, though they also collaborate with journals, https://devguide.ropensci.org/softwarereviewintro.html)
 - time capsules > https://twitter.com/DougBlank/status/1135904909663068165?s=09
 - science is changing: https://theconversation.com/what-you-need-to-know-about-how-coronavirus-is-changing-science-137641
+- reproducibility is important, also
+  - effects on well-being/mental health, https://www.nature.com/articles/d41586-020-01642-9
 
 **main contributions**
 
@@ -143,6 +145,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - should every code be checkd, or should the labour be capped by only checking "important" works or at important stages; if yes, isn't peer review such a stage?
 - see https://github.com/codecheckers/discussion
 - can we establish code checks as a type of review within the schol comm metadata (or should we?) > we should not, put them on the same level as reviews!
+- how can we turn a CODECHECK into a positive experience?
+  - cf. kindness in peer review in https://www.mdpi.com/2304-6775/8/2/26
 
 # Acknowledgements
 
