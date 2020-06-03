@@ -98,6 +98,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - example https://scigen.report/reviews/get?doi=10.1063/1.1823034
   - seems to be closed infrastructure
 - new journal _ReScienceX_ (about experiments) also seems to have an ECR angle, https://www.nature.com/articles/d41586-020-01328-2
+- really interesting work on reproductions in hydrology, with a neat survey that reproducers filled out which might be interesting to capture from codecheckers, too: https://www.nature.com/articles/sdata201930#Sec9
 
 # CODE CHECK implementation concepts
 
