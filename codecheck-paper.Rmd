@@ -59,6 +59,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - relation to research compendia? point it out for authors unsure about how to structure their workflow
   - CrossRef and Publons and ORCID have features around reviews
   - shifting burden from reviewer to author (but not too much)
+  - What issues with (open) peer review does CODECHECK address?
 - keynote https://doi.org/10.7557/5.4963: in discussion, the speaker mentioned value of peer review for "baseline reassurance", i.e. a paper has at least been checked by someone with an understanding, to increase trust especially if looking at papers from other disciplines
 - **report** must fulfil some requirements to make clear what is really checked and not mislead - readers will have very different understandings of a green checkmark!
 - reproducibility is hard https://twitter.com/annakrystalli/status/1144176149859377152?ref_src=twsrc%5Etfw > code check gives at least some benefits
@@ -79,6 +80,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07 - work by Amy J. Ko: https://faculty.washington.edu/ajko/publications
   - is CODE CHECK's process too small, too incremental a change?
 - overview of peer review and bibliometrics (if not a reference itself, it gives plenty of references): http://juser.fz-juelich.de/record/865096/files/Peer%20Review%20and%20Bibliometrics.pdf
+- Open Peer Review > https://researchintegrityjournal.biomedcentral.com/articles/10.1186/s41073-019-0063-9
+  - Are OPR lessons transferable to CODECHECK? Does CODECHECK work better with OPR than with (single/double) blind peer review?
+  - similarities to their advice: open reports, give credit
 - _Successes and struggles with computational reproducibility: Lessons from the Fragile Families Challenge_ > https://osf.io/preprints/socarxiv/g3pdb/
 - community standards for software, cf. slide 6 in https://figshare.com/articles/_/5675104
   - "good enough practice" is "get a colleague to try using it", slide 19 in https://figshare.com/articles/_/5675104
@@ -148,6 +152,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - can we establish code checks as a type of review within the schol comm metadata (or should we?) > we should not, put them on the same level as reviews!
 - how can we turn a CODECHECK into a positive experience?
   - cf. kindness in peer review in https://www.mdpi.com/2304-6775/8/2/26
+- how can we allow reactions to checks? (commenting on reports)
 
 # Acknowledgements
 
