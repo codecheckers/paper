@@ -65,7 +65,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - reproducibility is hard https://twitter.com/annakrystalli/status/1144176149859377152?ref_src=twsrc%5Etfw > code check gives at least some benefits
 - what are the requirements / level or reproducibility required or checked?
   - [Stodden et al., 2013](https://stodden.net/icerm_report.pdf): five-level hierarchy of research - reviewable, replicable, confirmable, auditable, and open or reproducible
-  - [Whitaker 2017](https://figshare.com/articles/Showing_your_working_A_guide_to_reproducible_neuroimaging_analyses/4244996/2): reproducible, generalisable, replicability, robustness
+  - [Whitaker 2017](https://figshare.com/articles/Showing_your_working_A_guide_to_reproducible_neuroimaging_analyses/4244996/2): reproducible, generalisable, replicability, robustnes
+- can authors retract their code/data once a CODECHECK has started? In the eLife prepreint review, there seems no "way back", see https://twitter.com/ceptional/status/1271528976763121664?s=09
 
 # Related work
 
