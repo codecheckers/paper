@@ -137,23 +137,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Open problems
 
-- need publishers build up data science experts who can conduct checks?
-- integration of software/data citation checks benefitial?
-- bot-support and tools (linter)
-- how can open platforms be used to enable a review in private (cf. https://www.cambridge.org/core/blog/2019/08/19/how-to-make-the-data-and-code-for-your-manuscript-available-to-peer-reviewers-before-making-it-public/), if that is desired
+- Do publishers need to build up data science experts who can conduct checks?
+- Is an integration of software/data citation checks benefitial/realistic?
+- Bot-support and tools (linter, report authoring with R Markdown)
+- How can open platforms be used to enable a review in private (cf. https://www.cambridge.org/core/blog/2019/08/19/how-to-make-the-data-and-code-for-your-manuscript-available-to-peer-reviewers-before-making-it-public/), if that is desired
 - Does nudging towards better practices work (highlight the successes) or is any check with opt-in doomed to fail?
 - Do we need more than one codechecker? Is there a similar diversity as in a peer review where more opinions are needed?
-- can CODE CHECK work for preprints? how? is a re-check required?
-- risk: is the hurdle too low? are "levels" of checks are solution to increase transparency of check's level of detail
-- code check in the context of innovations and disruptions in scientific publishing
+- can CODECHECK work for preprints? how? is a re-check required?
+- Risk: is the hurdle too low? are "levels" of checks are solution to increase transparency of check's level of detail
+- CODECHECK in the context of innovations and disruptions in scientific publishing
   - https://doi.org/10.1042/ETLS20180172
   - https://doi.org/10.3390/publications7020034
-- should every code be checkd, or should the labour be capped by only checking "important" works or at important stages; if yes, isn't peer review such a stage?
+- Should every code be checkd, or should the labour be capped by only checking "important" works or at important stages; if yes, isn't peer review such a stage?
 - see https://github.com/codecheckers/discussion
-- can we establish code checks as a type of review within the schol comm metadata (or should we?) > we should not, put them on the same level as reviews!
-- how can we turn a CODECHECK into a positive experience?
+- Can we establish code checks as a type of review within the schol comm metadata (or should we?) > we should not, put them on the same level as reviews!
+- How can we turn a CODECHECK into a positive experience?
   - cf. kindness in peer review in https://www.mdpi.com/2304-6775/8/2/26
-- how can we allow reactions to checks? (commenting on reports)
+- How can we allow reactions to checks? (commenting on reports)
+- Will bitwise reproducibility become easier than what a CODECHECK does? triggered by https://twitter.com/khinsen/status/1242842759733665799?s=09)
 
 # Acknowledgements
 
