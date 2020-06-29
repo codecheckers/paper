@@ -155,6 +155,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - cf. kindness in peer review in https://www.mdpi.com/2304-6775/8/2/26
 - How can we allow reactions to checks? (commenting on reports)
 - Will bitwise reproducibility become easier than what a CODECHECK does? triggered by https://twitter.com/khinsen/status/1242842759733665799?s=09)
+- If a report is not published for failures: Isn't there a bias for the codechecker to have a "successful" reproduction because then a report is published?
 
 # Acknowledgements
 
