@@ -71,6 +71,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # Related work
 
 - CODECHECK vs. the "Artifacts Evaluated - Functional" badge of the ACM, see https://www.acm.org/publications/policies/artifact-review-badging
+- Does CODECHECK do internal replication, as defined by https://gatesopenresearch.org/articles/4-17/v2 ?
 - https://paperpile.com/shared/rVNwBS
 - Are "Replicated Computations Results (RCR) Report" a thing? apparently so (using ACM terminology)
   - https://dl.acm.org/doi/10.1145/3185337
