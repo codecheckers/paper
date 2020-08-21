@@ -70,6 +70,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Related work
 
+- CODECHECK vs. Verification Reports > > https://www.sciencedirect.com/science/article/pii/S0010945220301738#fn3
 - CODECHECK vs. the "Artifacts Evaluated - Functional" badge of the ACM, see https://www.acm.org/publications/policies/artifact-review-badging
 - Does CODECHECK do internal replication, as defined by https://gatesopenresearch.org/articles/4-17/v2 ?
 - https://paperpile.com/shared/rVNwBS
