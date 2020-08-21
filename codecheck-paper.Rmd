@@ -80,6 +80,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - https://dl.acm.org/doi/epdf/10.1145/3341094
     - citation for replicated workflow lists it as "to appear"
   - getting proper papers for reproductions != CODECHECK approach where we want credit as reviewers
+  - see also [Google Search](https://www.google.com/search?q=%22Replicated+Computations+Results+%28RCR%29+Report+for%22)
 - https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07 - work by Amy J. Ko: https://faculty.washington.edu/ajko/publications
   - is CODE CHECK's process too small, too incremental a change?
 - overview of peer review and bibliometrics (if not a reference itself, it gives plenty of references): http://juser.fz-juelich.de/record/865096/files/Peer%20Review%20and%20Bibliometrics.pdf
