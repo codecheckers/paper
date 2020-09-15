@@ -32,23 +32,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Open questions
 
+* Prefer longlines or short?
 * Can we switch to latex for this?  (Find it slightly easier.)
 * Which journal to target -- maybe worry abotu that once we have a
   preprint.  F1000R my current favourite?
   
+* Check with Giuliano re: "code works".
 
 
 # Introduction
 
-Many areas of scientific research now use computation to either
-simulate or analyse their data.  These computations are increasingly
-complex, and difficult to explain coherently in a paper. (MARWICK).
-To complement the traditional route of sharing research by writing
-papers, there is a growing trend/demand to share the underlying artifacts,
-notably code and datasets, so that others can inspect, reproduce or
-expand that work (Figure 1).  Some of the earliest proponents were
-Buckheit and Donoho (1995) who commented "advert is scholarship for
-the paper". (get correct quote).
+Many areas of scientific research now use computation to either simulate or analyse their data.  These computations are increasingly complex, and difficult to explain coherently in a paper. (MARWICK).  To complement the traditional route of sharing research by writing papers, there is a growing trend/demand to share the underlying artifacts, notably code and datasets, so that others can inspect, reproduce or expand that work (Figure 1).  Some of the earliest proponents were Buckheit and Donoho (1995) who commented "advert is scholarship for the paper". (get correct quote).
 
 So, assuming that researchers begin to share more artifacts, how
 might they be examined to test that they do what they claim?  For
@@ -82,7 +76,23 @@ pragmatic way of checking that code works.  We call this system
 CODECHECK as outlined next.
 
 
-Figure 1: the inverse problem figure.
+\begin{figure}
+  \centering
+  \includegraphics{figs/rr.pdf}
+  \caption{The inverse problem in reproducible research.  The left
+  half of the diagram shows the diverse range of materials used
+  internally within a laboratory.  These materials are often then
+  condensed into a paper for sharing with the outside world via the
+  research paper, astatic PDF document.  Working backwards from the
+  PDF to the underlying materials is impossible.  By sharing the
+  materials on the left, others outside the lab are able to reproduce
+  or build on this work.  (Should we draw a backward arrow showing the
+  impossibility of this backward flow?)}
+  \label{fig:inverse}
+\end{figure}
+
+
+
 
 # What is a CODECHECK?
 
@@ -127,8 +137,15 @@ Step 6: the Publisher can then use the certificate as part of their
 supplementary records for a paper, and give credit to the codechecker
 for their work by depositing appropriate records (*bit hazy here*).
 
-Figure 2: the detective.  Could we number the arrows as steps?
-(Implementing the CODECHECK process)
+
+\begin{figure}
+  \centering
+  \caption{The detective. Could we number the arrows as steps?
+(Implementing the CODECHECK process).  DANIEL: best source for this figure?}
+  \label{fig:worfklow}
+\end{figure}
+
+
 
 ## Variations
 
@@ -218,10 +235,15 @@ certificates and depositing work on zenodo.  (Cite zen4R).
 # Related work
 
 All the related projectsfrom A-Z... e.g. CASCAID, Rescience, modeldb,
-o2r, 
+o2r.  Community iniatives like reprohack along similar lines of
+checking code. <https://reprohack.github.io/reprohack-hq/>
 
 
 # Limitations
+
+Handling failure:  we have no established process for this, as so far
+all our codechecks succeeded.  Open question remains as what to do in
+this case -- should we publicly report that the code would not run.
 
 Compute time:  for those papers that take significant compute time
 (think days, not minutes), who will pay for the compute time?
@@ -249,7 +271,9 @@ we cannot get exactly the same, or even different versions of
 libraries.  (Cite freesurfer example that generates different outputs
 on different operating systems).
 
-- untilhe co modelDB principle.
+- modelDB principle: minimum of one figure should be reproducibe.
+  Exampler certificate 2020-016 (I think) which had only a small
+  subset of the possible figures.  Still useful and worth sharing.
 
 
 # Future work and conclusions
@@ -392,18 +416,21 @@ on different operating systems).
 - Will bitwise reproducibility become easier than what a CODECHECK does? triggered by https://twitter.com/khinsen/status/1242842759733665799?s=09)
 - If a report is not published for failures: Isn't there a bias for the codechecker to have a "successful" reproduction because then a report is published?
 
+# Declaration of interest
+
+SJE is on the senior editorial board at the journal *Scientific Data*.
+
 # Acknowledgements
 
 Collaborators and potential collaborators:
 
-- eLife
-- GigaScience
-- AH, SciData
-- Mozilla
-- PLOS?
-- Richard van Noorden, Dalmeet Singh (paper 9)
-- Iain Davies and Sebastian 
-- SSI for some funding.
+We are grateful to the following individuals for discussions regarding
+the work presented here: Andy Collings, Melissa Harrison, Giuliano
+Maciocci (eLife), Rebecca Kirk (PLOS Computational Biology), Scott
+Edmunds (Gigascience) Andrew Hufton (Scientific Data). Iain Davies and
+Yuhao (Sebastian) Wang worked on developing code and example
+certificates.  This work was financially supported by the UK Software
+Sustainability Institute and a Mozilla Science mini grant.
 
 
 # Contribution
