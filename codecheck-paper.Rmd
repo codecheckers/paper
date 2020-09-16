@@ -18,7 +18,9 @@ abstract: |
 bibliography: bibliography.bib
 #output: rticles::plos_article
 #csl: plos.csl
-output: pdf_document
+output:
+  pdf_document:
+    keep_tex: true  
 ---
 
 ```{r setup, include=FALSE}
@@ -30,15 +32,12 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- add " {-}" after headings to remove numbering -->
 
 
-# Open questions
+# TODO
 
-* Prefer one sentence per line / short / one para per line.
+
 * Nust* and Eglen*. contributed equally.
-* latex.
-* Which journal to target -- maybe worry abotu that once we have a
-  preprint.  F1000R my current favourite.
   
-* Check with Giuliano re: "code works".  Write to Naomi to apologise / placeholder.
+* Check with Giuliano re: "code works".  Write to Naomi.
 
 
 # Introduction
@@ -116,6 +115,7 @@ for their work by depositing appropriate records (*bit hazy here*).
 
 \begin{figure}
   \centering
+	  \includegraphics{/home/stephen/papers/talks/talkfigs/openscience/codecheck_overview.pdf}
   \caption{The detective. Could we number the arrows as steps?
 (Implementing the CODECHECK process).  DANIEL: best source for this figure?}
   \label{fig:worfklow}
@@ -148,7 +148,7 @@ single blind, double blind, private/public communication between author and
 codechecker, collaborative.  (This might need finessing with principle
 2 below).
 
-## Core principles
+# Core principles
 
 The workflow and variations just outlined below reflect our current
 views on how a codecheck should be performed.  They are not set in
