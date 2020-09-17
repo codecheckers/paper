@@ -2,7 +2,7 @@
 all: rr.pdf annotate-cert-crop.pdf
 
 rr.pdf: rr.svg
-	inkscape --export-type="png" my_file.svg
+	inkscape --export-type="pdf" rr.svg
 
 
 annotate-cert.pdf: annotate-cert.tex cert-2020-012-4up.pdf
