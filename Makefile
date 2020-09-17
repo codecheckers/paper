@@ -1,8 +1,10 @@
 
 codecheck-paper.pdf: codecheck-paper.tex bibliography.bib
-	pdflatex $<
+	pdflatex -synctex=1 $<
 	bibtex codecheck-paper
-	pdflatex $<
+	pdflatex -synctex=1 $<
+	pdflatex -synctex=1 $<
+
 
 
 ##codecheck-paper.pdf: codecheck-paper.Rmd bibliography.bib
