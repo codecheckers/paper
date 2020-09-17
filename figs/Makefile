@@ -1,3 +1,6 @@
+
+all: rr.pdf annotate-cert-crop.pdf
+
 rr.pdf: rr.svg
 	inkscape --export-type="png" my_file.svg
 
@@ -15,4 +18,4 @@ annotate-cert-crop.pdf: annotate-cert.pdf
 .PHONY: clean
 
 clean:
-	rm -f cert-2020-012-4up.pdf annotate-cert-crop.pdf annotate-cert.pdf
+	rm -f cert-2020-012-4up.pdf annotate-cert-crop.pdf annotate-cert.pdf rr.pdf
