@@ -8,11 +8,12 @@
 \onehalfspacing
 
 \begin{document}
-\title{CODECHECK: An open-science initiative to facilitate sharing of computer programs and results presented in scientific publications.}
+\title{CODECHECK: An open-science initiative to facilitate sharing of
+  computer programs and results presented in scientific publications.}
 \author[1,$\ast$]{Daniel N\"{u}st}
 \author[2,$\ast$]{Stephen J Eglen}
-\affil[1]{Address of author1}
-\affil[2]{Address of author2}
+\affil[1]{\url{https://orcid.org/0000-0002-0024-5046}}
+\affil[2]{\url{https://orcid.org/0000-0001-8607-8025}}
 \affil[$\ast$]{Contributed equally}
 \maketitle
 \begin{abstract}
@@ -38,19 +39,20 @@ datasets, so that others can inspect, reproduce or expand that work
 correct quote).
 
 So, assuming that researchers begin to share more artifacts, how might
-they be examined to test that they do what they claim? For example, most
-scientific journals now require a data sharing statement that outlines
-what data the authors have (or will) share. The implementation status of
-this varies considerably according to the journal. At one of the
-spectrum, there are specialist journals that have been created to accept
-``data papers'' (e.g.~\emph{Scientific Data}, \ldots{} NAME COUPLE OF
+they be examined to test that they do what they claim? For example,
+most scientific journals now require a data sharing statement that
+outlines what data the authors have (or will) share. The
+implementation status of this varies considerably according to the
+journal. At one of the spectrum, there are specialist journals that
+have been created to accept ``data papers'' (e.g.~\emph{Scientific
+  Data}, \textit{Geoscience Data Journal}\ldots{} NAME COUPLE OF
 OTHERS). These journals have established rigorous procedures by which
-the data is validated according to standards in each field. At the other
-end of the spectrum, we still witness today the infamous statement
-``Data available upon reasonable request'' whereby authors,
-well-intentioned, often cannot provide the data when readers ask for it.
-(ANDREW H: any references to sum up poor/evolving state of data sharing;
-Vines et al 2014).
+the data is validated according to standards in each field. At the
+other end of the spectrum, we still witness today the infamous
+statement ``Data available upon reasonable request'' whereby authors,
+well-intentioned, often cannot provide the data when readers ask for
+it.  (ANDREW H: any references to sum up poor/evolving state of data
+sharing; Vines et al 2014).
 
 Given that there are no clear standards yet for sharing data, what hope
 might there be for sharing computer programs? Our anectodal experiences
@@ -92,16 +94,16 @@ the PUBLISHER of a journal intereseted in publishing the paper by the
 AUTHOR and (3) the CODECHECKER who checks that the AUTHOR's code works.
 The workflow that we have refined is documented in Figure 2.
 
-Step 1: the author submit their manuscript along with code and data to
+\textbf{Step 1:} the author submit their manuscript along with code and data to
 the publishers. The code and data need not be openly available at this
 point.
 
-Step 2: the publisher finds a codechecker to check the code. This is
+\textbf{Step 2:} the publisher finds a codechecker to check the code. This is
 analgous to the publisher finding one or more reviewers to evaluating
 the code. However a cruical difference is that we suggest the codechcker
 and the author can talk freely to each directly (see next).
 
-Step 3: the codechecker runs the code, based on instructions provided by
+\textbf{Step 3:} the codechecker runs the code, based on instructions provided by
 the author, and checks if some/all of the results from the paper can be
 reproduced. (See later for exact nature of ``reproduced''). If there are
 any problems running the code, the codechecker asks the author for help
@@ -113,27 +115,29 @@ locally on their own compute resource, or in the cloud, e.g.~using
 mybinder infrastructure. Using such cloud-based infrastructure allows
 for the codechecker and author to collaboratively run the code together.
 
-Step 4: The codechecker writes a certificate stating how the code was
+\textbf{Step 4:} the codechecker writes a certificate stating how the code was
 run and includes a copy of outputs (figures, tables) that were
 independently generated.
 
-Step 5: the certificate and code/data get deposited on an open archive
+\textbf{Step 5:} the certificate and code/data get deposited on an open archive
 (currently Zenodo), and the certificate is given to the PUBLISHER.
 
-Step 6: the Publisher can then use the certificate as part of their
+\textbf{Step 6:} the PUBLISHER can then use the certificate as part of their
 supplementary records for a paper, and give credit to the codechecker
 for their work by depositing appropriate records (\emph{bit hazy here}).
 
 \begin{figure}
   \centering
-      \includegraphics{/home/stephen/papers/talks/talkfigs/openscience/codecheck_overview.pdf}
+      \includegraphics{figs/codecheck_overview.pdf}
   \caption{The detective. Could we number the arrows as steps?
-(Implementing the CODECHECK process).  DANIEL: best source for this figure?}
+(Implementing the CODECHECK process).  DANIEL: could you check whether
+the icons are reusable.}
   \label{fig:worfklow}
 \end{figure}
 
 \subsection*{Variations}\label{variations}
 
+DANIEL: COULD YOU DO THIS?
 This example workflow leaves sufficient room for different
 implementations of this process. There are several aspects that can be
 considered:
@@ -202,6 +206,8 @@ peer review, or because of public interest (covid). several covid models
 have been done during the time of peer review of these papers, under our
 initative rather than requested from journal, but certificate have then
 been acknowledged/cited in the paper (LANCET / LSHTM).
+Table~\ref{tab:register} lists the certificates completed to date,
+along with citations to the original papers.
 
 We would like to briefly highlight three examples here.
 
@@ -216,9 +222,6 @@ We would like to briefly highlight three examples here.
   Geoscience (add 6 for Agile).
 \end{enumerate}
 
-\subsection*{Annotated certificate}\label{annotated-certificate}
-
-What can you expect to find in  a CODECHECK certificate? Draw an annotated example.
 
 \begin{table}
   \centering
@@ -228,9 +231,10 @@ What can you expect to find in  a CODECHECK certificate? Draw an annotated examp
     2020-001 & \cite{cert-2020-001} & Machine learning & CODECHECK undertaken post acceptance of manuscript and before its publication in \textit{Gigascience} \cite{Piccolo2020-lo}.
     \\ 
     2020-002 & \cite{cert-2020-002} & neuroscience &
-    Paper from 1997 showing unsupervised learning on images \cite{Hancock1992-mp} \\
+    Paper from 1997 showing unsupervised learning from natural images \cite{Hancock1992-mp}.
+    \\
     2020-003 & \cite{cert-2020-003} & neuroscience &
-    Classic paper from 1982 on  models of associative memory \cite{Hopfield1982-mz} \\
+    Classic paper from 1982 on  models of associative memory \cite{Hopfield1982-mz}. \\
     2020-004 & \cite{cert-2020-004} & area & barto \\
     2020-005 & \cite{cert-2020-005} & area & Larisch \\
     2020-006 & \cite{cert-2020-006} & area & Detorakis \\
@@ -239,6 +243,7 @@ What can you expect to find in  a CODECHECK certificate? Draw an annotated examp
     2020-009 & \cite{cert-2020-009} & Covid &  tracing \\
     2020-010 & \cite{cert-2020-010} & Covid &  report 9 \\
     2020-011 & \cite{cert-2020-011} & Covid &  nature europe \\
+    2020-012 & \cite{cert-2020-012} & Covid &  USA Covid modelling \cite{Unwin2020}. \\
     \\ \bottomrule
   \end{tabular}
   \caption{Register of completed certificates.  An interactive version
@@ -247,27 +252,38 @@ What can you expect to find in  a CODECHECK certificate? Draw an annotated examp
 \end{table}
 
 
-As an example, we have taken the certificate 2020-012
-\cite{cert-2020-012}, and shown the first four pages (the remaining N
-pages contain other example outputs), see Figure~\ref{fig:cert}.  This
-certificate corresponded to a preprint on the modelling of COVID-19 in
-the USA.i
-%% TODO - has this been published yet?.
-Figure~\ref{fig:cert} shows an annotation of the first four (out of
-ten) pages for the certificate for this codecheck.
+\subsection*{Annotated certificate}\label{annotated-certificate}
+
+At the completion of each CODECHECK, a certificate is written that
+states which figures and tables from the original article could be
+reproduced by the CODECHECKER.  This certificate is made freely
+available so that all readers of the article can see which elements
+have been reproduced.  The certificate also includes links to the code
+and data used by the codechecker, allowing others to build on the
+work.  The format of the certificates has evolved slightly during the
+project, as we have learnt to automate different aspects of the
+certification.  
+
+To demonstrate the typical contents of a certificate, in
+Figure~\ref{fig:cert} we have annotated the first four (out of ten)
+pages of the certificate 2020-012 \cite{cert-2020-012}.  The reference
+article \cite{Unwin2020} describes the modelling COVID-19 across the
+USA.
+%% TODO - has this been published yet?.  No, not yet... in review...
 Figure~\ref{fig:cert}A shows the certificate number, and its DOI,
-which points to the certificate as archived on Zenodo.
+which points to the certificate as archived on Zenodo.  Our logo is
+attached to the certificate to denote successful reproduction.
 Figure~\ref{fig:cert}B provides the key metadata about the check --
 which paper was checked, and who/when it was checked.  Materials
 relating to the codecheck are freely available via the Repository
 link.  Figure~\ref{fig:cert}C is a summary of how the codecheck was
 performed, and any interesting findings.
 
-Turning to page 2 of the certificate, in Figure~\ref{fig:cert}D we
-have a table that is a list of the outputs that were generated from
-the codecheck (this is termed the MANIFEST.)  For each output, there
-is a comment stating which figure/table it should be compared to in
-the original paper, along with the size of the file.  On Page 3,
+Figure~\ref{fig:cert}D (page 2 of the certificate) shows a table that
+lists the outputs that were generated from the codecheck (this is
+termed the MANIFEST.)  For each output, there is a comment stating
+which figure/table it should be compared to in the original paper,
+along with the size of the file.  On page 3 of the certificate,
 Figure~\ref{fig:cert}E shows some more detailed notes from the
 codechecker, in this case indicating what steps were needed to
 initialize the environment and run the code.  This particular example
@@ -286,13 +302,12 @@ outputs (not shown here).
   \label{fig:cert}
 \end{figure}
 
-\subsubsection*{Tools}\label{tools}
+\subsubsection*{Tools and resources}\label{tools}
 
-To run the system, we rely on github to host our work, and use a custom
-R pacakge, codecheck, to help with the generation of certificates and
-depositing work on zenodo. (Cite zen4R).
-
-You can do all with open infrastructure (e.g.~automated rendering of
+To run the system, we rely on github to host our work, and use a
+custom R pacakge, codecheck, to help with the generation of
+certificates and depositing work on zenodo. (Cite zen4R).  You can do
+everything with open infrastructure (e.g.~automated rendering of
 register). but you can use your own tools if you prefer.
 
 \section*{Related work}\label{related-work}
@@ -330,17 +345,22 @@ attracted to working with groups (recall it is not anonymous)
 \textbf{Who finds the codechecker?} Good point! The journal. Community
 however think this is an important issue, and are volunteering.
 
+\textbf{Checking multiple times?}  If you check a preprint before peer
+review, it might need checking again as it is modified during peer
+review.  Unavoidable, and as happened to us (2020-012 has been
+revised).  But checking the manuscript the second time is likely to be
+much less work than the first time.
+
 As a principle, we do not require results to be exactly the same for a
 codecheck to pass, simply that the code runs and generates the output
-files that the author claims. Stochastic simulations mean that often we
-cannot get exactly the same, or even different versions of libraries.
-(Cite freesurfer example that generates different outputs on different
-operating systems).
+files that the author claims. Stochastic simulations mean that often
+we cannot get exactly the same, or even different versions of
+libraries.  (Cite freesurfer example \cite{Gronenschild2012-pp} that
+generates different outputs on different operating systems).
 
 \begin{itemize}
-\item
-  modelDB principle: minimum of one figure should be reproducibe.
-  Exampler certificate 2020-016 (I think) which had only a small subset
+\item modelDB principle: minimum of one figure should be reproducibe.
+  Example certificate 2020-016 (I think) which had only a small subset
   of the possible figures. Still useful and worth sharing.
 \end{itemize}
 
