@@ -137,7 +137,7 @@ the icons are reusable.}
 
 \subsection*{Variations}\label{variations}
 
-DANIEL: COULD YOU DO THIS?
+DANIEL: COULD YOU DO THIS SECTION ON DIMENSIONS?
 This example workflow leaves sufficient room for different
 implementations of this process. There are several aspects that can be
 considered:
@@ -180,7 +180,7 @@ installations. Allowing the codechecker and human to communicate
 directly and openly with each other should make this process as
 constructive as possible. We feel that routing this conversation
 (possibly anonymously) through a publisher would slow things down and
-reduce the chances for community bulding.
+reduce the chances for community building.
 
 \textbf{3. Credit is given to codecheckers.} (TODO Explain in a few
 sentences what each means, e.g.~see 1,2) Ideally publons, or similar,
@@ -209,7 +209,9 @@ been acknowledged/cited in the paper (LANCET / LSHTM).
 Table~\ref{tab:register} lists the certificates completed to date,
 along with citations to the original papers.
 
-We would like to briefly highlight three examples here.
+The bulk of the certificates fall into three themes: (1) `classic'
+papers from computational neuroscience (2) Covid modelling preprints
+(3) AGILE.  We would like to briefly highlight three examples here.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -217,37 +219,58 @@ We would like to briefly highlight three examples here.
   Gigascience -- our first paper. Only visualisation, not machine
   learning (which would have taken sseveral days of compute time).
 \item
-  report 9 -- covid model of UK lockdown model.
+  report 9 -- covid model of UK lockdown model -- unlike many claims
+  in the popular media at the time, the model was reproducible
+  [NOORDEN news piece]. 
 \item
-  Geoscience (add 6 for Agile).
+  Manuel's certificate -- approached us as he requested a certificate
+  as paper was entering peer review.
 \end{enumerate}
 
+
+(DANIEL: say something about the Agile bundle, and the origins?)
 
 \begin{table}
   \centering
 
-  \begin{tabular}{lllp{9cm}}  \toprule
-    Certificate & Ref & Research area & Description \\ \midrule
-    2020-001 & \cite{cert-2020-001} & Machine learning & CODECHECK undertaken post acceptance of manuscript and before its publication in \textit{Gigascience} \cite{Piccolo2020-lo}.
-    \\ 
-    2020-002 & \cite{cert-2020-002} & neuroscience &
-    Paper from 1997 showing unsupervised learning from natural images \cite{Hancock1992-mp}.
+  \begin{tabular}{lllp{9cm}} \toprule Certificate & Ref & Research
+    area & Description \\ \midrule 2020-001 & \cite{cert-2020-001} &
+    Machine learning & CODECHECK undertaken post acceptance of
+    manuscript and before its publication in \textit{Gigascience}
+    \cite{Piccolo2020-lo}.
+    \\
+    2020-002 & \cite{cert-2020-002} & neuroscience & Paper from 1997
+                                                     showing
+                                                     unsupervised
+                                                     learning from
+                                                     natural images
+                                                     \cite{Hancock1992-mp}.
     \\
     2020-003 & \cite{cert-2020-003} & neuroscience &
-    Classic paper from 1982 on  models of associative memory \cite{Hopfield1982-mz}. \\
-    2020-004 & \cite{cert-2020-004} & area & barto \\
+                                                     Classic paper
+                                                     from 1982 on
+                                                     models of
+                                                     associative
+                                                     memory
+                                                     \cite{Hopfield1982-mz}.
+    (Simulation code was written specifically for this project.)\\
+    2020-004 & \cite{cert-2020-004} & area & Barto \\
     2020-005 & \cite{cert-2020-005} & area & Larisch \\
     2020-006 & \cite{cert-2020-006} & area & Detorakis \\
     2020-007 & \cite{cert-2020-007} & area & in progress \\
-    2020-008 & \cite{cert-2020-008} & Covid & covid-uk Davies \\
+    2020-008 & \cite{cert-2020-008} & Covid & Modelling of
+    interventions on Covid  cases in the UK; checked as preprint (NOW REMOVED XXX)
+    and now published \cite{Davies2020-vj} \\
     2020-009 & \cite{cert-2020-009} & Covid &  tracing \\
     2020-010 & \cite{cert-2020-010} & Covid &  report 9 \\
-    2020-011 & \cite{cert-2020-011} & Covid &  nature europe \\
-    2020-012 & \cite{cert-2020-012} & Covid &  USA Covid modelling \cite{Unwin2020}. \\
+    2020-011 & \cite{cert-2020-011} & Covid & Modelling of Covid
+    spread across Europe;  paper was checked when in press (now  published) \cite{Flaxman2020-yb}. \\
+    2020-012 & \cite{cert-2020-012} & Covid &   Modelling of Covid spread across the USA; preprint currently review \cite{Unwin2020}. \\
     \\ \bottomrule
   \end{tabular}
   \caption{Register of completed certificates.  An interactive version
-  of this is available at \url{http://codecheck.org.uk/register}.}
+  of this is available at \url{http://codecheck.org.uk/register}.  SJE
+to complete...}
   \label{tab:register}
 \end{table}
 
@@ -372,7 +395,7 @@ generates different outputs on different operating systems).
   we can find out when softwave breaks, and if provenance tools are
   used, when.
 \item
-  How to embed this in juornals.
+  How to embed this in journals.
 \item
   When is CODECHECK redundant? will it become part of regular peer
   review? or, if ayuthors become more skillful, then everything becomes
