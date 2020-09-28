@@ -200,7 +200,7 @@ principle 2 below).
 
 The workflow and variations just outlined below reflect our current
 views on how a codecheck should be performed. They are not set in
-stone, but we do believe the following core principles underpinour
+stone, but we do believe the following core principles underpin our
 CODECHECK:
 
 \textbf{1. Codecheckers record but don't investigate or fix.} The
@@ -212,27 +212,46 @@ not to fix all these problems, but simply to report them, and await a
 fix from the author.
 
 \textbf{2. Communication between humans is key.} Some code may just work
-without any interaction (e.g.~Manuel's certificate); however, more often
+without any interaction (e.g.~Manuel's certificate TODO add cert number); 
+however, more often
 there are hidden dependencies that need to be found, or revised software
 installations. Allowing the codechecker and human to communicate
 directly and openly with each other should make this process as
 constructive as possible. We feel that routing this conversation
 (possibly anonymously) through a publisher would slow things down and
-reduce the chances for community building.
+reduce the chances for community building as well as the lessons learned
+for both author and codecheckers.
 
-\textbf{3. Credit is given to codecheckers.} (TODO Explain in a few
-sentences what each means, e.g.~see 1,2) Ideally publons, or similar,
-but can just be a citation to the publicly available DOI. (Community
-DOIs use these.)
+\textbf{3. Credit is given to codecheckers.} The value of contributing a
+CODECHECK is comparable to providing a scientific peer review. Indiviual
+variations aside, it may also require a similar amount of time. Therefore,
+the codechecker's activity should be publicly recorded and mentioned in the
+published paper.
+The public record can be realised by publishing the certificate in a 
+citable form (i.e., with a DOI; this is done within the community codecheck
+process), by listing codecheckers on the journal's website or, ideally, by
+publishing the checks alongside peer review activities in public databases,
+such as ORCID \footnote{\href{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}}
+or Publons.
 
-\textbf{4. Workflows must be auditable.} (TODO Explain in a few
-sentences what each means, e.g.~see 1,2)
+\textbf{4. Workflows must be auditable.} This requires that the codechecker 
+has at least enough material to validate the workflow outputs submitted by 
+the authors. Tode could be executed at least once without critical errors or
+warnings using the provided instructions, and, therefore, all code and data 
+was given and could be investigated more deeply or extended in the future.
+Ideally, this is a "one~click" step, but achieving this requires particular 
+skills. It is also hard to create a sufficient level of documentation for 
+third parties. That is why the possibility to communicate is more important
+than perfected workflows, and why a CODECHECK is not automated.
+A codechecker does \emph{not} conduct a code review.
+% more content from the website, may fit better elsewhere:
+% The CODECHECK is not automated on purpose: automation may (a) lead to people gaming the system, (b) hide details that eventually decrease level of certainty that a codechecker has in their assessment, and (c) reduce the understandability of instructions in the long term, which is more important than short term ease of use (see Principle 2).
 
 \textbf{5. Open by default.}  By default, unless there are strong
-reasons to the contrary (e.g. clinically-sensitive data), all code and
-data, both from author and codechecker, will be made freely available
-when the certificate is published, following community principles.
-
+reasons to the contrary (e.g., clinically-sensitive data), all code and
+data, both from author and codechecker, will be made freely available, i.e., 
+under open licenses, when the certificate is published. The code and data 
+publication should follow community good practices.
 
 \section*{Register}\label{register}
 
