@@ -24,19 +24,27 @@
 
 \begin{itemize}
 \item Check with Giuliano re: ``code works''. Write to Naomi.
+\item Use "execution" insteand of "sharing" in title?
+\item Can we introduce "research compendium" as a term?
 \end{itemize}
 
 \section*{Introduction}\label{introduction}
 
 Many areas of scientific research now use computation to either simulate
 or analyse their data. These computations are increasingly complex, and
-difficult to explain coherently in a paper. (MARWICK). To complement the
+difficult to explain coherently in a paper \citep{marwick_how_2015}. To complement the
 traditional route of sharing research by writing papers, there is a
 growing trend/demand to share the underlying artifacts, notably code and
 datasets, so that others can inspect, reproduce or expand that work
-(Figure 1). Some of the earliest proponents were Buckheit and Donoho
-(1995) who commented ``advert is scholarship for the paper''. (get
-correct quote).
+(Figure 1). Some of the earliest proponents were Buckheit and Donoho \cite{buckheit_wavelab_1995} who coined what has been called 
+\emph{Claerbout's claim} (extending on \citet{claerbout_electronic_1992}):
+\emph{"An article about computational science in a scientific publication 
+is \text{not} the scholarship itself, it is merely \textbf{advertising} of
+the scholarship. The actual scholarship is the complete software development
+environment and the complete set of instructions which generated the 
+figures."}
+%  Donoho (2010) has another paraphrasing of the same quote, which might work better:
+% "an article about computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result."
 
 So, assuming that researchers begin to share more artifacts, how might
 they be examined to test that they do what they claim? For example,
@@ -44,13 +52,20 @@ most scientific journals now require a data sharing statement that
 outlines what data the authors have (or will) share. The
 implementation status of this varies considerably according to the
 journal. At one of the spectrum, there are specialist journals that
-have been created to accept ``data papers'' (e.g.~\emph{Scientific
-  Data}, \textit{Geoscience Data Journal}\ldots{} NAME COUPLE OF
-OTHERS). These journals have established rigorous procedures by which
+have been created to accept ``data papers'' (e.g.~\href{}{\emph{Scientific
+  Data}}, 
+\href{https://essd.copernicus.org/}{\emph{Earth System Science Data}}, 
+\href{https://rmets.onlinelibrary.wiley.com/journal/20496060}{\emph{Geoscience Data Journal}},
+\href{https://bdj.pensoft.net/}{\emph{Biodiversity Data Journal}},
+\href{https://openpsychologydata.metajnl.com/}{\emph{Journal of Open Psychology Data}},
+\href{https://odjar.org/}{\emph{Open Data Journal for Agricultural Research}},
+\href{https://openhealthdata.metajnl.com}{\emph{Journal of Open Health Data}}).
+These journals have established rigorous procedures by which
 the data is validated according to standards in each field. At the
 other end of the spectrum, we still witness today the infamous
 statement ``Data available upon reasonable request'' whereby authors,
-well-intentioned, often cannot provide the data when readers ask for
+while possible well-intentioned at the time of writing the article,
+often cannot provide the data when readers ask for
 it.  (ANDREW H: any references to sum up poor/evolving state of data
 sharing; Vines et al 2014).
 
@@ -64,7 +79,7 @@ wherever possible sharing code is good for the community, as outlined
 ten years ago \cite{Barnes2010-iv}. Having the code freely available, and
 suitably archived, provides a valuable resource for others to learn
 from, even when it doesn't run or if there is no documentation. However,
-with a little effort, we believe that if someone independent can run/use
+with a little effort, we believe that if someone independent can run/execute
 the code, this is worth documenting as early as possible. With this in
 mind, we have developed a set of PRINCIPLES and an example workflow that
 provides what he hope is a pragmatic way of checking that code works. We
@@ -78,10 +93,11 @@ call this system CODECHECK as outlined next.
   internally within a laboratory.  These materials are often then
   condensed into a paper for sharing with the outside world via the
   research paper, a static PDF document.  Working backwards from the
-  PDF to the underlying materials is impossible.  By sharing the
+  PDF to the underlying materials is impossible. This probihibits reuse
+  and is not only non-transparent for a specific paper, but also 
+  ineffective for science as a whole. By sharing the
   materials on the left, others outside the lab are able to reproduce
-  or build on this work.  (Should we draw a backward arrow showing the
-  impossibility of this backward flow?)}
+  or build on this work.}
   \label{fig:inverse}
 \end{figure}
 
