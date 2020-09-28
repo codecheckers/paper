@@ -46,3 +46,9 @@ codecheck-paper.pdf
 .rstudio/
 
 .venv/
+
+codecheck-paper.bbl
+
+codecheck-paper.log
+
+codecheck-paper.synctex.gz
