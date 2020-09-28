@@ -105,49 +105,71 @@ call this system CODECHECK as outlined next.
 
 CODECHECK is best demonstrated by way of our example workflow, and later
 we expand on the underlying principles. The workflow involves three
-groups of people (1) the AUTHOR providing the code to be checked, (2)
+groups of people: (1) the AUTHOR of a paper providing the code to be checked, (2)
 the PUBLISHER of a journal intereseted in publishing the paper by the
 AUTHOR and (3) the CODECHECKER who checks that the AUTHOR's code works.
 The workflow that we have refined is documented in Figure 2.
 
-\textbf{Step 1:} the author submit their manuscript along with code and data to
-the publishers. The code and data need not be openly available at this
-point.
+\textbf{Step 1:} the AUTHOR submit their manuscript along with code and data to
+the PUBLISHER. The code and data need not be openly available at this point.
+However, in many cases the code and data may be published on a code hosting platform,
+such as GitHub/Lab.
 
-\textbf{Step 2:} the publisher finds a codechecker to check the code. This is
-analgous to the publisher finding one or more reviewers to evaluating
-the code. However a cruical difference is that we suggest the codechcker
-and the author can talk freely to each directly (see next).
+\textbf{Step 2:} the publisher finds a CODECHECKER to check the code. This is
+analogous to the publisher finding one or more reviewers to evaluating
+the paper. However, a cruical difference is that we suggest the CODECHECKER
+and the author can talk freely to each other directly (see next).
 
-\textbf{Step 3:} the codechecker runs the code, based on instructions provided by
+\textbf{Step 3:} the CODECHECKER runs the code, based on instructions provided by
 the author, and checks if some/all of the results from the paper can be
 reproduced. (See later for exact nature of ``reproduced''). If there are
-any problems running the code, the codechecker asks the author for help
-to resolve the problems. The codechecker then tries to run the code
-again. This process iterates until either the codechecker is successful,
-or the codechecker concludes the code does not (\emph{what do in this
-case}). As part of this process, the codechecker could work entirely
-locally on their own compute resource, or in the cloud, e.g.~using
-mybinder infrastructure. Using such cloud-based infrastructure allows
-for the codechecker and author to collaboratively run the code together.
+any problems running the code, the CODECHECKER asks the author for help
+to resolve the problems. The CODECHECKER then tries to run the code
+again. This process iterates until either the CODECHECKER is successful,
+or the CODECHECKER concludes the code does not work (\emph{what do in this
+case}). As part of this process, the CODECHECKER could work entirely
+locally on their own compute resource, or in the cloud, e.g.~using the open
+MyBinder infrastructure \cite{jupyter_binder_2018}. Using such cloud-based 
+infrastructure allows for the CODECHECKER and author to collaboratively improve
+the code and enforces a much more complete definition of the computing environment,
+but, unless infrastructure is provided by, e.g., by the publisher, requires code
+and data to be published openly online.
 
-\textbf{Step 4:} the codechecker writes a certificate stating how the code was
+\textbf{Step 4:} the CODECHECKER writes a certificate stating how the code was
 run and includes a copy of outputs (figures, tables) that were
-independently generated.
+independently generated. The certificate may include further recommendations to
+the author how to improve the material.
 
-\textbf{Step 5:} the certificate and code/data get deposited on an open archive
-(currently Zenodo), and the certificate is given to the PUBLISHER.
+\textbf{Step 5:} the certificate as well as auxiliary files created during the check,
+e.g., a specifiction of a computing environment, helper scripts, and the code and data,
+if available under open licenses, get deposited in an open archive (currently Zenodo);
+the certificate is given to the PUBLISHER.
 
 \textbf{Step 6:} the PUBLISHER can then use the certificate as part of their
-supplementary records for a paper, and give credit to the codechecker
-for their work by depositing appropriate records (\emph{bit hazy here}).
+supplementary records for a paper or provide it to scientific reviewers; the
+PUBLISHER also gives credit to the CODECHECKER for their work by depositing the
+activity appropriately in scholarly publication databases, such as ORCID.
+The PULISHER also ensures proper publication metadata, e.g., links from the 
+certificate repository to the published paper or the original code repository.
 
 \begin{figure}
+% original figure source: https://docs.google.com/drawings/d/1tGOZFNZle-oE1Ynw_tLZFmNcv3wgxD0HPs5bXzDOrng/edit
+% emojis: https://github.com/googlefonts/noto-emoji and https://github.com/twitter/twemoji
+% emoji codes:
+% book stack: 1f4da
+% package: 1f4e6
+% file drawer: 1f5c4
+% disk: 1f4be
+% document: 1f4c4
+% phd: 1f393
+% detective: u1f575
+% laptop: 1f4bb
+% folder: 1f4c1 1f4c2
+% recept: 1f9fe
   \centering
       \includegraphics{figs/codecheck_overview.pdf}
-  \caption{The detective. Could we number the arrows as steps?
-(Implementing the CODECHECK process).  DANIEL: could you check whether
-the icons are reusable.}
+  \caption{The CODECHECK example process implementation. Codechecker act as a detectives:
+  The investigate and record, but do not fix issues.}
   \label{fig:worfklow}
 \end{figure}
 
