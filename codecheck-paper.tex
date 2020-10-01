@@ -255,28 +255,29 @@ under open licenses, when the certificate is published. The code and data
 publication should follow community good practices.
 
 \section*{Register}\label{register}
+% count certificates: 
+% curl https://raw.githubusercontent.com/codecheckers/register/master/register.csv | wc -l
+% minus 1 for Hathway-Goodman (no empty last line, so no -1 for the headline needed)
 
-We have a curated list of 15 certificates available at
+We have a curated list of 22 certificates available at
 \url{https://codecheck.org.uk/register}. These are a mixture of
-reproductions of papers for a variety of reasons (do we name them all?)
-from interesting historical papers, to papers codechecked as part of
-peer review, or because of public interest (covid). several covid models
-have been done during the time of peer review of these papers, under our
-initative rather than requested from journal, but certificate have then
-been acknowledged/cited in the paper (LANCET / LSHTM).
-Table~\ref{tab:register} lists the certificates completed to date,
-along with citations to the original papers.
-
-The bulk of the certificates fall into three themes: (1) `classic'
-papers from computational neuroscience (2) Covid modelling preprints, and
+reproductions of papers for a variety of reasons and fall into three themes:
+(1) `classic' papers from computational neuroscience
+(2) COVID-19 modelling preprints, and
 (3) GIScience.  
+%from interesting historical papers, to papers codechecked as part of
+%peer review, or because of public interest (COVID-19).
+
 The first theme was the initial set of papers used to explore the concept
-of CODECHECK. The idea was to take very well known articles from a specific
-domain, in this case the work area of co-author S.~Eglen, possibly as as a
-conversation starter for potential collaborating journals.
+of CODECHECK. The idea was to take very well known historical articles from a 
+specific domain, in this case the work area of co-author S.~Eglen, possibly 
+as as a conversation starter for potential collaborating journals.
 The second theme is rather opportunistic. As the COVID-19 pandemic swept
-over the whole Earth, we hoped to contribute to science's answer to the
-unknown virus. The checks were solicited through community interaction.
+over the whole Earth, we hoped to contribute a small part to science's answer
+to the unknown virus. The checks were solicited through community interaction
+%Several COVID-19 models have been done during the time of peer review of these papers,
+and under our initative rather than requested from journal, but the certificate
+has then been acknowledged/cited in the paper (LANCET/LSHTM). % TODO SJE: clarify references in brackets
 The third theme represents co-author D.~N\"ust's work area.
 Independent of CODECHECK, the \emph{Reproducible AGILE} Initiative \cite{reproducible_agile}
 established a process for reproducing workflows at the AGILE conference
@@ -287,6 +288,8 @@ reproducibility reviews adhere to the codecheck principles.
 Furthermore, two checks were completed as part of a peer review for a
 GIScience journal.
 
+Table~\ref{tab:register} lists the certificates completed to date,
+along with citations to the original papers.
 Out of these areas, we would like to briefly highlight three examples here.
 
 \begin{enumerate}
@@ -312,14 +315,11 @@ Out of these areas, we would like to briefly highlight three examples here.
     2020-001 \cite{cert-2020-001} &
     Machine learning & CODECHECK undertaken post acceptance of
     manuscript and before its publication in \textit{Gigascience}
-    \cite{Piccolo2020-lo}.
-    \\
+    \cite{Piccolo2020-lo}. \\
     2020-002  \cite{cert-2020-002} & neuroscience & Paper from 1997
  showing unsupervised learning from natural images \cite{Hancock1992-mp}.
- Code written for this project.
-    \\
-    2020-003  \cite{cert-2020-003} & neuroscience &
-                                                     Classic paper
+ Code written for this project. \\
+    2020-003  \cite{cert-2020-003} & neuroscience &  Classic paper
                                                      from 1982 on
                                                      models of
                                                      associative
@@ -330,14 +330,14 @@ Out of these areas, we would like to briefly highlight three examples here.
     2020-005  \cite{cert-2020-005} & area & Larisch \\
     2020-006  \cite{cert-2020-006} & area & Detorakis \\
     2020-007  \cite{cert-2020-007} & area & in progress \\
-    2020-008  \cite{cert-2020-008} & Covid & Modelling of
-    interventions on Covid  cases in the UK; checked as preprint (NOW REMOVED XXX)
+    2020-008  \cite{cert-2020-008} & COVID-19 & Modelling of
+    interventions on COVID-19 cases in the UK; checked as preprint (NOW REMOVED XXX)
     and now published \cite{Davies2020-vj} \\
-    2020-009  \cite{cert-2020-009} & Covid &  tracing \\
-    2020-010  \cite{cert-2020-010} & Covid &  report 9 \\
-    2020-011  \cite{cert-2020-011} & Covid & Modelling of Covid
+    2020-009  \cite{cert-2020-009} & COVID-19 & tracing \\
+    2020-010  \cite{cert-2020-010} & COVID-19 & report 9 \\
+    2020-011  \cite{cert-2020-011} & COVID-19 & Modelling of Covid
     spread across Europe;  paper was checked when in press (now  published) \cite{Flaxman2020-yb}. \\
-    2020-012  \cite{cert-2020-012} & Covid &   Modelling of Covid spread across the USA; preprint currently review \cite{Unwin2020}. \\
+    2020-012  \cite{cert-2020-012} & COVID-19 & Modelling of COVID-19 spread across the USA; preprint currently review \cite{Unwin2020}. \\
     2020-013  \cite{cert-2020-013} & area & biorXiv \cite{Spitschan2020.06.02.129502}. \\
     2020-014  \cite{cert-2020-014} & area & eLife \cite{Sadeh2020}. \\
     2020-015  \cite{cert-2020-015} & area & eLife \cite{Liou2020}. \\
@@ -355,36 +355,45 @@ Out of these areas, we would like to briefly highlight three examples here.
     \\ \bottomrule
   \end{tabular}
   \caption{Register of completed certificates as of October 2020.  An interactive version
-  of this is available at \url{http://codecheck.org.uk/register}.  SJE
-to complete...}
+  of this is available at \url{http://codecheck.org.uk/register}. % TODO: SJE to complete...
+  }
   \label{tab:register}
 \end{table}
 
 \subsection*{Annotated certificate}\label{annotated-certificate}
 
 At the completion of each CODECHECK, a certificate is written that
-states which figures and tables from the original article could be
-reproduced by the CODECHECKER.  This certificate is made freely
+states which outputs, i.e., numbers, figures and tables, from the 
+original article could be reproduced by the CODECHECKER.
+This certificate is made openly
 available so that all readers of the article can see which elements
 have been reproduced.  The certificate also includes links to the code
 and data used by the codechecker, allowing others to build on the
-work.  The format of the certificates has evolved slightly during the
+work.
+The format of the certificates has evolved slightly during the
 project, as we have learnt to automate different aspects of the
 certification.  
 
 To demonstrate the typical contents of a certificate, in
-Figure~\ref{fig:cert} we have annotated the first four (out of ten)
-pages of the certificate 2020-012 \cite{cert-2020-012}.  The reference
-article \cite{Unwin2020} describes the modelling COVID-19 across the
-USA.
+Figure~\ref{fig:cert} we have annotated the first four out of ten
+pages of the certificate \texttt{2020-012} \cite{cert-2020-012}.
+The referenced article \cite{Unwin2020} describes the modelling COVID-19
+across the USA.
 %% TODO - has this been published yet?.  No, not yet... in review...
 Figure~\ref{fig:cert}A shows the certificate number, and its DOI,
-which points to the certificate as archived on Zenodo.  Our logo is
+which points to the certificate as archived on Zenodo.
+The CODECHECK logo is
 attached to the certificate to denote successful reproduction.
 Figure~\ref{fig:cert}B provides the key metadata about the check --
-which paper was checked, and who/when it was checked.  Materials
+which paper was checked, who the authors and the codechecker were,
+and when it was checked. Materials
 relating to the codecheck are freely available via the Repository
-link.  Figure~\ref{fig:cert}C is a summary of how the codecheck was
+link. This table is generated from machine readable text file, the
+CODECHECK configuration file \texttt{codecheck.yml}.
+The configuration file collects the core pieces of metadata surrounding
+a check and enables current and future automation of workflows and 
+meta-analyses.
+Figure~\ref{fig:cert}C is a textual summary of how the codecheck was
 performed, and any interesting findings.
 
 Figure~\ref{fig:cert}D (page 2 of the certificate) shows a table that
