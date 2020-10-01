@@ -180,6 +180,19 @@ activity appropriately in scholarly publication databases, such as ORCID.
 The PULISHER also ensures proper publication metadata, e.g., links from the 
 certificate repository to the published paper or the original code repository.
 
+\subsection*{Variations}\label{variations}
+
+\subsubsection*{Dimensions of CODECHECK processes}\label{dimensions-of-processes}
+
+The example workflow leaves sufficient room for different
+implementations of this process. To elaborate on these options, we consider
+the following dimensions in a space of possible CODECHECKs, as shown in 
+Figure~\ref{fig:dimensions}, to represent relevant aspects for the involved
+stakeholders. These aspects touch on timing, responsibilities, and 
+transparency and will be discussed in the following sections.
+Each of these have their own pros and cons and can for the most part be
+freely combined.
+
 \begin{figure}
 % original figure source: https://docs.google.com/drawings/d/1q2EdW3Ad-IpcD-CeoR1eIFMJW2fF6OVmDhCtCUmLO1k/edit
   \centering
@@ -191,26 +204,179 @@ certificate repository to the published paper or the original code repository.
 \subsubsection*{When to do a codecheck and with what power}
 \label{when-to-do-a-codecheck}
 
-DANIEL: COULD YOU DO THIS SECTION ON DIMENSIONS?
-This example workflow leaves sufficient room for different
-implementations of this process. There are several aspects that can be
-considered:
+The time for a CODECHECK greatly depends on the intentions and the ascribed
+importance. The earlier a CODECHECK happens in the process, the more the
+results can play a role in the most important decision in scholarly 
+communication: is a paper published, sent back for revisions, or rejected.
+The later in a review process the check happens, the less challenging is it
+to allow a bidirectional communication between author and codechecker, e.g.,
+because the author might already be notified of the acceptance and may more
+freely share materials online.
+Even earlier checks, i.e., a CODECHECK of a preprint, may even help to 
+improve the workflow itself even before a publisher is involved. The 
+possibility for codechecking papers could be part of a preprint server's
+policy, or simply be initiated by interested readers and community members.
 
-\subsubsection*{When to do a codecheck}\label{when-to-do-a-codecheck}
+A pre-review CODECHECK allows editors to use it as a filter to only send 
+a submission out to peer review if it passes the check. A less strict
+pre-review check would simply be included in the submission package provided
+to the reviewers, so they can include the CODECHECK's results in their 
+evaluation of the work.
+A CODECHECK may also be conducted in parallel to the scientific review. This
+puts less burden on the turnaround time for the check yet only makes the 
+outcomes available for the final consideration of the handling editor.
+The check could also be tasked on demand, e.g., only if one of the reviewers
+suggests/requests one because previous screenings might not have caught the 
+fact that a computational workflow is part of the submission. However, 
+soliciting such a "specialist review" is much more undesirable than having
+a regular CODECHECK, without any special treatment for some submissions.
+A CODECHECK could then be awared equal weight as the other reviews.
+A post acceptance CODECHECK puts the least requirements on the author and may
+simply lead to an award of excellence on top of the acceptance of the
+submission. This is the least strict solution while still properly 
+acknowleding the check results, because the CODECHECK is to be completed 
+before the publication of the final paper.
+The GIScience group of checks (see \nameref{register}) falls into this
+category: the AGILE conference highlights articles where the reproducibility
+was successfully reviewed with a badge on the volume and article landing
+pages.
 
-preprint (no publisher available), pre-condition for peer review, during
-peer review, after acceptance. Each of these have their own pros/cons.
+Finally, a CODECHECK may also be conducted after publication, though it
+would required to update the article later with a note to reference the check,
+otherwise readers would presumably not be aware of it. While this has the
+least impact on the current publishing practices, it also has the smallest
+effect and does not acknowledge the importance of reproducible workflows for
+ensuring good scientific practice.
 
 \subsubsection*{Who does the codecheck}\label{who-does-the-codecheck}
 
-in house staff, pool of ECRs, volunteeres, for inhouse staff, credit not
-an issue.
+The options for the person who can conduct a CODECHECK require a not quite
+simple matching of a combination of skills and availability. Ideally, the
+codechecker has a matching code \emph{and} domain expertise, for example to
+check a workflow based on Python code analysing MRT brain imagery. However,
+a well-documented workflow should be executable by any person with a basic
+understanding of computers. Naturally, the more prerequisite knowledge the
+codechecker has, the less time is spend to understand the goals and 
+the mechanics of an analysis. From our experiences, the priority should be
+given to matching technical expertise first, as the a lack of knowledge in
+setting  up a computing environment with a particular language or tool is 
+much more discouraging and the assessment of the outcome, e.g., comparing
+created figures with the original, is largely possible without 
+understanding.
+The time and expertise alloted to the check
+are the main drivers for the depth of checking, though in general, we 
+expect a CODECHECK not to evaluate performance, e.g., does a racing car
+have the best apex speed, but to assess operation free of failure, i.e., 
+is it a car with 4 wheels and at least one door, and does it move forwards
+when accelerating. This depth can be seen independent from the power of
+the check (see above), as long as it is communicated clearly to all
+stakeholders, most importantly authors and readers.
+
+The concrete people to provide these expertises can range from researchers,
+possibly drawn from the regular pool of volunteer reviewers or from a 
+special group, to editorial staff of a publisher. If the regular reviewers
+are relied upon, the editor's task to find suitable ones becomes more
+tedious; extra information such as software familiarity would have to be
+modelled in review platforms.
+We see a great opportunity to especially involve early career 
+researchers as codecheckers. They arguably have a high interest in learning
+about the latest tools and technologies as they are building up their own
+expertise and specialisation. They are also introduced to peer review and 
+may transition into the role of scientific reviewer over time.
+Not to solve the general problems of peer review, which is largely an
+unsupervised process, i.e., rarely are reviewers taught how to do it, but
+a junior codechecker may be supported by a senior codechecker, too.
+We see a high potential in setting up the new processes for CODECHECKING with
+a clear committment on opennes and transparency, independent of the
+respective current peer review process (see \nameref{who-knows-who}).
+
+Publisher staff represents the most controlled yet also not quickly scalable
+option. Hiring the required technical and or domain expertise puts a financial
+burden on the publisher, of course, but such a committment also shows the 
+value given to publishing reproducibility and would positively impact the 
+submission experience, because of more controllability, and external 
+perception of the journal or conference. A staff codechecker reduces the 
+challenges when it comes to open communication and awarding credit, as
+in-house personnel may be more readily be given access to non-anonymised
+submission material and receives a proper salary instead of public credit
+as part of the scientific community.
+
+In contrast, for researchers it can be very important to be publicly credited
+with their activity as a reviewer (see \nameref{who-knows-who}). A regular
+review may be listed in public databases (e.g., ORCID
+\footnote{\href{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}} or commercial offerings such as Publons
+\footnote{\href{https://publons.com/}{https://publons.com/}} or 
+ReviewerCredits\footnote{\href{https://www.reviewercredits.com/}{https://www.reviewercredits.com/}}).
+A codechecker should be listed just the same. The number of scientific reviews
+if of course a very coarse indicator for the community contribution by an 
+individual researcher, so it's unclear if a regular reviewer, who in addition
+conducts a CODECHECK to the scientific review, should be credited twice. 
+
+The codecheckers community\footnote{\href{https://github.com/codecheckers/codecheckers/}{https://github.com/codecheckers/codecheckers/}}
+currently has over 20 individuals who signed up as volunteer codecheckers
+following talks given on the project in the last 12 months.
+That is even though no checks are actively elicited.
+We see a high potential in an open shared list of potential codecheckers 
+compared to a private, in-house group, as it may better match expertise
+and share the workload.
+% TODO tell more about the motivations and commitments that we know about?
 
 \subsubsection*{Who knows who?}\label{who-knows-who}
 
-single blind, double blind, private/public communication between author
-and codechecker, collaborative. (This might need finessing with
-principle 2 below).
+The topic of blinding is broadly discussed, not the least in the push towards
+open peer review as part of the Open Science movement [REF]. Without taking
+a strong stand on this discussion, the general motivation for more 
+transparency and reproducibility does indeed favour a more open review 
+process. However, anonymity can also serve to protect individuals 
+\ref{tennant_limitations_2020}, e.g.,  juniour scientists, whereas it might 
+be acceptable to require revealing of the names of tenured researchers.
+The possible negative effects of a non-anonymous review are greatly reduced
+if a CODECHECK is not relevant for the decision to accept or reject, but that
+is of course not desirable. Instead, we argue that a CODECHECK is technical
+process that should in any case be fixable and not a question of opinion or
+faulty approach. It is possible for a nonsense workflow to receive a 
+CODECHECK certificate.
+Furthermore, the level of documentation that is needed for third parties
+to reproduce a workflow is extremely hard to get right. Too often, this 
+uncertainty leads to researchers giving up and not documenting at all.
+
+The technical nature of the check and the challenge of good enough 
+documentation is why we see great benefits in a effective bidirectional
+means of communication between author and codechecker. Instead of trying to
+fix problems or guess the next step, the codechecker can ask the author to 
+rework the docs  or the code.
+Instead of lenghtily describing a small change, the codechecker may simply
+provide a fix within the code.
+Instead of hiding useful and  instructive files created during the codecheck
+(e.g., a machine-readable computing environment specification), the author 
+and readers can profit from the software-related expertise of the
+codechecker.
+While such a communication may be facilitated in an anonymous way by the 
+publisher, it most likely only helps to protect the identity of the 
+codechecker, because, especially when of a certain size, not trivial, or 
+if very specialised, it is close to impossible to fully anonymise a 
+software analysis stack.
+Therefore, the most effective means with the most desirable result for
+the stakeholders is a non-anonymous and collaborative CODECHECK.
+The possible contributions by the codechecker may even be integrated into
+the code of the workflow and be acknowledged as code commits. This way, 
+proper credit is given within the research software development community.
+Nevertheless, depending on other needs represented by other dimensions,
+the aspect of `Who knows who?' may be the most flexible one.
+
+\subsubsection*{How is the CODECHECK integrated in other processes?}\label{turnaround-time}
+
+As a prerequisite, we see a CODECHECK as part of a typical scholarly
+communication process. While more extreme ideas to change the paradigms
+how researchers share their work exist [REF Octopus], there is a 
+value in an evolutionary approach. Thereby, existing communities can 
+transition towards more open practices at their own pace and ensure
+no one is left behind unfairly.
+When integrating a CODECHECK in existing review and publication processes,
+the \emph{turnaround time} is crucial. Depending on when and who conducts
+the check, it may be done faster, or add considerably to the overall
+time from submission to publication.
+% TODO write about our experiences how long a CODECHECK takes?
 
 \section*{Core principles}\label{core-principles}
 
