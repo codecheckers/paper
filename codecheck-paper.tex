@@ -113,7 +113,30 @@ we expand on the underlying principles. The workflow involves three
 groups of people: (1) the AUTHOR of a paper providing the code to be checked, (2)
 the PUBLISHER of a journal intereseted in publishing the paper by the
 AUTHOR and (3) the CODECHECKER who checks that the AUTHOR's code works.
-The workflow that we have refined is documented in Figure 2.
+The workflow that we have refined is documented in Figure~\ref{fig:workflow}.
+
+% TODO: how is a CODECHECK different from a "specialist reviewer" ? Is it because it is not special, but regular?
+
+\begin{figure}
+% original figure source: https://docs.google.com/drawings/d/1tGOZFNZle-oE1Ynw_tLZFmNcv3wgxD0HPs5bXzDOrng/edit
+% emojis: https://github.com/googlefonts/noto-emoji and https://github.com/twitter/twemoji
+% emoji codes:
+% book stack: 1f4da
+% package: 1f4e6
+% file drawer: 1f5c4
+% disk: 1f4be
+% document: 1f4c4
+% phd: 1f393
+% detective: u1f575
+% laptop: 1f4bb
+% folder: 1f4c1 1f4c2
+% recept: 1f9fe
+  \centering
+      \includegraphics[width=\textwidth]{figs/codecheck_overview.pdf}
+  \caption{The CODECHECK example process implementation. Codechecker act as a detectives:
+  The investigate and record, but do not fix issues.}
+  \label{fig:worfklow}
+\end{figure}
 
 \textbf{Step 1:} the AUTHOR submit their manuscript along with code and data to
 the PUBLISHER. The code and data need not be openly available at this point.
@@ -158,27 +181,15 @@ The PULISHER also ensures proper publication metadata, e.g., links from the
 certificate repository to the published paper or the original code repository.
 
 \begin{figure}
-% original figure source: https://docs.google.com/drawings/d/1tGOZFNZle-oE1Ynw_tLZFmNcv3wgxD0HPs5bXzDOrng/edit
-% emojis: https://github.com/googlefonts/noto-emoji and https://github.com/twitter/twemoji
-% emoji codes:
-% book stack: 1f4da
-% package: 1f4e6
-% file drawer: 1f5c4
-% disk: 1f4be
-% document: 1f4c4
-% phd: 1f393
-% detective: u1f575
-% laptop: 1f4bb
-% folder: 1f4c1 1f4c2
-% recept: 1f9fe
+% original figure source: https://docs.google.com/drawings/d/1q2EdW3Ad-IpcD-CeoR1eIFMJW2fF6OVmDhCtCUmLO1k/edit
   \centering
-      \includegraphics{figs/codecheck_overview.pdf}
-  \caption{The CODECHECK example process implementation. Codechecker act as a detectives:
-  The investigate and record, but do not fix issues.}
-  \label{fig:worfklow}
+      \includegraphics[width=0.8\textwidth]{figs/codecheck_dimensions.pdf}
+  \caption{The dimensions of implementing a CODECHECK process.}
+  \label{fig:dimensions}
 \end{figure}
 
-\subsection*{Variations}\label{variations}
+\subsubsection*{When to do a codecheck and with what power}
+\label{when-to-do-a-codecheck}
 
 DANIEL: COULD YOU DO THIS SECTION ON DIMENSIONS?
 This example workflow leaves sufficient room for different
