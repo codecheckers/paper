@@ -35,11 +35,13 @@
 
 Many areas of scientific research now use computation to either simulate
 or analyse their data. These computations are increasingly complex, and
-difficult to explain coherently in a paper \citep{marwick_how_2015}. To complement the
-traditional route of sharing research by writing papers, there is a
-growing trend/demand to share the underlying artifacts, notably code and
-datasets, so that others can inspect, reproduce or expand that work
-(Figure 1). Some of the earliest proponents were Buckheit and Donoho \cite{buckheit_wavelab_1995} who coined what has been called 
+difficult to explain coherently in a paper \citep{marwick_how_2015}.
+To complement the traditional route of sharing research by writing papers,
+there is a growing trend/demand to share the underlying artifacts, notably 
+code and datasets, so that others can inspect, reproduce or expand that work
+(see Figure~\ref{fig:inverse}).
+Some of the earliest proponents were Buckheit and Donoho
+\cite{buckheit_wavelab_1995} who coined what has been called 
 \emph{Claerbout's claim} (extending on \citet{claerbout_electronic_1992}):
 \emph{"An article about computational science in a scientific publication 
 is \text{not} the scholarship itself, it is merely \textbf{advertising} of
@@ -52,8 +54,8 @@ figures."}
 So, assuming that researchers begin to share more artifacts, how might
 they be examined to test that they do what they claim? For example,
 most scientific journals now require a data sharing statement that
-outlines what data the authors have (or will) share. The
-implementation status of this varies considerably according to the
+outlines what data the authors have (or will) share.
+The implementation status of this varies considerably according to the
 journal. At one of the spectrum, there are specialist journals that
 have been created to accept ``data papers'' (e.g.~\href{}{\emph{Scientific
   Data}}, 
@@ -90,7 +92,7 @@ call this system CODECHECK as outlined next.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figs/rr.pdf}
+  \includegraphics[width=0.7\textwidth]{figs/rr.pdf}
   \caption{The inverse problem in reproducible research.  The left
   half of the diagram shows the diverse range of materials used
   internally within a laboratory.  These materials are often then
