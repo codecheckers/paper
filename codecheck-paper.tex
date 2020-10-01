@@ -666,22 +666,50 @@ DELIBERATEY NOT COMPREHENSIVE HERE.
 
 \section*{Limitations}\label{limitations}
 
+\textbf{Just peer review}: Wait, isn't that what peer review should be 
+doing already? That is correct.
+The general observation is that the increasing
+number of researchers, submissions, and reviews to conduct under the
+pressure to publish, puts the scholarly publication system under a lot
+of strain [REF].  We also see parallels to the terms 
+`reproducible research' and `open science'. Establishing a CODECHECK 
+process is largely an acknowledgement that peer reviewing practices 
+have faltered to adopt to the challenges of digitisation and computer-based
+research or data science. The concept of a CODECHECK, just as the 
+reproducibility of research and the openness of science, may be of 
+transitional nature. If the activites described here as being part of a 
+CODECHECK become the norm for scientific reviews and publications, then
+the initiative will have succeeded.
+However, the rapidly changing technology used in  research leads us to 
+believe that a seperate role of codechecker is benefitial in general.
+
 \textbf{Handling failure}: we have no established process for this, as
 so far all our codechecks succeeded. Open question remains as what to do
 in this case -- should we publicly report that the code would not run.
+Be careful as to the impact of acceptance or volunteers this decision
+has.
 
 \textbf{Compute time}: for those papers that take significant compute
 time (think days, not minutes), who will pay for the compute time?
+The openness of CODECHECK certificates could help to establish community
+peer pressure, as submitting authors can be evaluated on their engagement
+as codecheckers.
 
 \textbf{Software}: authors can currently provide code that requires
 propieratiry software. Given the prevalence of software like MATLAB,
 this seems like a pragmatic choice, but then (a) we can't rely on open
 infrastructure like mybinder, (b) codechecker must have that software.
 
-\textbf{Can't someone cheat?} yes. we don't check it is correct code,
-just simply that it runs. Very low bar. But by having the code open,
-interested parties can then examine the code, and knowing that the code
-will be open we hope will be an incentive for authors to share.
+\textbf{Can't someone cheat?} Yes. we don't check it is correct code,
+just simply that it runs. This `mechanical' test is indeed a very low bar.
+Yet, by having the code and data openly deposited, interested parties can
+then examine the code, and knowing that the code will be open we hope will
+be an incentive for authors to share. It will also give the opportunity 
+to future researchers, potentially with new methods, to look for errors.
+This is a much more effective means to avoid cheating than an arms race
+trying to catch the cheater with closed datasets and code.
+% give credit to Everything Hertz podcast for the idea? they compared it
+% to the blood samples of drug tests in sports (stored for n years)
 
 \textbf{Who's got time for more peer review?} Agree, but ECRS might be
 attracted to working with groups (recall it is not anonymous)
@@ -712,11 +740,21 @@ generates different outputs on different operating systems).
 
 \begin{itemize}
 \item
+  CODECHECK works! we have created 23 certificates to demonstrate it.
+\item 
+  CODECHECK and can increase trust in results, underlies the same
+  limitations as peer review (needs people with time), but also the same
+  power (community, reasoning of human)
+\item
   possibility to allow CI for open papers such that for ``nearly free''
   we can find out when softwave breaks, and if provenance tools are
   used, when.
 \item
   How to embed this in journals.
+\item
+  When some journals have it - what are crucial decisions/pain points?
+  How open do they make the check itself and its outputs, and how does it
+  relate/influence the openness of regular peer review
 \item
   When is CODECHECK redundant? will it become part of regular peer
   review? or, if ayuthors become more skillful, then everything becomes
