@@ -689,28 +689,54 @@ DELIBERATEY NOT COMPREHENSIVE HERE.
 
 \section*{Limitations}\label{limitations}
 
-\textbf{Just peer review}: Wait, isn't that what peer review should be 
+\textbf{Just peer review}: wait, isn't CODECHECK what peer review should be 
 doing already? That is correct.
-The general observation is that the increasing
+However, the general observation is that the increasing
 number of researchers, submissions, and reviews to conduct under the
 pressure to publish, puts the scholarly publication system under a lot
 of strain [REF].  We also see parallels to the terms 
 `reproducible research' and `open science'. Establishing a CODECHECK 
 process is largely an acknowledgement that peer reviewing practices 
-have faltered to adopt to the challenges of digitisation and computer-based
+have faltered to adapt to the challenges of digitisation and computer-based
 research or data science. The concept of a CODECHECK, just as the 
 reproducibility of research and the openness of science, may be of 
 transitional nature. If the activites described here as being part of a 
 CODECHECK become the norm for scientific reviews and publications, then
 the initiative will have succeeded.
-However, the rapidly changing technology used in  research leads us to 
-believe that a seperate role of codechecker is benefitial in general.
+However, the rapidly changing technology used in research leads us to 
+believe that a seperate role of codechecker and the expertise it brings
+will be benefitial in the long term.
 
-\textbf{Handling failure}: we have no established process for this, as
-so far all our codechecks succeeded. Open question remains as what to do
-in this case -- should we publicly report that the code would not run.
-Be careful as to the impact of acceptance or volunteers this decision
-has.
+\textbf{Not going deep enough}: 
+It should be noted that a codechecker is not taking the same roles as the
+\emph{statistical reviewer}, as it is practices by some journals in the 
+biomedical domain (cf.~\cite{petrovecki_role_2009,greenwood_how_2015}).
+The statistical reviewer actually evaluates the appropriateness of
+statistical methods \cite{greenwood_how_2015} and can support topical
+reviewers if, e.g., complex methods or sophisticated variants of statistical
+tests are applied \cite{petrovecki_role_2009}.
+The codechecker may go equally deep into the review, if they have, by 
+intention of by chance, the required expertise and the required time, 
+but they are by no means expected to be able to provide
+such a level of scrutiny. We can imagine a tiered workflow where the 
+codechecker, just as the conventional reviewer, could recommend a detailed
+statistical review to the editor as they might come across upon different
+hints.
+%The CODECHECK provides a certain level of safety with regard to the inherent
+%problems that a computational workflow might have. We want to capture the
+%obvious errors, but ... https://www.quora.com/What-is-the-difference-between-safety-and-security
+
+\textbf{Handling failure}: we have no established process for the case
+that a reproduction fails. This may be the sign of a pre-selection bias
+of the examples, as so far all our codechecks succeeded.
+In case of a journal adopting CODECHECK for all submissions, the open 
+question remains as what to do in this case will have to be answered.
+At the start, we doubt publicly reporting failures (i.e., the code 
+would not run) will increase overall reproducibility and recommend not
+to share the outcome publicly but to share the latest draft of the 
+certific with the authors.
+One must be careful as to the impact of acceptance by authors and the
+concerns of volunteers this approach, or a contrary one, has.
 
 \textbf{Compute time}: for those papers that take significant compute
 time (think days, not minutes), who will pay for the compute time?
@@ -718,33 +744,65 @@ The openness of CODECHECK certificates could help to establish community
 peer pressure, as submitting authors can be evaluated on their engagement
 as codecheckers.
 
-\textbf{Software}: authors can currently provide code that requires
-propieratiry software. Given the prevalence of software like MATLAB,
-this seems like a pragmatic choice, but then (a) we can't rely on open
-infrastructure like mybinder, (b) codechecker must have that software.
+\textbf{Proprietary software}: authors can currently provide code that requires
+proprietary software. Given the prevalence of proprietary software in
+some disciplines, such as MATLAB or eCognition,
+this seems like a pragmatic choice.
+However, it prohibits to benefit from open infrastructure for reproducibility
+(cf.~\cite{konkol_publishing_2020}) and requires the codechecker to have access 
+to that software.
+Non-open software also considerably hampers reuse, especially by researchers
+from the global south. Therefore, allowing proprietary software is a compromise
+that each implementation of CODECHECK should critically reconsider.
 
-\textbf{Can't someone cheat?} Yes. we don't check it is correct code,
+\textbf{Can't someone cheat?} Yes. We don't check it is correct code,
 just simply that it runs. This `mechanical' test is indeed a very low bar.
-Yet, by having the code and data openly deposited, interested parties can
+Yet, by having the code and (raw) data openly deposited, interested parties can
 then examine the code, and knowing that the code will be open we hope will
 be an incentive for authors to share. It will also give the opportunity 
 to future researchers, potentially with new methods, to look for errors.
 This is a much more effective means to avoid cheating than an arms race
-trying to catch the cheater with closed datasets and code.
-% give credit to Everything Hertz podcast for the idea? they compared it
-% to the blood samples of drug tests in sports (stored for n years)
+trying to catch the cheater with closed datasets and code. This approach
+is comparable to the storing of blood samples in sports to detect
+doping in the future (cf. \cite{everythinghertz97}).
+Another picture that helped us to define the scope of a CODECHECK is:
+the codechecker is the forensic photographer, making sure all the details
+are captured so that an investigator may, now or in the future, scrutinize
+them.
 
-\textbf{Who's got time for more peer review?} Agree, but ECRS might be
-attracted to working with groups (recall it is not anonymous)
+\textbf{Who's got time for more peer review?} Agree, but the technical
+nature and specific skill set might allow to introduce different groups
+into the peer review process. ECRs might be attracted to working with
+groups to learn more about recent methods and reproducibility practices.
+Research software experts (Research Software Engineers, RSE) who might
+not regularly be involved in writing or reviewing papers could be 
+interested to increase their connection with scholarly practices.
+An extra codechecker may simplify the matchmaking an editor has to do
+when identifying suitable reviewers for a submission, as technical and
+topical expertise can be provided by different people, who must not even
+be traditional peer reviewers. In fact, the codechecker could even be
+a software professional employed by a publisher.
+Also, recall that we expect CODECHECKSs to be not anonymous and always
+publicly deposited, which is common practice for some journals, but not
+broadly practiced. We also found that the focus on the mechanics of a
+workflow and the ability to interact with the authors can make
+reproductions very educational. It's a different role and as such could
+be a welcome alternation/diversion for reviewers.
 
-\textbf{Who finds the codechecker?} Good point! The journal. Community
+\textbf{Who finds the codechecker?} Good point! The journal, using either
+their own team of codecheckers or the public database. Community
 however think this is an important issue, and are volunteering.
 
-\textbf{Checking multiple times?}  If you check a preprint before peer
-review, it might need checking again as it is modified during peer
-review.  Unavoidable, and as happened to us (2020-012 has been
-revised).  But checking the manuscript the second time is likely to be
-much less work than the first time.
+\textbf{Checking multiple times?} If you check a preprint before peer
+review or a submission to a journal with non-public review,
+it might need checking again as it is modified during peer
+review.  This is in part unavoidable, and as happened to us (e.g., 
+`2020-012` has been revised). This can also be desired, if the
+interaction between author, reviewer, and codechecker lead to
+improvements.
+Since checking the manuscript the second time is likely to be
+much less work than the first time, this is largely mitigated by 
+open and regular communication.
 
 As a principle, we do not require results to be exactly the same for a
 codecheck to pass, simply that the code runs and generates the output
