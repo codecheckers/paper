@@ -52,3 +52,7 @@ codecheck-paper.bbl
 codecheck-paper.log
 
 codecheck-paper.synctex.gz
+
+codecheck-paper.aux
+
+codecheck-paper.blg
