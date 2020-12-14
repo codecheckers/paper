@@ -190,7 +190,7 @@ case}). As part of this process, the CODECHECKER could work entirely
 locally on their own compute resource, or in the cloud, e.g.~using the open
 MyBinder infrastructure \cite{jupyter_binder_2018} or alternatives, some of which
 are more tailored for scientific publications while others offer commercial
-options to, e.g., publishers \cite{}.
+options to, e.g., publishers (cf. \cite{konkol_publishing_2020}).
 Using such cloud-based 
 infrastructure allows for the CODECHECKER and author to collaboratively improve
 the code and enforces a much more complete definition of the computing environment,
@@ -401,10 +401,12 @@ but also for independent no-cost open access journals.
 \subsubsection*{Who knows who?}\label{who-knows-who}
 
 The topic of blinding is broadly discussed, not the least in the push towards
-open peer review as part of the Open Science movement [REF]. Without taking
-a strong stand on this discussion, the general motivation for more 
-transparency and reproducibility does indeed favour a more open review 
-process. However, anonymity can also serve to protect individuals 
+open peer review as part of the Open Science movement 
+(cf. \cite{ross-hellauer_guidelines_2019}).
+Without taking a strong stand on this discussion, the general motivation 
+for more  transparency and reproducibility does indeed favour a more open 
+review process.
+However, anonymity can also serve to protect individuals 
 \ref{tennant_limitations_2020}, e.g.,  juniour scientists, whereas it might 
 be acceptable to require revealing of the names of tenured researchers.
 The possible negative effects of a non-anonymous review are greatly reduced
@@ -504,8 +506,9 @@ publishing the checks alongside peer review activities in public databases.
 This requires that the codechecker 
 has at least enough material to validate the workflow outputs submitted by 
 the authors. Stark~\cite{stark_before_2018} calls this `preproducibility'
-and the ICERM report \cite{} defines the level ``Auditable Research'' 
-similarly. Note that openness is not required here, as to accommodate 
+and the ICERM report \cite{stodden_setting_2013} defines the level
+``Auditable Research''  similarly.
+Note that openness is not required here, as to accommodate 
 communities of practice and review workflows that (currently) do not want
 to or are not able to work openly.
 A completed check eans that code could be executed at least once without
@@ -806,10 +809,19 @@ A number of journals or conferences/workshops provide guidelines for ensuring re
 These include, for example, \ldots{}
 % first glimpse into "Code exeuction processes in scholarly publishing" ?
 % `https://docs.google.com/document/d/1fMWrFvBTwAYXg5J_bYIjgb-gY7DfQ0DOjx9Vlg_Rbmg/edit# ?
-
 \emph{Information Systems}, with an invited reproducibility paper track
 \footnote{\url{https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors}}
 
+Another journal initiative is more indirectly connected with reproductions.
+\emph{Nature Machine Intelligence} recently introduced a new type of article,
+the reusability report \cite{noauthor_research_2020}.
+Inspired by the detailed and nuanced submissions to a reproducibility 
+challenge, the reusability report focuses on the exploration of robustness
+and generalizability of the original paper's claims
+\cite{noauthor_research_2020}. This answers the specific community's 
+challenges around computational reproducibility and also values these kind
+of contributions as independent publications, which goes beyond the goals 
+of CODECHECK.
 
 However, no approach besides CODECHECK spans across journals and is
 intentionally designed to be picked up and implemented by many different 
@@ -823,6 +835,13 @@ The latter recently announced a collaborations with the preprint server
 \emph{arXiv} on providing data and code supplements for machine learning
 manuscripts\footnote{\url{https://medium.com/paperswithcode/papers-with-code-partners-with-arxiv-ecc362883167}} and runs a reproduciblity challenge
 \footnote{\url{https://paperswithcode.com/rc2020}}.
+% Papers with Code now also does more disciplines than just ML.
+Likewise, different disciplines and journals provide reproducibility
+checklists, e.g., \cite{rosenberg_next_2020}, which naturally share some
+aspects while addressing particularities as well as addressing researchers
+from different fields. Regarding the education and guidance for authors, 
+we see CODECHECK's role in referencing and linking educational efforts
+and helpful material, not as a creator and maintainer of content.
 
 The journal \emph{ReScience C} publishes replications,
 \url{https://rescience.github.io/faq/};
@@ -876,7 +895,7 @@ doing already? That is correct.
 However, the general observation is that the increasing
 number of researchers, submissions, and reviews to conduct under the
 pressure to publish, puts the scholarly publication system under a lot
-of strain [REF].  We also see parallels to the terms 
+of strain.  We also see parallels to the terms 
 `reproducible research' and `open science'. Establishing a CODECHECK 
 process is largely an acknowledgement that peer reviewing practices 
 have faltered to adapt to the challenges of digitisation and computer-based
