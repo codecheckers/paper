@@ -38,6 +38,8 @@
 \item revisit \url{https://github.com/codecheckers/discussion}
 \item \url{https://hdsr.mitpress.mit.edu/pub/f0obb31j/release/1} and other articles form the HDSR special issue
 \item \url{https://av.tib.eu/media/42484} > "Code will make systematic mistakes, not random mistakes", "code is more reliable (and auditable) than a human"
+\item \url{https://doi.org/10.1016/j.isci.2020.101698} - "Rigor and Transparency Index may serve as a proxy for methodological quality" - CODECHECK doesn't evaluate that, could be used for distinction
+\item Make code Feedback and leave better than found a principle, not an option? Just checking the code does not give enough credit (?), but improving it certainly does, and good peer review improves (watch out to not do full software review though)
 \end{itemize}
 
 \section*{Introduction}\label{introduction}
@@ -262,7 +264,8 @@ freely combined.
 \subsubsection*{When to do a CODECHECK and with what power}
 \label{when-to-do-a-codecheck}
 
-The time for a CODECHECK greatly depends on the intentions and the ascribed
+The point in time when a CODECHECK happens greatly depends on the 
+intentions and the ascribed
 importance. The earlier a CODECHECK happens in the process, the more the
 results can play a role in the most important decision in scholarly 
 communication: is a paper published, sent back for revisions, or rejected.
@@ -413,14 +416,19 @@ Without taking a strong stand on this discussion, the general motivation
 for more  transparency and reproducibility does indeed favour a more open 
 review process.
 However, anonymity can also serve to protect individuals 
-\ref{tennant_limitations_2020}, e.g.,  juniour scientists, whereas it might 
+\cite{tennant_limitations_2020}, e.g.,  juniour scientists, whereas it might 
 be acceptable to require revealing of the names of tenured researchers.
 The possible negative effects of a non-anonymous review are greatly reduced
 if a CODECHECK is not relevant for the decision to accept or reject, but that
 is of course not desirable. Instead, we argue that a CODECHECK is technical
 process that should in any case be fixable and not a question of opinion or
-faulty approach. It is possible for a nonsense workflow to receive a 
-CODECHECK certificate.
+faulty approach. It is technically possible for a nonsense workflow to receive
+a CODECHECK certificate.
+If passing a CODECHECK becomes mandatory, the full transparency may have to be 
+revisited as the relations between authors and codecheckers fall under the
+same social and acommunity challenges as non-anonymous peer review
+(cf.~\cite{everythinghertz123}).
+% previous sentenc inspired by https://osf.io/9cftx/
 Furthermore, the level of documentation that is needed for third parties
 to reproduce a workflow is extremely hard to get right. Too often, this 
 uncertainty leads to researchers giving up and not documenting at all.
@@ -455,7 +463,11 @@ As a prerequisite, we see a CODECHECK as part of a typical scholarly
 communication process. While more radical ideas to change the paradigms
 how researchers share their work exist\footnote{For example Octopus, 
 \url{https://science-octopus.org/about}, or Hypergraph
-\url{https://www.libscie.org/hypergraph}.}, there is a 
+\url{https://www.libscie.org/hypergraph}.},
+% mimosa is another platform idea, but no real prototype AFAICT:
+% https://projects.invisionapp.com/share/E9Z3RKE7W3P#/screens/436978924
+% https://docs.google.com/presentation/d/1V_K8hghgnvGfEtW7TdwtowTveZyy4Qs8rMemNyHx_Dg/edit#slide=id.p
+there is a 
 value in an evolutionary approach. Thereby, existing communities can 
 transition towards more open practices at their own pace and ensure
 no one is left behind unfairly.
@@ -983,7 +995,7 @@ suitablerepositories.
 We do expect codecheckers to be aware of these though and possibly point 
 them out.
 
-\textbf{Handling failure}: we have no established process for the case
+\textbf{Handling failure}: We have no established process for the case
 that a reproduction fails. This may be the sign of a pre-selection bias
 of the examples, as so far all our codechecks succeeded.
 In case of a journal adopting CODECHECK for all submissions, the open 
@@ -991,11 +1003,15 @@ question remains as what to do in this case will have to be answered.
 At the start, we doubt publicly reporting failures (i.e., the code 
 would not run) will increase overall reproducibility and recommend not
 to share the outcome publicly but to share the latest draft of the 
-certific with the authors.
-One must be careful as to the impact of acceptance by authors and the
-concerns of volunteers this approach, or a contrary one, has.
+certificate with the authors.
+A negative comment in a CODECHECK certificate or a failed check does
+not necessarily mean the paper or the science is bad
+(cf. discussion on negative comments in \cite{everythinghertz123}).
+Therefore, one must be careful as to the impact of acceptance by authors 
+and the concerns of volunteers this approach, or a contrary one, has.
 Private feedback for failures and public acknowledgement/encouragement
 for successes seems to be the way to go.
+% eLife's new model (see https://osf.io/9cftx/) will publish reports evantually, e.g., after preprint has been accepted elsewhere
 \cite{Rosenthal2016b} discuss incentives for different actors around the
 implementation of reproducibility. We see CODECHECK as one mean for
 organisations to invest in reproducibility by creating incentives
@@ -1048,6 +1064,9 @@ are captured so that an investigator may, now or in the future, scrutinize
 them.
 
 \textbf{Who's got time for more peer review?} Agree.
+Ignoring the complex community contract behind volunteered peer review,
+the time spent with CODECHECKs likely reduces the individual's time to work
+as a reviewer.
 However, there are differences to peer review.
 First, the technical nature of a CODECHECK can provide a more 
 clearly defined scope and expectations compared to conventional 
