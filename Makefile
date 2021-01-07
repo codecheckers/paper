@@ -1,9 +1,9 @@
 
 codecheck-paper.pdf: codecheck-paper.tex bibliography.bib
-	pdflatex -synctex=1 $<
+	pdflatex -synctex=1 -interaction nonstopmode $<
 	bibtex codecheck-paper
-	pdflatex -synctex=1 $<
-	pdflatex -synctex=1 $<
+	pdflatex -synctex=1 -interaction nonstopmode $<
+	pdflatex -synctex=1 -interaction nonstopmode $<
 
 
 
@@ -14,4 +14,4 @@ codecheck-paper.pdf: codecheck-paper.tex bibliography.bib
 
 
 clean:
-	rm -f codecheck-paper.pdf
+	rm -f codecheck-paper.pdf *.aux *.bbl *.blg
