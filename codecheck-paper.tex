@@ -597,12 +597,11 @@ While using slightly different terms and infrastructure, e.g., ``reproducibility
 reports'' are published on OSF instead of certificates on Zenodo, the 
 reproducibility reviews adhere to the codecheck principles.
 Furthermore, a small number of checks was completed as part of a peer reviews
-for a GIScience journals.
+for GIScience journals.
 
 Table~\ref{tab:register} lists the certificates completed to date,
 along with citations to the original papers.
 Out of these areas, we would like to briefly highlight three examples here.
-
 
 \textbf{TODO: SJE, tidy this paragraph.}
 \begin{enumerate}
@@ -620,51 +619,38 @@ Out of these areas, we would like to briefly highlight three examples here.
 \end{enumerate}
 
 \begin{table}
+  \footnotesize
+
   \centering
 
-  \begin{tabular}{llp{11cm}}
+  \begin{tabular}{llp{12cm}}
     \toprule
-    Certificate & Research area & Description \\ \midrule
-    2020-001 \cite{cert-2020-001} &
-    Machine learning & CODECHECK undertaken post acceptance of
-    manuscript and before its publication in \textit{Gigascience}
-    \cite{Piccolo2020-lo}. \\
-    2020-002  \cite{cert-2020-002} & neuroscience & Paper from 1997
- showing unsupervised learning from natural images \cite{Hancock1992-mp}.
- Code written for this project. \\
-    2020-003  \cite{cert-2020-003} & neuroscience &  Classic paper
-                                                     from 1982 on
-                                                     models of
-                                                     associative
-                                                     memory
-                                                     \cite{Hopfield1982-mz}.
-    (Simulation code was written specifically for this project.)\\
-    2020-004  \cite{cert-2020-004} & neuroscience & Cart-pole balancing problem solved using reinforcement learning \cite{Barto1983-rg}.  Code written for this reimplementation.\\
-    2020-005  \cite{cert-2020-005} & neuroscience & Larisch \\
-    2020-006  \cite{cert-2020-006} & neuroscience & Detorakis \\
-    2020-007  \cite{cert-2020-007} & neuroscience & \textbf{in progress} \\
-    2020-008  \cite{cert-2020-008} & COVID-19 & Modelling of
-    interventions on COVID-19 cases in the UK; checked as preprint (NOW REMOVED XXX)
-    and now published \cite{Davies2020-vj} \\
-    2020-009  \cite{cert-2020-009} & COVID-19 & tracing \\
-    2020-010  \cite{cert-2020-010} & COVID-19 & report 9 \\
-    2020-011  \cite{cert-2020-011} & COVID-19 & Modelling of Covid
-    spread across Europe;  paper was checked when in press (now  published) \cite{Flaxman2020-yb}. \\
-    2020-012  \cite{cert-2020-012} & COVID-19 & Modelling of COVID-19 spread across the USA; preprint currently review \cite{Unwin2020}. \\
-    2020-013  \cite{cert-2020-013} & neuroscience & biorXiv \cite{Spitschan2020.06.02.129502}. \\
-    2020-014  \cite{cert-2020-014} & neuroscience & eLife \cite{Sadeh2020}. \\
-    2020-015  \cite{cert-2020-015} & neuroscience & eLife \cite{Liou2020}. \\
-    2020-016  \cite{cert-2020-016} & GIScience & 
-    R models demonstrating the Modifiable Aral Unit Problem (MAUP) in spatial data science \cite{Brunsdon2020}. \\
-    2020-017  \cite{cert-2020-017} & GIScience & 
-    Spatial data handling, analysis, and visualisation using a variety of R packages \cite{Bivand2020}. \\
-    2020-018  \cite{cert-2020-018} & GIScience & 
-    Cellular automaton in R for modeling dynamic phenomena within a Discrete Global Grid System (DGGS) data model; using a subset for demonstration \cite{Hojati2020}. \\
-    2020-019  \cite{cert-2020-019} & GIScience & Reachability analysis of suburban transportation using analysis of privately owned shared cars; workflow uses Python, and reproduction with a considerably subsampled dataset \cite{Illium2020}. \\
-    2020-020  \cite{cert-2020-020} & GIScience & In-database windows operators for processing spatio-temporal data streams based on Python and PostgreSQL/PostGIS \cite{Werner2020}; reproduction using container. \\
-    2020-021  \cite{cert-2020-021} & GIScience & Python code for comparing supervised machine learning models for spatial nominal entity recognition. \cite{Medad2020}. \\
-    2020-022  \cite{cert-2020-022} & GIScience & Python code for visualising text analysis on intents and concepts from geo-analytic questions \cite{Xu2020}. \\
-    2020-023  \cite{cert-2020-023} & GIScience & Analysis of spatial footprints of geo-tagged extreme weather events from social media using R \cite{Owuor2020}. \\
+    \textbf{Certificate} & \textbf{Research area} & \textbf{Description} \\ \midrule
+    2020-001 \cite{cert-2020-001} & Machine learning & Code for benchmarking ML classification tool checked post acceptance of manuscript and before its publication in \textit{Gigascience} \cite{Piccolo2020-lo}. \\
+    2020-002  \cite{cert-2020-002} & Neuroscience & Code written for this project checked by second project member as demonstration using paper from 1997 showing unsupervised learning from natural images \cite{Hancock1992-mp}. \\
+    2020-003  \cite{cert-2020-003} & Neuroscience &  Code written for this project checked by second project member as demonstration using classic paper on models of associative memory \cite{Hopfield1982-mz}. \\
+    2020-004  \cite{cert-2020-004} & Neuroscience & Code written for this project checked by second project member as demonstration using classic paper on cart-pole balancing problem \cite{Barto1983-rg}. \\
+    2020-005  \cite{cert-2020-005} & Neuroscience & Check of independent reimplementation of spike-timing-dependent plasticity (STDP) model \cite{larisch_re_2019} conducted as demonstration for this paper. \\ % Python ANNarchy
+    2020-006  \cite{cert-2020-006} & Neuroscience & Check of independent reimplementation of a generalized linear integrate-and-fire neural model \cite{detorakis_re_2017} conducted as demonstration for this paper. \\
+    2020-007  \cite{cert-2020-007} & Neuroscience & Check of independent reimplementation of analysing spike patterns of neurons \cite{hathway_re_2018} conducted as demonstration for this paper. \\
+    2020-008  \cite{cert-2020-008} & COVID-19 & Code for modelling of interventions on COVID-19 cases in the UK checked at preprint stage \cite{davies-preprint-2020} and later published \cite{Davies2020-vj}. \\
+    2020-009  \cite{cert-2020-009} & COVID-19 & Code for analysis of effectiveness of measures to reduce transmission of SARS-CoV-2 checked as preprint \cite{kucharski-preprint-2020} and later published \cite{kucharski_effectiveness_2020}. \\ % R, check mentiond in acks, but not linked
+    2020-010  \cite{cert-2020-010} & COVID-19 & Code for analysis of non-pharmaceutical interventions (Report 9) checked as a preprint \cite{ferguson_report_2020}. \\ % CovidSim
+    2020-011  \cite{cert-2020-011} & COVID-19 & Code for modelling of COVID-19 spread across Europe was provided by authors and checked while paper was in press \cite{flaxman_estimating_2020}. \\
+    2020-012  \cite{cert-2020-012} & COVID-19 & Code for modelling of COVID-19 spread across the USA was checked as preprint \cite{unwin_report_2020} and later published \cite{unwin_state-level_2020}. \\
+    2020-013  \cite{cert-2020-013} & Neuroscience & Code for analsis of rest-activity patterns in people wihout con-mediated vision was checked as a preprint \cite{Spitschan2020.06.02.129502} after direct contact with the authors. \\ % MATLAB
+    2020-014  \cite{cert-2020-014} & Neuroscience & Code for analysis of pertubation patterns of neural activity was checked after publication as part of publisher collaboration \cite{Sadeh2020}. \\ % MATLAB
+    2020-015  \cite{cert-2020-015} & Neuroscience & Code for a neural network model for human focal seizures was checked after publication as part of publisher collaboration \cite{Liou2020}. \\ % MATLAB
+    2020-016  \cite{cert-2020-016} & GIScience & Code for models demonstrating the Modifiable Aral Unit Problem (MAUP) in spatial data science \cite{Brunsdon2020} was checked during peer review. \\ % R
+    2020-017  \cite{cert-2020-017} & GIScience & Code for spatial data handling, analysis, and visualisation using a variety of R packages \cite{Bivand2020} was checked after peer review before publication. \\ % R
+    2020-018  \cite{cert-2020-018} & GIScience & AGILE conference reproducibility report using a demonstration data subset with cellular automaton for modeling dynamic phenomena \cite{Hojati2020}. \\ % R
+    2020-019  \cite{cert-2020-019} & GIScience & AGILE conference reproducibility report with subsampled dataset for reachability analysis of suburban transportation using shared cars \cite{Illium2020}. \\
+    2020-020  \cite{cert-2020-020} & GIScience & AGILE conference reproducibility report using a container for checking in-database windows operators for processing spatio-temporal data \cite{Werner2020}. \\ % Python + PostGIS
+    2020-021  \cite{cert-2020-021} & GIScience & AGILE conference reproducibility report checking code for comparing supervised machine learning models for spatial nominal entity recognition \cite{Medad2020}. \\ % Python
+    2020-022  \cite{cert-2020-022} & GIScience & AGILE conference reproducibility report checking code for visualising text analysis on intents and concepts from geo-analytic questions \cite{Xu2020}. \\ % Python
+    2020-023  \cite{cert-2020-023} & GIScience & AGILE conference reproducibility report on analysis of spatial footprints of geo-tagged extreme weather events from social media \cite{Owuor2020}. \\
+    2020-024  \cite{cert-2020-024} & Neuroscience & Code for multi-agent system for concept drift detection in electromyography \cite{vieira_driftage_2020} was checked during peer review. \\ % R
+    2020-025  \cite{cert-2020-025} & GIScience & Adaptation and application of Local Indicators for Categorical Data (LICD) to archaeological data \cite{carrer_application_2021} was checked after peer review before publication. \\ % R
     \\ \bottomrule
   \end{tabular}
   \caption{Register of completed certificates as of October 2020.  An interactive version
@@ -690,7 +676,7 @@ certification.
 To demonstrate the typical contents of a certificate, in
 Figure~\ref{fig:cert} we have annotated the first four out of ten
 pages of the certificate \texttt{2020-012} \cite{cert-2020-012}.
-The referenced article \cite{Unwin2020} describes the modelling COVID-19
+The referenced article \cite{unwin_report_2020} describes the modelling COVID-19
 across the USA.
 %% TODO - has this been published yet?.  No, not yet... in review...
 Figure~\ref{fig:cert}A shows the certificate number, and its DOI,
@@ -720,8 +706,8 @@ initialize the environment and run the code.  This particular example
 was quite long, taking about 17 hours to run.  Finally, on page 4 of
 the certificate, we see the first output that was generated by the
 codecheck (Figure~\ref{fig:cert}F).  In this case, the figure matches
-figure~4 of \cite{Unwin2020}.  Subsequent pages of the certificate show other
-outputs (not shown here).
+figure~4 of \cite{unwin_report_2020}.
+Subsequent pages of the certificate show other outputs (not shown here).
 
 \begin{figure}
   \centering
