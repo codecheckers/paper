@@ -26,22 +26,6 @@
   \ldots{}
 \end{abstract}
 
-\section*{TODO}\label{todo}
-
-\begin{enumerate}
-\item Check with Giuliano re: ``code works''.
-\item Can we introduce "research compendium" as a term?
-\item Should we make code and data sharing a prerequisite or leave that door open?
-\item Take a look at the Lancet's statistical review process (areas for improvement by authors) \url{https://www.thelancet.com/journals/lancet/article/PII0140-6736(92)90409-V/fulltext}
-\item How to relate to "reproducibility does not matter but trust does", see \url{https://gmbecker.github.io/MayInstituteKeynote2019/outline.html}
-\item Should we ask the people currently listed in the acknowledgements?
-\item revisit \url{https://github.com/codecheckers/discussion}
-\item \url{https://hdsr.mitpress.mit.edu/pub/f0obb31j/release/1} and other articles form the HDSR special issue
-\item \url{https://av.tib.eu/media/42484} > "Code will make systematic mistakes, not random mistakes", "code is more reliable (and auditable) than a human"
-\item \url{https://doi.org/10.1016/j.isci.2020.101698} - "Rigor and Transparency Index may serve as a proxy for methodological quality" - CODECHECK doesn't evaluate that, could be used for distinction
-\item Make code Feedback and leave better than found a principle, not an option? Just checking the code does not give enough credit (?), but improving it certainly does, and good peer review improves (watch out to not do full software review though)
-\end{enumerate}
-
 \section*{Introduction}\label{introduction}
 
 Many areas of scientific research now use computation to either simulate
@@ -438,7 +422,12 @@ multiple referees are common. Because of the technical focus, the
 determination if the concrete outputs of author and codechecker, who can
 collaborate to solve any issues, actually match should be a very factual 
 process and not
-(see TODO: check ref \ref{when-to-do-a-codecheck}), a mediator, e.g., the editor, or a
+require much debate or opinion. Code usually makes systematic and repeatable
+mistakes is is thereby more reliable and auditable than processes controlled
+by humans \cite{tibav:42484}, e.g., in a laboratory.
+
+Depending on the importance of the CODECHECK
+(see \ref{when-to-do-a-codecheck}), a mediator, e.g., the editor, or a
 second opinion might be warranted in rare cases.
 
 We see a great opportunity to especially involve
@@ -463,7 +452,8 @@ We see a high potential in setting up the new processes for CODECHECKING with
 a clear commitment on openness and transparency, independent of the
 respective current peer review process (see \nameref{who-knows-who}).
 
-Publisher staff represents the most controlled but also resource-intensive
+A publisher's \textbf{editorial staff} represents the most controlled but also
+resource-intensive
 option. Hiring the required technical and or domain expertise puts a financial
 burden on the publisher, of course, but such a commitment also shows the 
 value given to publishing reproducibility and would positively impact the 
@@ -473,9 +463,12 @@ challenges when it comes to open communication and awarding credit, as
 in-house personnel may be more readily be given access to non-anonymised
 submission material and receives a proper salary instead of public credit
 as part of the scientific community.
+Keeping diverse specialists as staff to realise a codechecking process is 
+unlikely to be feasible, especially for small or independent publishers.
 
 In contrast, for researchers it can be very important to be publicly credited
-with their activity as a reviewer (see TODO CHECK REF \nameref{who-knows-who}). A regular
+with their activity as a reviewer (see TODO CHECK REF \nameref{who-knows-who}).
+A regular
 review may be listed in public databases (e.g., ORCID
 \footnote{\href{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}} or commercial offerings such as Publons
 \footnote{\href{https://publons.com/}{https://publons.com/}} or 
@@ -539,9 +532,10 @@ has at least enough material to validate the workflow outputs submitted by
 the authors. Stark~\cite{stark_before_2018} calls this `preproducibility'
 and the ICERM report \cite{stodden_setting_2013} defines the level
 ``Auditable Research''  similarly.
-Note that openness is not required here, as to accommodate 
-communities of practice and review workflows that (currently) do not want
-to or are not able to work openly.
+Every community may establish their own good practices or adapt generic
+concepts and practical tools, such as publishing all building blocks
+of science in a research compendium
+\footnote{\url{https://research-compendium.science/}}.
 A completed check means that code could be executed at least once without
 critical errors or
 warnings using the provided instructions, and, therefore, all code and data 
@@ -564,27 +558,28 @@ By default, unless there are strong
 reasons to the contrary (e.g., clinically-sensitive data), all code and
 data, both from author and codechecker, will be made freely available, i.e., 
 under open licenses, before or when the certificate is published.
-The code and data  publication should follow community good practices.
-By disposition, a CODECHECK workflow should be designed as a recognition of
-shortcomings in asserting reproducibility of submissions and understand the
+Note that openness is not required for the paper itself as to accommodate 
+journals to transition to sustainable open access models.
+The code and data publication should follow community good practices.
+By disposition, a CODECHECK workflow should be designed (a) as a recognition of
+shortcomings in asserting reproducibility of submissions and (b)
+with an understanding of the
 complex situation that lead to this. However, establishing a CODECHECK workflow
 should go hand in hand with initiatives and a perspective to improve education
 around reproducibility of methods and communication of comprehensive 
 computational workflows, with the long term goal for a specific community or
 journal's target audience to reach a state where the level of verification 
-and trust provided by codecheckers becomes part of peer review.
+and trust provided by codecheckers becomes part of peer review and regular
+merit of all accepted papers.
 
 \section*{Implementation}\label{implementation}
 
 \subsection*{Register}\label{register}
-% count certificates: 
-% curl https://codecheck.org.uk/register/stats.json
-% -1 for Hathway-Goodman (no empty last line, so no -1 for the column headers needed)
 
-We have a curated list of 22 certificates available at
+We have a curated list of 25 certificates available at
 \url{https://codecheck.org.uk/register}. These are a mixture of
 reproductions of papers for a variety of reasons and fall into three themes:
-(1) `classic' papers from computational neuroscience
+(1) classic and current papers from computational neuroscience,
 (2) COVID-19 modelling preprints, and
 (3) GIScience.  
 The first theme was the initial set of papers used to explore the concept
@@ -1048,7 +1043,8 @@ but not raw data \cite{shannon_opening_2018},
 i.e., data enclaves \cite{foster_research_2018},
 or domains of reproducibility \cite{harris_more_2017})
 
-\textbf{Can't someone cheat?} Yes. We don't check it is correct code,
+\textbf{Can't someone cheat?} Yes. We don't check it is correct code or
+sound science,
 just simply that it runs. This `mechanical' test is indeed a very low bar.
 Yet, by having the code and (raw) data openly deposited, interested parties can
 then examine the code, and knowing that the code will be open we hope will
@@ -1093,11 +1089,11 @@ workflow and the ability to interact with the authors can make
 reproductions very educational. It's a different role and as such could
 be a welcome alternation/diversion for researchers to give back their 
 time to the community.
-
-\textbf{Who finds the codechecker?} Good point! The journal, using either
-their own team of codecheckers or the public database. Researchers
-however think this is an important issue, and are volunteering.
-
+With code and workflows, there also is a good chance that a codechecker's
+feedback can have direct impact and lead to improvements of the author's 
+work that comes with a rewarding experience or even tangible contributions.
+While such impact is also part of idealistic peer review, it is
+rather rare beyond paraphrased anonymous acknowledgement.
 
 \textbf{Checking multiple times?} If you check a preprint before peer
 review or a submission to a journal with non-public review, it might
@@ -1141,9 +1137,17 @@ conversation along or not.
 We have discussed stronger more drastic rules at length, such as only 
 considering diamond Open Access journals, community-led no-fee journals,
 or journals with collaborative/open peer review, but eventually decided
-against it.
+against them.
+We also have considered to require latest technologial solutions which can
+support reproducibility (cf.~\cite{konkol_publishing_2020}), but have 
+decided to focus on the human interface and the judgement of an experienced
+researchers/developer as a more sustainable approach.
+The structurelessness of the required data and software gives the needed
+freedom to enable all types of research. It could be complemented by
+automated scoring (e.g.,~\cite{menke_rigor_2020}, yet automation and 
+metrics bears risks that lead us to put our trust in the codechecker.
 Note that the focused nature of the CODECHECK principles allows journals
-and publishers to innovate on the finance model and peer review practices
+and publishers to innovate on the financial model and peer review practices
 at their own pace.
 
 \section*{Conclusions and future work}\label{future-work-and-conclusions}
@@ -1259,7 +1263,7 @@ of computer programs and documenting reproducibility of results.
 \subsection*{Competing interests}
 
 SJE is on the editorial board at the journal \emph{Scientific Data}.
-DN is reproducibility editor at the Association of Geographic
+DN is reproducibility chair at the Association of Geographic
 Information Laboratories in Europe's (AGILE) annual conference.
 
 \subsection*{Grant information}
