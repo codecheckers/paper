@@ -837,56 +837,54 @@ The journal \emph{ACM Transactions on Mathematical Software (TOMS)}
 established a "Replicated Computational Results" (RCR) review process
 \cite{heroux_editorial_2015} (using "replicable" with the same meaning 
 as CODECHECK uses "reproducible").
+A search on Crossref\footnote{\url{https://search.crossref.org/?q=\%22Replicated+Computations+Results+\%28RCR\%29+Report\%22&from_ui=yes&page=2}; search executed
+on 2020-12-10.} shows 15 RCR Reports to be published and the 
+% Number of found TOMAS RCR reports:
+% 8: https://scholar.google.de/scholar?start=10&q=Replicated+Computations+Results+%22(RCR)+Report%22&hl=de&as_sdt=0,5
+% 15: https://search.crossref.org/?q=Replicated+Computations+Results+%22%28RCR%29+Report%22&from_ui=yes&publication=ACM+Transactions+on+Mathematical+Software
+% 15: https://academic.microsoft.com/search?q=Replicated%20Computations%20Results%20%22(RCR)%20Report%22&f=&orderBy=0&skip=10&take=10
+workflow to be 
+extended to the ACM journal \emph{Transactions on Modeling and Computer 
+Simulation (TOMACS)}\footnote{\url{https://dl.acm.org/journal/tomacs/author-guidelines}}.
+
 The CODECHECK principles were independently developed as we only later 
 learned about TOMS RCR, which we judge as fulfilling CODECHECK principles
 1 to 4.
-Our CODECHECK provides more extensive discussion of the possible variants, 
+This work provides an extensive discussion of the possible variants, 
 while TOMS RCR realises one particular workflow for reproducibility 
-reviews for one particular journal. \cite{heroux_editorial_2015}
-include similar concerns about
+reviews for one particular journal. The TOMS editorial
+\cite{heroux_editorial_2015} shares similar concerns about
 selection of reviewers as above. Unlike existing CODECHECK certificates, 
 the RCR reports undergo editorial review, but this could very well become
-part of CODECHECK workflows at journals.
+part of CODECHECK processes at journals.
 The publication of the RCR report is seen as a reward for the efforts of
 the reproducing person, while the possible conflict of interest of this 
 motivation is acknowledged. TOMS also recognises reviewer activity in a 
-partnership with Publons
-\footnote{\url{https://authors.acm.org/author-services/publons}},
-though it is unclear if the author of an RCR report receives both the report
+partnership with Publons\footnote{
+\url{https://authors.acm.org/author-services/publons}},
+though it is unclear if the author of an RCR report receives both the report's
 authorship and the reviewer recognition. In any case, this is different
 from CODECHECK, which specifically aims at recognition as reviewers.
-In our view, this removes the possible conflict of interest while keeping
-the public acknowledgement.
-
-Specific to the field of Mathematics, the RCR was also  expected to apply a
+In our view, the reviewer role removes the possible conflict of interest while
+keeping the public acknowledgement.
+Specific to the field of Mathematics, the RCR is also expected to apply a
 review of the software itself if the system it runs on cannot be evaluated by
 an independent party.
-The TOMS RCR also notes the importance of communication and expects
-collaboration between author and RCR reviewers.
-The TOMS creators share thoughts around reviewer selection and also put trust
+The TOMS RCR creators concur with the importance of communication, expect
+collaboration between author and RCR reviewers,
+share the considerations around reviewer selection, and also put trust
 in reviewer judgement over numerical bit-wise perfection.
 A key difference is that authors opt-in with an \emph{RCR Review Request} and
 the RCR reports, which are very similar to CODECHECK certificates, are
 published in the TOMS journal next to the actual papers.
-A search on Crossref\footnote{\url{https://search.crossref.org/?q=\%22Replicated+Computations+Results+\%28RCR\%29+Report\%22&from_ui=yes&page=2}; search executed
-on 2020-12-10} shows 15 RCR Reports to be published and the workflow to be 
-extended to the ACM journal \emph{Transactions on Modeling and Computer 
-  Simulation (TOMACS)}
-%% SJE TODO - fix footnote
-%% \footnote{\url{https://dl.acm.org/journal/tomacs/author-guidelines-%35-rcrini}}.
 
-% 8: https://scholar.google.de/scholar?start=10&q=Replicated+Computations+Results+%22(RCR)+Report%22&hl=de&as_sdt=0,5
-% 15: https://search.crossref.org/?q=Replicated+Computations+Results+%22%28RCR%29+Report%22&from_ui=yes&publication=ACM+Transactions+on+Mathematical+Software
-% 15: https://academic.microsoft.com/search?q=Replicated%20Computations%20Results%20%22(RCR)%20Report%22&f=&orderBy=0&skip=10&take=10
-
-A number of journals or conferences/workshops provide guidelines for ensuring reproducible publications and their verification.
-These include, for example, \ldots{}
+A number of journals provide guidelines for 
+ensuring reproducible publications and their verification,
+e.g.,~\emph{Information Systems} with its invited 
+reproducibility paper track\footnote{
+\url{https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors}.}.
 % first glimpse into "Code exeuction processes in scholarly publishing" ?
 % `https://docs.google.com/document/d/1fMWrFvBTwAYXg5J_bYIjgb-gY7DfQ0DOjx9Vlg_Rbmg/edit# ?
-\emph{Information Systems}, with an invited reproducibility paper track
-\footnote{\url{https://www.elsevier.com/journals/information-systems/0306-4379/guide-for-authors}}
-
-Another journal initiative is more indirectly connected with reproductions.
 \emph{Nature Machine Intelligence} recently introduced a new type of article,
 the reusability report \cite{noauthor_research_2020}.
 Inspired by the detailed and nuanced submissions to a reproducibility 
@@ -896,11 +894,55 @@ and generalizability of the original paper's claims
 challenges around computational reproducibility and also values these kind
 of contributions as independent publications, which goes beyond the goals 
 of CODECHECK.
+The journal \emph{Cortex} has a special article type 
+\emph{Verification Reports}, which  actually are about replication of results 
+but are very well designed/reasoned \cite{chambers_verification_2020}.
+In a similar vein, the CODECHECK certificates
+could also be published as a special article type within journals.
 
-However, no approach besides CODECHECK spans across journals and is
+Going beyond article types, the journal \emph{ReScience C} publishes only
+replications\footnote{\url{https://rescience.github.io/faq/}} requiring
+open code and replication by a third party to. ReScience also relies on
+free infrastructure (GitHub and Zenodo).
+For research with very high stakes, where reproduction would be too weak and
+post publication replication possibly too late because of policy impact,
+Benjamin-Chung et~al. \cite{benjamin-chung_internal_2020} propose
+\emph{internal replication}.
+A workflow that underwent internal
+replication would very likely be of high quality and relatively easy to check.
+Similarly, internal CODECHECKs may be used, with the same limitations such
+as group think \cite{benjamin-chung_internal_2020},
+to ensure reproducibility before submission.
+Such internal checks are professionalised in local reproduction services,
+such as CISER R-squared\footnote{
+\url{https://ciser.cornell.edu/research/results-reproduction-r-squared-service/}},
+} (established/permanent),
+%Uni Münster's Reproducible Research Support Service\footnote{
+%\url{https://go.wwu.de/r2s2}} (pilot),
+Oxford's code review network (OxCRN)\footnote{
+\url{https://github.com/OxfordCodeReviewNet/forum}} (community, broader scope), or
+Yale's YARD\footnote{
+\url{https://isps.yale.edu/research/data/approach}} (staff for replications).
+
+Gavis and Donoho \cite{gavish_universal_2011} propose a new discipline and 
+infrastructure for reproducible computational research with its own tools and
+API. Their specific packaging format, provenance record, and cryptographic
+\emph{Verifiable Result Identifier} would indeed provide excellent
+reproduciblity. However, the system is also complex and was not taken up by
+any publisher as far as we know; the system is indeed not open source itself.
+In comparison, CODECHECK is less powerful but also much more flexible and
+less dependent on specific tools or infrastructure. If data and code are 
+deposited properly, i.e.,~very unlikely to disappear, then the certificate's 
+DOI is practically close to the cryptographic identifier.
+
+\emph{SciGen.Report} is a community-run platform to foster communication on
+reproducibility\footnote{\url{https://scigen.report/}}. People can report on
+fully, particially or un-successful reproductions post publication.
+
+No approach besides CODECHECK spans across journals and is
 intentionally designed to be picked up and implemented by many different 
 journals or events, and to build a community of codecheckers. CODECHECK shares
-this interdisciplinary nature with other community initiatives concerned with 
+its interdisciplinary nature with other community initiatives concerned with 
 reproducibility awareness, education, and supports, such as ReproHack
 \footnote{\url{https://reprohack.github.io/reprohack-hq/}}, Code Copilot
 \footnote{\url{https://twitter.com/Code_Copilot}}, or Papers with Code
@@ -911,57 +953,11 @@ manuscripts\footnote{\url{https://medium.com/paperswithcode/papers-with-code-par
 \footnote{\url{https://paperswithcode.com/rc2020}}.
 % Papers with Code now also does more disciplines than just ML.
 Likewise, different disciplines and journals provide reproducibility
-checklists, e.g., \cite{rosenberg_next_2020}, which naturally share some
+checklists, e.g.,~\cite{rosenberg_next_2020}, which naturally share some
 aspects while addressing particularities as well as addressing researchers
 from different fields. Regarding the education and guidance for authors, 
 we see CODECHECK's role in referencing and linking educational efforts
-and helpful material, not as a creator and maintainer of content.
-
-The journal \emph{ReScience C} publishes replications
-\footnote{\url{https://rescience.github.io/faq/}};
-they do not accept proprietary software and require open source code;
-they also required a third party to replicate; they also use Zenodo
-to issue DOIs.
-The journal \emph{Cortex} has a special article type 
-\emph{Verification Reports}, which  actually are about replication of results 
-but are very well designed/reasoned \cite{chambers_verification_2020}.
-In a similar vein, the CODECHECK certificates
-could also be published as a special article type within journals.
-
-For research with very high stakes, where reproduction would be too weak and
-post publication replication possibly too late because of policy impact,
-\cite{benjamin-chung_internal_2020} propose \emph{internal replication}.
-A workflow that underwent internal
-replication would very likely be of high quality and relatively easy to codecheck.
-In a similar vein, internal codechecks may be used, with the same limitations such
-as group think \cite{benjamin-chung_internal_2020},
-to ensure reproducibility before submission. The guidelines
-for CODECHECK can be used by fellow/not independent lab members just as well.
-
-Gavis and Donoho \cite{gavish_universal_2011} propose a new discipline and 
-infrastructure for reproducible computational research with its own tools and
-API. Their specific packaging format, provenance record, and cryptographic
-\emph{Verifiable Result Identifier} would indeed provide excellent
-reproduciblity. However, the system is also complex and was not taken up by
-any publisher as far as we know; the system is indeed not open source itself.
-In comparison, CODECHECK is less powerful but also much more flexible and
-less dependent on specific tools or infrastructure. If data and code are 
-deposited properly, i.e., very unlike to disappear, then the certificate's 
-DOI is practically quite close to the cryptographic identifier.
-
-Local reproduction initiatives/services:
-\href{https://ciser.cornell.edu/research/results-reproduction-r-squared-service/}{CISER R-squared}
-(established/permanent),
-\href{https://go.wwu.de/r2s2}{WWU R2S2} (pilot only, focused on reproductions),
-\href{https://github.com/OxfordCodeReviewNet/forum}{Oxford code review network (OxCRN)}
-(community, broader scope), \href{https://isps.yale.edu/research/data/approach}{YARD 
-at Yale} with dedicated staff for replications.
-For these, the CODECHECK scope, tools, and practical experiences may be
-helpful resources.
-
-\emph{SciGen.Report} is a community-run platform to foster communication on
-reproducibility\footnote{\url{https://scigen.report/}}. People can report on
-fully, particially or un-successful reproductions post publication.
+and helpful material, not as a creator and maintainer of such content.
 
 \section*{Limitations}\label{limitations}
 
