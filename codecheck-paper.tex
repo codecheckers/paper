@@ -999,12 +999,12 @@ create reproducibility packages.
 The author-friendly ``low bar'' should not stay low forever, but cultural
 change takes time and the encouragement and guidance that CODECHECK,
 as part of the widely accepted peer review concept, can provide may
-eventually allow to raise the bar as high as possible, e.g., with
+eventually allow to raise the bar as high as possible, e.g.,~with
 executable research compendia \cite{nust_opening_2017}
 or continuous analysis \cite{beaulieu-jones_reproducibility_2017-1}.
 However, considering that missing artefacts and lack of documentation
 have repeatedly been identified as main barriers to reproducibility
-(e.g., \cite{stagge_assessing_2019,nust_improving_2020}),
+(e.g.,~\cite{stagge_assessing_2019,nust_improving_2020}),
 we would not underestimate the power of a simple check.
 
 It should be noted that a codechecker is not taking the same roles as the
@@ -1012,7 +1012,7 @@ It should be noted that a codechecker is not taking the same roles as the
 biomedical domain (cf.~\cite{petrovecki_role_2009,greenwood_how_2015}).
 The statistical reviewer actually evaluates the appropriateness of
 statistical methods \cite{greenwood_how_2015} and can support topical
-reviewers if, e.g., complex methods or sophisticated variants of statistical
+reviewers if, e.g.,~complex methods or sophisticated variants of statistical
 tests are applied \cite{petrovecki_role_2009}.
 The codechecker may go equally deep into the review, if they have, by 
 intention of by chance, the required expertise and the required time, 
@@ -1047,10 +1047,10 @@ to be aware of these though and possibly highlight them.
 
 \textbf{Handling failure}: We have no established process for the case
 that a reproduction fails. This may be the sign of a pre-selection bias
-of the examples, as so far all our codechecks succeeded.
+of the examples, as so far all our CODECHECKs succeeded.
 In case of a journal adopting CODECHECK for all submissions, the open 
 question remains as what to do in this case will have to be answered.
-At the start, we doubt publicly reporting failures (i.e., the code 
+At the start, we doubt publicly reporting failures (i.e.,~the code 
 would not run) will increase overall reproducibility and recommend not
 to share the outcome publicly but to share the latest draft of the 
 certificate with the authors.
@@ -1061,7 +1061,7 @@ Therefore, one must be careful as to the impact of acceptance by authors
 and the concerns of volunteers this approach, or a contrary one, has.
 Private feedback for failures and public acknowledgement/encouragement
 for successes seems to be the way to go.
-% eLife's new model (see https://osf.io/9cftx/) will publish reports evantually, e.g., after preprint has been accepted elsewhere
+% eLife's new model (see https://osf.io/9cftx/) will publish reports evantually, e.g.,~after preprint has been accepted elsewhere
 \cite{Rosenthal2016b} discuss incentives for different actors around the
 implementation of reproducibility. We see CODECHECK as one mean for
 organisations to invest in reproducibility by creating incentives
@@ -1094,7 +1094,7 @@ data can effectively be redacted \cite{oloughlin_data_2015}, and publishers or
 independent entities can provide infrastructure for sharing data and workflows
 confidentially \cite{perignon_certify_2019} or with access to derived results
 but not raw data \cite{shannon_opening_2018},
-i.e., data enclaves \cite{foster_research_2018},
+i.e.,~data enclaves \cite{foster_research_2018},
 or domains of reproducibility \cite{harris_more_2017})
 
 \textbf{Can't someone cheat?} Yes. We don't check it is correct code or
@@ -1152,7 +1152,7 @@ rather rare beyond paraphrased anonymous acknowledgement.
 \textbf{Checking multiple times?} If you check a preprint before peer
 review or a submission to a journal with non-public review, it might
 need checking again as it is modified during peer review.  This is in
-part unavoidable, and as happened to us (e.g., certificate 2020-012
+part unavoidable, and as happened to us (e.g.,~certificate \texttt{2020-012}
 \cite{cert-2020-012} has been revised). This can also be desired, if
 the interaction between author, reviewer, and codechecker lead to
 improvements.  Since checking the manuscript the second time is likely
@@ -1169,15 +1169,15 @@ workflows as detectors for when a piece of software breaks if a
 workflow is set up to use the latest versions of tools.
 
 As a principle, we do not require results to be exactly the same for a
-codecheck to pass, simply that the code runs and generates the output
+CODECHECK to pass, simply that the code runs and generates the output
 files that the author claims. Stochastic simulations mean that often
 we cannot get exactly the same, or even the same versions of libraries
 can generate outputs that differ by operating system
 \cite{Gronenschild2012-pp}.
 
 \begin{itemize}
-\item modelDB principle: minimum of one figure should be reproducibe.
-  Example certificate 2020-016 (I think) which had only a small subset
+\item TODO SJE: modelDB principle: minimum of one figure should be reproducibe.
+  Example certificate \texttt{2020-016} (I think) which had only a small subset
   of the possible figures. Still useful and worth sharing.
 \end{itemize}
 
