@@ -711,60 +711,69 @@ Out of these areas, we would like to briefly highlight three examples here.
   \label{tab:register}
 \end{table}
 
-\subsection*{Annotated certificate}\label{annotated-certificate}
+\subsection*{Annotated certificate and check metadata}\label{annotated-certificate}
 
-At the completion of each CODECHECK, a certificate is written that
-states which outputs, i.e., numbers, figures and tables, from the 
-original article could be reproduced by the codechecker.
+At the completion of each CODECHECK, the codechecker writes a certificate
+stating which outputs, i.e.,~numbers, figures or tables, from the 
+original article, could be reproduced by the codechecker.
 This certificate is made openly
 available so that all readers of the article can see which elements
-have been reproduced.  The certificate also includes links to the code
+have been reproduced and what limitations or issues were faced.
+The certificate also includes links to the code
 and data used by the codechecker, allowing others to build on the
 work.
 The format of the certificates has evolved slightly during the
 project, as we have learnt to automate different aspects of the
-certification.  
+certification, such as inserting figures into certificate documents
+and managing core metadata surrounding a check.
+The metadata is stored in a machine-readable structured file in YAML,
+the CODECHECK configuration file \texttt{codecheck.yml}\footnote{
+See technical specification of the CODECHECK configuration file at
+\url{https://codecheck.org.uk/spec/config/latest/}}.
+The configuration file enables current and future automation of workflows and
+meta-analyses.
 
-To demonstrate the typical contents of a certificate, in
-Figure~\ref{fig:cert} we have annotated the first four out of ten
-pages of the certificate \texttt{2020-012} \cite{cert-2020-012}.
+To demonstrate the typical contents of a certificate the the underlying
+metadata, 
+Figure~\ref{fig:cert} shows the first four out of ten
+pages of the certificate \texttt{2020-012} \cite{cert-2020-012} with
+annotations.
 The referenced article \cite{unwin_report_2020} describes the modelling COVID-19
 across the USA.
-%% TODO - has this been published yet?.  No, not yet... in review...
-Figure~\ref{fig:cert}A shows the certificate number, and its DOI,
-which points to the certificate as archived on Zenodo.
+Figure~\ref{fig:cert}A shows the certificate number and its DOI,
+which points to the certificate and any supplemental files on Zenodo.
 The CODECHECK logo is
-attached to the certificate to denote successful reproduction.
-Figure~\ref{fig:cert}B provides the key metadata about the check --
-which paper was checked, who the authors and the codechecker were,
-and when it was checked. Materials
-relating to the codecheck are freely available via the Repository
-link. This table is generated from machine readable text file, the
-CODECHECK configuration file \texttt{codecheck.yml}.
-The configuration file collects the core pieces of metadata surrounding
-a check and enables current and future automation of workflows and 
-meta-analyses.
-Figure~\ref{fig:cert}C is a textual summary of how the codecheck was
+added for recognition and to denote successful reproduction.
+Figure~\ref{fig:cert}B provides the key metadata as a table generated
+from the \texttt{codecheck.yml} --
+which paper was checked (title, DOI), who the authors and the codechecker 
+were, when it was checked, and in which repository related material is
+accessible.
+Figure~\ref{fig:cert}C is a textual summary of how the CODECHECK was
 performed, and any interesting findings.
 
 Figure~\ref{fig:cert}D (page 2 of the certificate) shows a table that
-lists the outputs that were generated from the codecheck (this is
-termed the MANIFEST).  For each output, there is a comment stating
-which figure/table it should be compared to in the original paper,
-along with the size of the file.  On page 3 of the certificate,
-Figure~\ref{fig:cert}E shows some more detailed notes from the
-codechecker, in this case indicating what steps were needed to
-initialize the environment and run the code.  This particular example
-was quite long, taking about 17 hours to run.  Finally, on page 4 of
+lists the outputs that were generated from the check.
+This table is generated from the manifest of output files in the CODECHECK
+configuration file. The manifest lists output files with a short description.
+The certificate's file table shows the file name, the description stating to
+which figure/table each file should be compared to in the original paper, and
+the size of the file.
+Page 3 of the certificate,
+as Figure~\ref{fig:cert}E shows, provides detailed notes from the
+codechecker. In this particular example, the notes document what steps were 
+needed to initialize the environment and run the code, and that the execution
+took quite long to run -- about 17 hours.  Finally, on page 4 of
 the certificate, we see the first output that was generated by the
-codecheck (Figure~\ref{fig:cert}F).  In this case, the figure matches
+CODECHECK (Figure~\ref{fig:cert}F).  In this case, the figure matches
 figure~4 of \cite{unwin_report_2020}.
-Subsequent pages of the certificate show other outputs (not shown here).
+Subsequent pages of the certificate show other outputs and the computing
+environment in which the certificate itself was created (not shown here).
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figs/annotate-cert-crop.pdf}
-  \caption{Annotated certificate 2020-012 \cite{cert-2020-012} (first four pages only).}
+  \caption{Annotated certificate \texttt{2020-012} \cite{cert-2020-012} (first four pages only).}
   \label{fig:cert}
 \end{figure}
 
