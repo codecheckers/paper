@@ -132,12 +132,13 @@ We call this system CODECHECK as outlined next.
 
 CODECHECK is best demonstrated by way of our example workflow, and later
 we expand on the underlying principles. The workflow involves three
-groups of people: (1) the AUTHOR of a paper providing the code to be checked, (2)
-the PUBLISHER of a journal interested in publishing the paper by the
-AUTHOR and (3) the CODECHECKER who checks that the AUTHOR's code works.
-The workflow that we have refined is documented in Figure~\ref{fig:workflow}.
-
-% TODO: how is a CODECHECK different from a "specialist reviewer" ? Is it because it is not special, but regular?
+groups of people:
+(1) the AUTHOR of a paper providing the code to be checked,
+(2) the PUBLISHER of a journal interested in publishing the paper 
+by the author, and
+(3) the CODECHECKER who checks that the authors's code works.
+The workflow that we have refined is documented in Figure~\ref{fig:workflow}
+and consists of six steps.
 
 \begin{figure}
 % original figure source: https://docs.google.com/drawings/d/1tGOZFNZle-oE1Ynw_tLZFmNcv3wgxD0HPs5bXzDOrng/edit
@@ -160,47 +161,50 @@ The workflow that we have refined is documented in Figure~\ref{fig:workflow}.
   \label{fig:workflow}
 \end{figure}
 
-\textbf{Step 1:} the AUTHOR submit their manuscript along with code and data to
+\textbf{Step 1:} the author submits their manuscript along with code and data to
 the PUBLISHER. The code and data need not be openly available at this point.
 However, in many cases the code and data may be published on a code hosting platform,
 such as GitHub or GitLab. Ideally, the AUTHOR is expecting the CODECHECK and
-prepares for it, e.g., by asking a colleague to briefly attempt a reproduction
-of the submitted workflow.
+prepares for it, e.g.,~by asking a colleague to attempt a reproduction or by 
+following the PUBLISHER's guidelines for sharing computational workflows.
 
 \textbf{Step 2:} the publisher finds a CODECHECKER to check the code. This is
-analogous to the publisher finding one or more reviewers to evaluating
+analogous to the publisher finding one or more reviewers to evaluate
 the paper. However, a crucial difference is that we suggest the CODECHECKER
-and the author can talk freely to each other directly (see next).
+and the author can talk freely to each other directly (see next), independent
+of the openness of the scientific peer review process.
 
 \textbf{Step 3:} the CODECHECKER runs the code, based on instructions provided by
-the author, and checks if some/all of the results from the paper can be
-reproduced. (See later for exact nature of ``reproduced''). If there are
-any problems running the code, the CODECHECKER asks the AUTHOR for help
-to resolve the problems. The burden to provide reproducible material lies with
-the author.
+the author. They check if some or all of the results from the paper can be
+reproduced. If there are
+any problems running the code, the CODECHECKER asks the AUTHOR for help,
+updates, or further documentation.
+The burden to provide reproducible material lies with the author.
 The CODECHECKER then tries to run the code again.
 This process iterates until either the CODECHECKER is successful,
-or the CODECHECKER concludes the code does not work (\emph{TODO NOT
-  YET HANDLED}). As part of this process, the CODECHECKER could work entirely
-locally on their own compute resource, or in the cloud, e.g.~using the open
+or the CODECHECKER concludes the code does not work.
+As part of this process, the CODECHECKER could work entirely
+locally on their own compute resource, or in the cloud, e.g.,~using the open
 MyBinder infrastructure \cite{jupyter_binder_2018} or alternatives, some of which
 are more tailored for scientific publications while others offer commercial
-options to, e.g., publishers (cf. \cite{konkol_publishing_2020}).
-Using such cloud-based 
+options to, e.g.,~publishers (cf. \cite{konkol_publishing_2020}).
+Cloud-based 
 infrastructure allows for the CODECHECKER and author to collaboratively improve
-the code and enforces a much more complete definition of the computing environment,
-but, unless secure infrastructure is provided by, e.g., by the publisher, requires code
-and data to be published openly online.
+the code and enforces a complete definition of the computing environment,
+but, unless secure infrastructure is provided, e.g.,~by the PUBLISHER,
+requires code and data to be published openly online.
+
 Note that the task of the CODECHECKER is to check the ``mechanics'' of the
 workflow, not to evaluate its correctness. 
-Stodden et~al. \cite{stodden_setting_2013} distinguish between verification and
-validation in the context of Mathematics, and in the same vein a CODECHECK
-ensures a verification\footnote{Note this is a different use as the \emph{Verification Reports} article type in the journal \emph{Cortex}
-\cite{chambers_verification_2020}},
-i.e., checking that the code correctly produces the 
-output it claims to create, but not a validation, i.e., does the code implement
-the right algorithm to solve the problem that is researched, 
-of the computational results.
+Stodden et~al. \cite{stodden_setting_2013} distinguish between \emph{verification}
+and \emph{validation}
+in the context of Mathematics. Following their definition, a CODECHECK
+ensures a verification\footnote{Note this is a different use as the
+\emph{Verification Reports} 
+article type in the journal \emph{Cortex} \cite{chambers_verification_2020}},
+of computational results, i.e.,~checking that the code correctly produces the 
+output it claims to create, but not a validation, i.e.,~does the code implement
+the right algorithm to solve the problem that is researched.
 Nevertheless, the simple attempt to reproduce may highlight shortcomings in
 a submission with respect to transparency as it may be required by a journal's
 policy and help to resolve misunderstandings and discrepancies
@@ -210,27 +214,38 @@ policy and help to resolve misunderstandings and discrepancies
 run and includes a copy of outputs (figures, tables) that were
 independently generated. The certificate may include further recommendations to
 the author how to improve the material.
-The plain text in the certificate is the most flexible and feasible way to 
-make clear what was really checked. Readers will have very different 
-understandings of what a ``green'' checkmark (cf. Step~5) means.
+The free text in the certificate is the most flexible and feasible way to 
+make clear what was really checked, because each workflow is unique.
+Since no specific tool or platform should be required so that no authors are
+excluded, automation or fixed checklists are futile.
 
 \textbf{Step 5:} the certificate as well as auxiliary files created
-during the check, e.g., a specification of a computing environment,
-helper scripts, and the code and data, if available under open
-licenses, get deposited in an open archive (currently Zenodo); the
-certificate is given to the PUBLISHER.
+during the check, e.g.,~a specification of a computing environment, data 
+subsets or helper scripts, and the original code and data get deposited in
+an open archive unless restrictions regarding data size, license or 
+sensitivity apply.
+Currently, the CODECHECKERs deposit the material on Zenodo themselves, 
+while processes managed by the PUBLISHER may have them complete this step.
+A badge or other visual aid may be added to the deposit and the paper and
+link to the certificate.
+Despite the simplification into a binary value and the risk of confusion of
+the extent of the check, especially across disciplines and methods,
+a badge can provide recognition value and creditation for the completed
+CODECHECK. The badge and the actual check are incentives for the efforts
+of providing a readily computationally reproducible workflows.
 
-\textbf{Step 6:} the PUBLISHER can then use the certificate as part of their
-supplementary records for a paper or provide it to scientific reviewers; the
-PUBLISHER also gives credit to the CODECHECKER for their work by depositing the
-activity appropriately in scholarly publication databases, such as ORCID.
-The PUBLISHER also ensures proper publication metadata, e.g., links from the 
+\textbf{Step 6:} the PUBLISHER can, depending on the timing, provide the
+certificate to scientific reviewers or handling editors, or publish it
+and link between the certificate, the paper, and any repositories 
+through metadata. Currently, the CODECHECKER creates these on Zenodo\footnote{
+See ``related identifiers'' and ``alternate identifiers'' in the right-hand
+sidebar of certificate \texttt{2020-025} \cite{cert-2020-025}.}.
+The PUBLISHER also gives credit to the CODECHECKER for their work by depositing
+the activity appropriately in scholarly profiles, such as ORCID\footnote{
+See peer review contributions in ORCID records at
+\url{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}.},
+The PUBLISHER also ensures proper publication metadata, e.g.,~links from the 
 certificate repository to the published paper or the original code repository.
-A badge or other visual aid may be applied to highlight the fact of a completed
-CODECHECK and provide a incentive and reward for the, today often considered
-``additional'' efforts of providing readily computationally reproducible workflows,
-despite the simplification into a binary value and the possible confusion of
-the meaning, especially across disciplines and methods.
 
 \subsection*{Variations}\label{variations}
 
