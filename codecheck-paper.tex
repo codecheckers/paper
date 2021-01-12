@@ -782,53 +782,54 @@ environment in which the certificate itself was created (not shown here).
 To run the system, we rely on freely available infrastructure, more 
 specifically GitHub and Zenodo.
 
-The \texttt{codecheckers} GitHub organisation\footnote{
-\url{https://github.com/codecheckers}} contains projects managing the
+The \texttt{codecheckers} \textbf{GitHub} organisation\footnote{
+\url{https://github.com/codecheckers}} contains projects for managing the
 project website, the community of codecheckers, community discussions,
-forks of codechecked code repositories, and the main register for
-managing the collection of checks. Both the website\footnote{
-\url{https://codecheck.org.uk/}} and the register
-\footnote{\url{https://codecheck.org.uk/register}} are hosted as GitHub
-pages. The register is effectively a single table in CSV format that
+forks of checked code repositories, and the main register of 
+CODECHECKs. Both the website\footnote{
+\url{https://codecheck.org.uk/}} and the register\footnote{
+\url{https://codecheck.org.uk/register}} are hosted as GitHub
+pages. The register is a single table in CSV format that
 connects the certificate identifier with the repository associated with
-a specific conducted codecheck. Each of these repositories, which 
+a specific conducted CODECHECK. Each of these repositories, which 
 currently can be hosted on GitHub or Open Science Framework (OSF), 
 contains the CODECHECK metadata file \texttt{codecheck.yml}. The register
-further contains a column for the type of check, e.g., community, journal,
+further contains a column for the type of check, e.g.,~community, journal,
 or conference, and the respective GitHub issue where communications and 
 assignments around a specific check are organised. No information is 
 duplicated between the register and the metadata files. When a new
-certificate is entered into the register, an automated process using 
+certificate is entered into the register, an automated process using the
 continuous integration infrastructure of GitHub, GitHub Actions, retrieves
-the metadata files and builds different representations of the register
-for viewing (HTML) or integration with other services (CSV, JSON).
+all metadata files and builds different representations of the register
+for viewing (HTML) and for integration with other services (CSV, JSON).
 
-Zenodo is an open repository for scientific data and documents. It
+\textbf{Zenodo} is an open repository for scientific data and documents. It
 mints DOIs for deposits and ensures long-term availability of all digital
 artefacts related to the project. These include the community 
-certificates as well as the register, which is regularly archived to 
-Zenodo \cite{codecheck_register} (including all file formats).
+certificates as well as the regularly archived register \cite{codecheck_register}.
 
-A custom R package, \texttt{codecheck}\footnote{
+A \textbf{custom R package}, \texttt{codecheck}\footnote{
 \url{https://github.com/codecheckers/codecheck}}, helps with the authoring
-of certificates, and with the deposition of certificates and reated files to
+of certificates, and with the deposition of certificates and realed files to
 Zenodo using the R package \texttt{zen4R} \cite{zen4r}.
 Codecheckers may choose to not use the package and rely on their own tools
-for creating the certificate. This is a deliberate flexibility to
-accomodate both different skill sets and unforseen technical advances or
+for creating the certificate, even a simple word processor.
+This is a deliberate flexibility to
+accomodate different skill sets and unforseen technical advances or
 challenges.
 
 These tools and resources demonstrate that a CODECHECK process can be
 managed without infrastructure costs on freely available platforms.
-The scripted and automated parts should also ensure that more checks can
+The automation should ensure that more checks can
 be conducted in the future, though the management by a paid CODECHECK
-editor or further automation, e.g., with a bot, could improve turnaround time.
-The remaining costs are the project's domain, which is negligible, and
-the human resources for managing the project and processes, which are
-considerable and currently solely based on, partly grant-based, public funding.
-Naturally, similar set-ups are possible, such as using GitLab/GitLab.com 
-and the GitLab CI instead of GitHub and GitHub Actions, or using a different 
-data repository for depositing certificates and data.
+editor or further automation, e.g.,~with a bot, could improve turnaround time.
+The only costs are the project's domain, which is negligible.
+This leaves the initiative's main resource -- the \textbf{humans}
+for managing the project and processes and the codecheckers.
+All contributions are currently rely on (partly grant-based) public funding
+and volunteering.
+Naturally, similar set-ups are conceivable, such as using GitLab.com or
+a hosted GitLab instance and the GitLab continuous integration.
 
 \section*{Related work}\label{related-work}
 
