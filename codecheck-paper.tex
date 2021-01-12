@@ -27,11 +27,11 @@
 
 \section*{Introduction}\label{introduction}
 
-Many areas of scientific research now use computation to either simulate
+Many areas of scientific research use computations to either simulate
 or analyse their data. These computations are increasingly complex, and
 difficult to explain coherently in a paper \citep{marwick_how_2015}.
 To complement the traditional route of sharing research by writing papers,
-there is a growing trend/demand to share the underlying artefacts, notably 
+there is a growing demand to share the underlying artefacts, notably 
 code and datasets, so that others can inspect, reproduce or expand that work
 (see Figure~\ref{fig:inverse}).
 Some of the earliest proponents were Buckheit and Donoho
@@ -50,7 +50,7 @@ they be examined to test that they do what they claim? For example,
 most scientific journals now require a data sharing statement that
 outlines what data the authors have (or will) share.
 The implementation status of this varies considerably according to the
-journal. At one of the spectrum, there are specialist journals that
+journal. At one end of the spectrum, there are specialist journals that
 have been created to accept ``data papers''
 (e.g.~\href{https://www.nature.com/sdata/}{\emph{Scientific~Data}}, 
 \href{https://essd.copernicus.org/}{\emph{Earth System Science Data}}, 
@@ -70,33 +70,39 @@ it as data disappears over time \cite{Vines2014-hf}.
 Given that there are no clear standards yet for sharing data, what hope
 might there be for sharing computer programs? While both data and software
 together are required to validate outcomes of a computational analysis,
-they do differ in  that data can be seen as static/inert,
-while code requires an environment and interaction. This makes 
-software harder to share.
+they do differ in  that data can be seen as static and inert,
+while code requires an environment to be run in and interacted with.
+This makes software harder to share.
 Our anectodal experiences
 on this matter suggest that often a variety of reasons are given for why
-code cannot be shared, e.g.~``there is no documentation / I do not
-want to maintain it / I do not want to give away my code to my
-competitors''. Our view, rooted in Open Science principles, is that
-wherever possible sharing code is good for the community, as outlined
-in 2010 \cite{Barnes2010-iv}. Having the code freely available, and
-suitably archived, provides a valuable resource for others to learn
-from, even when it doesn't run or if there is no documentation. However,
-with a little effort, we believe that if someone independent can run/execute
-the code, this is worth documenting as early as possible and that the barrier
-to evaluating non-text parts of research can be greatly reduced with a 
+code cannot be shared, e.g.,~``there is no documentation'', ``I cannot 
+maintain it'', or ``I do not want to give away my code to competitors''.
+Our view, rooted in Open~Science principles
+\footnote{\url{https://en.wikipedia.org/wiki/Open_science}}, is that
+wherever possible sharing code is good for the community and the 
+individual \cite{Barnes2010-iv,markowetz_five_2015}.
+Having code and data openly available and archived, 
+provides a valuable resource for others to learn
+from, even when it doesn't run anymore or if there is no documentation.
+However,
+with a little effort, we believe that if someone independent can execute
+an analysis, this is worth documenting as early as possible and that the barrier
+to evaluating non-text materials of research can be greatly reduced with a 
 focused approach.
-Just like peer review can provide a ``baseline reassurance'', i.e., a paper
-has at least been checked by someone with an understanding of the topic
+Just like data journals' validations of data and all journals' peer review
+can provide a ``baseline reassurance'', i.e.,~a paper
+has been checked by someone with an understanding of the topic
 \cite{fyfe_mission_2019}, we think the same baseline should be provided
 regarding the workflow underlying a paper.
-With this in mind, we have developed a set of PRINCIPLES and an example 
-workflow that provides what he hope is a pragmatic way of checking that 
-code works.
+With this in mind, we have developed a set of principles and an example 
+workflow that provides what he hope is a pragmatic way of checking that a
+paper's code works.
 
 The main contribution of this work is a thorough description of a process
 and its variations to integrate a much needed evaluation of the 
-computational reproducibility \cite{barba_terminologies_2018} into peer
+computational reproducibility\footnote{Following the 
+Claerbout/Donoho/Peng terminilogy, see 
+\cite{barba_terminologies_2018}} into peer
 review, and a demonstration of its feasibility by means of 25
 reproductions across different scientific disciplines.
 We call this system CODECHECK as outlined next.
