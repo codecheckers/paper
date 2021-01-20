@@ -13,25 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      # https://github.com/marketplace/actions/latex-compilation
-      - name: LaTeX compilation
-        uses: dante-ev/latex-action@v0.2.0
-        with:
-          # The root LaTeX file to be compiled
-          root_file: codecheck-paper.tex
-          
-          # The working directory for the latex compiler to be invoked
-          #working_directory: # optional
-          # LaTeX engine to be used
-          #compiler: # optional, default is latexmk
-          
-          # Extra arguments to be passed to the latex compiler
-          args: -pdf -xelatex -bibtex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-          # -bm github.com/codecheckers/paper
-          
-          # Install extra packages by apt-get
-          #extra_system_packages: # optional
+      - name: Pull image
+        run: docker pull rocker/verse:4.0.3
       
+      - name: Render with rocker/verse
+        run: |
+           docker run --rm -i -v $(pwd):/paper rocker/verse:4.0.3 R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex")'
+
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
