@@ -2,6 +2,7 @@
 \usepackage{f1000_styles}
 \usepackage[numbers]{natbib}
 \usepackage{hyperref}
+\hypersetup{colorlinks=false, pdfborderstyle={/S/U/W 1}, pdfborder=0 0 1}
 \usepackage{url}
 \usepackage{setspace}
 
@@ -21,18 +22,23 @@
 \onehalfspacing
 
 \begin{document}
-\title{CODECHECK: An open-science initiative for the independent execution of computations underlying research articles}
+%\title{CODECHECK: An open-science initiative for the independent execution of computations underlying research articles}
+\title{CODECHECK: An open-science initiative for the independent execution of computations underlying research articles during peer review improves reproducibility}
 \author[1,$\ast$]{Daniel~N\"{u}st \orcid{0000-0002-0024-5046} \github{nuest} \twitter{nordholmen}}
 \author[2,$\ast$]{Stephen~J~Eglen \orcid{0000-0001-8607-8025} \github{sje30} \twitter{StephenEglen}}
 \affil[1]{Institute for Geoinformatics, University of M\"unster, Germany; \email{daniel.nuest@uni-muenster.de}}
 \affil[2]{Department of Applied Mathematics and Theoretical Physics, University of Cambridge, GB; \email{sje30@cam.ac.uk}}
 \affil[$\ast$]{Contributed equally}
-\affil[$$]{Public project for this article is at \url{https://github.com/codecheckers/paper}}
+\affil[$$]{Public project for this article is at \url{https://github.com/codecheckers/paper}.}
 \maketitle
 \begin{abstract}
-  This is a draft paper that we hope to submit to F1000R (and perhaps
-  as a preprint before) in the coming weeks.
-  \ldots{}
+  The scientific paper falls short of effectively communicating computational research.
+  To break out of the stalemate between multiple lacks of incentives, guidance, benefits, recognitions, and reproducibility, we propose to introduce execution of workflows underlying research articles as part of peer review.
+  The CODECHECK system relies on five principles and can be integrated into review and publications processes in multiple ways, which we describe along multiple dimensions (importance, who, openness, when).
+  We demonstrate CODECHECK with 25 reproductions of diverse scientific publications in collaboration with academic publishers and conferences.
+  These CODECHECKs show that asking for reproducible workflows in a collaborative review can effectively improve executability.
+  CODECHECK relies on free infrastructure and open tools.
+  While it has clear limitations, it can be a building block in the open-science and publishing ecosystems to improve the reproducibility, appreciation, and potentially quality of non-textual research artefacts.
 \end{abstract}
 
 \section*{Introduction}\label{introduction}
