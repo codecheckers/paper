@@ -18,7 +18,7 @@ jobs:
       
       - name: Render with rocker/verse
         run: |
-           make install-fontawsome codecheck-paper-rocker-container
+           make codecheck-paper-rocker-container
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
