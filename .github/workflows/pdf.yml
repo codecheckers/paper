@@ -18,7 +18,7 @@ jobs:
       
       - name: Render with rocker/verse
         run: |
-           docker run -i -v $(pwd):/paper rocker/verse:4.0.3 R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex")'
+           make install-fontawsome codecheck-paper-rocker-container
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2

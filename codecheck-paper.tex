@@ -8,14 +8,24 @@
 \usepackage{booktabs}
 \usepackage{doi} % turn DOIs into links
 
+\usepackage{academicons} % for ORCID icon, via https://tex.stackexchange.com/a/534476/212961
+\definecolor{idcolor}{HTML}{A6CE39}
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\color{idcolor}\aiOrcid}}
+
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+
+\usepackage{fontawesome}
+\newcommand{\github}[1]{\href{https://github.com/#1}{\faGithub}}
+\newcommand{\twitter}[1]{\href{https://twitter.com/#1}{\faTwitter}}
+
 \onehalfspacing
 
 \begin{document}
 \title{CODECHECK: An open-science initiative for the independent execution of computations underlying research articles}
-\author[1,$\ast$]{Daniel N\"{u}st}
-\author[2,$\ast$]{Stephen J Eglen}
-\affil[1]{\url{https://orcid.org/0000-0002-0024-5046}}
-\affil[2]{\url{https://orcid.org/0000-0001-8607-8025}}
+\author[1,$\ast$]{Daniel~N\"{u}st \orcid{0000-0002-0024-5046} \github{nuest} \twitter{nordholmen}}
+\author[2,$\ast$]{Stephen~J~Eglen \orcid{0000-0001-8607-8025} \github{sje30} \twitter{StephenEglen}}
+\affil[1]{Institute for Geoinformatics, University of M\"unster, Germany; \email{daniel.nuest@uni-muenster.de}}
+\affil[2]{Department of Applied Mathematics and Theoretical Physics, University of Cambridge, GB; \email{sje30@cam.ac.uk}}
 \affil[$\ast$]{Contributed equally}
 \affil[$$]{Public project for this article is at \url{https://github.com/codecheckers/paper}}
 \maketitle
