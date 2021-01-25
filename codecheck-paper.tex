@@ -646,6 +646,10 @@ of CODECHECK.
 The idea was to take very well known historical articles from a 
 specific domain, in this case the work area of SJE, possibly 
 as as a conversation starter for potential collaborating journals.
+This intention worked out with the first CODECHECK (certificate number
+\texttt{2020-001}) before publication of an article for the journal
+\emph{GigaScience}, which successfully reproduced the visualisations
+though not the full machine learning process.
 
 The second theme is rather opportunistic. As the COVID-19 pandemic swept
 over the whole Earth, we hoped to contribute a small part to science's answer
@@ -653,7 +657,11 @@ to the unknown virus. The checks were solicited through community interaction
 %Several COVID-19 models have been done during the time of peer review of these papers,
 and under our initiative rather than requested from journal, but some certificates
 have since then been acknowledged in reviewed papers
-\cite{Davies2020-vj,kucharski_effectiveness_2020}.
+\cite{Davies2020-vj,kucharski_effectiveness_2020}. Unlike many claims in
+popular media at the time,
+% reference missing here TODO SJE, you had a note about some Noorden news piece
+we found the results of Report 9, a model of the UK lockdown procedures,
+to be reproducible (certificate number \texttt{2020-10}).
 
 The third theme represents DN's service as Reproducibility
 Reviewer at the AGILE conference series.
@@ -665,22 +673,6 @@ reports'' are published on OSF instead of certificates on Zenodo) the
 AGILE reproducibility reviews adhere to the codecheck principles.
 Furthermore, a small number of checks was completed as part of a peer reviews
 for GIScience journals.
-
-Out of these areas, we would like to briefly highlight three examples here.
-\textbf{TODO SJE: tidy this paragraph.}
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Gigascience -- our first paper.  Only visualisation, not machine
-  learning (which would have taken several days of compute time).
-\item
-  report 9 -- covid model of UK lockdown model -- unlike many claims
-  in the popular media at the time, the model was reproducible
-  [NOORDEN news piece]. 
-\item
-  Manuel's certificate -- approached us as he requested a certificate
-  as paper was entering peer review.
-\end{enumerate}
 
 \begin{table}
   \footnotesize
@@ -847,8 +839,8 @@ a hosted GitLab instance and the GitLab continuous integration.
 
 The journal \emph{ACM Transactions on Mathematical Software (TOMS)} 
 established a "Replicated Computational Results" (RCR) review process
-\cite{heroux_editorial_2015} (using "replicable" with the same meaning 
-as CODECHECK uses "reproducible").
+\cite{heroux_editorial_2015}, using "replicable" with the meaning 
+as this work calls "reproducible".
 A search on Crossref\footnote{\url{https://search.crossref.org/?q=\%22Replicated+Computations+Results+\%28RCR\%29+Report\%22&from_ui=yes&page=2}; search executed
 on 2020-12-10.} shows 15 RCR Reports to be published and the 
 % Number of found TOMAS RCR reports:
@@ -858,7 +850,6 @@ on 2020-12-10.} shows 15 RCR Reports to be published and the
 workflow to be 
 extended to the ACM journal \emph{Transactions on Modeling and Computer 
 Simulation (TOMACS)}\footnote{\url{https://dl.acm.org/journal/tomacs/author-guidelines}}.
-
 The CODECHECK principles were independently developed as we only later 
 learned about TOMS RCR, which we judge as fulfilling CODECHECK principles
 1 to 4.
@@ -1028,6 +1019,9 @@ However, considering that missing artefacts and lack of documentation
 have repeatedly been identified as main barriers to reproducibility
 (e.g.,~\cite{stagge_assessing_2019,nust_improving_2020}),
 we would not underestimate the power of a simple check.
+ModelDB curation policies ensure manually to reproduce one figure only 
+\cite{mcdougal_reproducibility_2016}, but that has not limited the usefulness
+nor success of the platform.
 
 It should be noted that a codechecker is not taking the same roles as the
 \emph{statistical reviewer}, as it is practices by some journals in the 
@@ -1196,12 +1190,6 @@ files that the author claims. Stochastic simulations mean that often
 we cannot get exactly the same, or even the same versions of libraries
 can generate outputs that differ by operating system
 \cite{Gronenschild2012-pp}.
-
-\begin{itemize}
-\item TODO SJE: modelDB principle: minimum of one figure should be reproducibe.
-  Example certificate \texttt{2020-016} (I think) which had only a small subset
-  of the possible figures. Still useful and worth sharing.
-\end{itemize}
 
 \textbf{Not revolutionary enough?}
 CODECHECK's approach is to acknowledge the shortcomings around 
