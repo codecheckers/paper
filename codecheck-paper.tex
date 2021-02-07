@@ -399,8 +399,8 @@ a codechecker could be similarly listed.
 
 The codechecker
 community\footnote{\href{https://github.com/codecheckers/codecheckers/}{https://github.com/codecheckers/codecheckers/}}
-currently has over 20 individuals who volunteered in the last 12
-years.  These volunteer's motivations, mentioned in the registration
+has over 20 volunteers who signed up in the last year.  Their
+motivations, mentioned in the registration
 information\footnote{\url{https://github.com/codecheckers/codecheckers/labels/registration}},
 include: supporting reproducible research and Open Science, improve
 coding skills, gaining experience in helping scientists with their
@@ -414,88 +414,86 @@ for independent no-cost Open Access journals.
 
 \section*{Core principles}\label{core-principles}
 
-The example workflow and variations outlined above reflect our current
-views on how a workflow execution and code checking should be performed as part of peer review.
-They are not set in stone, but we do believe the following core principles underpin our CODECHECK process:
+The workflow and variations outlined describe our current
+views on how code could be checked.  They are not immutable, but
+we believe the following core principles underpin our CODECHECK
+process:
 
 \textbf{1. Codecheckers record but don't investigate or fix.} \\
-The codechecker follows the instructions provided by the author in running
-the code. If any steps are unclear, or if code does not run correctly,
-the codechecker records this fact and then communicates this
-information to the author. We believe that the job of the codechecker is
-not to fix all these problems but simply to report them and await a
-fix from the author.
-The level of documentation that is needed for third parties
-to reproduce a workflow is extremely hard to get right, and too often this 
-uncertainty leads researchers to give up and not document it at all.
-The conversation with a codechecker fixes this problem.
+The codechecker follows the author's instructions to run the code. If
+instructions are unclear, or if code does not run, the codechecker
+tells the author. We believe that the job of the codechecker is not to
+fix all these problems but simply to report them and await a fix from
+the author.  The level of documentation that is needed for third
+parties to reproduce a workflow is hard to get right, and
+too often this uncertainty leads researchers to give up and not
+document it at all.  The conversation with a codechecker fixes this
+problem.
 
 \textbf{2. Communication between humans is key.} \\ 
 Some code may
 work without any interaction (e.g., CODECHECK certificate \texttt{2020-013}
 \cite{cert-2020-013}) but more often there are hidden
-dependencies that need to be found or software installations that need to be adjusted for a particular system.
+dependencies or installations that need adjusting for a particular system.
 Allowing the (human) codechecker to communicate
 directly and openly with each other should make this process as
 constructive as possible. We feel that routing this conversation
-(possibly anonymously) through a publisher would slow things down and
-reduce the chances for community building as well as obscure some of the lessons
-learned for both authors and codecheckers.
+(possibly anonymously) through a publisher would introduce delays and
+reduce the chances for community building.
 
-\textbf{3. Credit is given to codecheckers.} \\ 
-The value of performing a
-CODECHECK is comparable to that of a scientific peer review, and
-it may also require a similar amount of time. Therefore,
-the codechecker's activity should be publicly recorded and mentioned in the
-published paper.
-The public record can be realised by publishing the certificate in a 
-citable form (i.e.,~with a DOI, as conducted in the community CODECHECK
-process), by listing codecheckers on the journal's website or, ideally, by
-publishing the checks alongside peer review activities in public databases.
+\textbf{3. Credit is given to codecheckers.} \\
+The value of performing a CODECHECK is comparable to that of a peer
+review, and it may also require a similar amount of time. Therefore,
+the codechecker's activity should be recorded, ideally in the
+published paper.  The public record can be realised by publishing the
+certificate in a citable form (i.e.,~with a DOI, as conducted in the
+community CODECHECK process), by listing codecheckers on the journal's
+website or, ideally, by publishing the checks alongside peer review
+activities in public databases.
 
-\textbf{4. Workflows must be auditable.} \\ 
-This requires that the codechecker 
-has at least enough material to validate the workflow outputs submitted by 
-the authors. Stark~\cite{stark_before_2018} calls this ``preproducibility''
-and the ICERM report \cite{stodden_setting_2013} defines the level
-``Auditable Research'' similarly.
-Every community may establish their own good practices or adapt generic
-concepts and practical tools, such as publishing all building blocks
-of science in a research compendium
-\footnote{\url{https://research-compendium.science/}}.
-A completed check means that code could be executed at least once without
-critical errors or
-warnings using the provided instructions, and, therefore, all code and data 
-was given and could be investigated more deeply or extended in the future.
-Ideally, this is a ``one~click'' step, but achieving this requires particular 
-skills and a sufficient level of documentation for 
-third parties. Furthermore, automation may lead to people gaming the system
+\textbf{4. Workflows must be auditable.} \\
+The codechecker should have sufficient material to validate the
+workflow outputs submitted by the
+authors. Stark~\cite{stark_before_2018} calls this
+``preproducibility'' and the ICERM report \cite{stodden_setting_2013}
+defines the level ``Auditable Research'' similarly.  Every community
+may establish their own good practices or adapt generic concepts and
+practical tools, such as publishing all building blocks of science in
+a research compendium
+\footnote{\url{https://research-compendium.science/}}.  A completed
+check means that code could be executed at least once using the
+provided instructions, and, therefore, all code and data was given and
+could be investigated more deeply or extended in the future.  Ideally,
+this is a ``one~click'' step, but achieving this requires particular
+skills and a sufficient level of documentation for third
+parties. Furthermore, automation may lead to people gaming the system
 or reliance on technology, which can often hide important details.
-All such aspects can reduce the understandability of the material, so we estimate our approach to codechecking, done without automation and with open human communication, to be the best way to ensure long-term transparency and usefulness.
-We acknowledge that others have argued in favour of bitwise reproducibility
-because, in the long run, it can be automated\footnote{Konrad Hinsen on 
-Twitter: \url{https://twitter.com/khinsen/status/1242842759733665799}},
-but until then we need CODECHECK's approach.
+All such aspects can reduce the understandability of the material, so
+we estimate our approach to codechecking, done without automation and
+with open human communication, to be a simple way to ensure long-term
+transparency and usefulness.  We acknowledge that others have argued
+in favour of bitwise reproducibility because, in the long run, it can
+be automated\footnote{Konrad Hinsen on Twitter:
+  \url{https://twitter.com/khinsen/status/1242842759733665799}}, but
+until then we need CODECHECK's approach.
 
-\textbf{5. Open by default and transitional by disposition.} \\ 
-By default, unless there are strong
-reasons to the contrary (e.g.,~sensitive data on human subjects), all code and
-data, both from author and codechecker, will be made freely available, 
-i.e.,~under open licenses, before or when the certificate is published.
-Note that openness is not required for the paper itself, as to accommodate 
-journals in their transition to sustainable Open Access models.
-The code and data publication should follow community good practices.
-By disposition, a CODECHECK workflow should be designed (a) with a recognition of
-shortcomings in asserting reproducibility of submissions and (b)
-with an understanding of the
-complex situation that led to this. However, establishing a CODECHECK workflow
-should go hand in hand with initiatives aiming to improve education
-around reproducibility of methods and communication surrounding comprehensive 
-computational workflows.
-The long term goal is for a specific community or
-journal's target audience to reach a state where the level of verification 
-ensured by codecheckers becomes part of peer review and a regular
-merit of all accepted papers.
+\textbf{5. Open by default and transitional by disposition.} \\
+By default, unless there are strong reasons to the contrary
+(e.g.,~sensitive data on human subjects), all code and data, both from
+author and codechecker, will be made freely available before or when
+the certificate is published.  Openness is not required for the paper
+itself, to accommodate journals in their transition to sustainable
+Open Access models.  The code and data publication should follow
+community good practices.  Ultimately we may find that CODECHECKS are
+subsumed within peer review.
+%% By disposition, a CODECHECK workflow should
+%% be designed (a) recognising shortcomings in asserting reproducibility
+%% of submissions and (b) with an understanding of the complex situation
+%% that led to this. However, establishing a CODECHECK workflow should
+%% mirror initiatives to improve education around reproducibility of
+%% methods.  The long term goal is for a specific community to reach a
+%% state where the level of verification ensured by codecheckers becomes
+%% part of peer review and a regular merit of all accepted papers.
 
 \section*{Implementation}\label{implementation}
 
@@ -1206,3 +1204,7 @@ DN and SJE contributed equally to all aspects of this project.
 \end{document} 
 
 % LocalWords:  CODECHECK CODECHECKER Zenodo ORCID ECRs codecheck codechecker
+
+% Local Variables:
+% TeX-engine: xetex
+% End:
