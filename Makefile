@@ -1,9 +1,13 @@
 
 codecheck-paper.pdf: codecheck-paper.tex bibliography.bib
-	pdflatex -synctex=1 -interaction nonstopmode $<
+	latexmk -xelatex codecheck-paper.tex
+
+
+codecheck-paper1.pdf: codecheck-paper.tex bibliography.bib
+	xelatex -synctex=1 -interaction nonstopmode $<
 	bibtex codecheck-paper
-	pdflatex -synctex=1 -interaction nonstopmode $<
-	pdflatex -synctex=1 -interaction nonstopmode $<
+	xelatex -synctex=1 -interaction nonstopmode $<
+	xelatex -synctex=1 -interaction nonstopmode $<
 
 codecheck-paper-rocker-container: codecheck-paper.tex bibliography.bib
 	docker build --tag codecheckpaper .
