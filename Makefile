@@ -11,7 +11,7 @@ codecheck-paper1.pdf: codecheck-paper.tex bibliography.bib
 
 codecheck-paper-rocker-container: codecheck-paper.tex bibliography.bib
 	docker build --tag codecheckpaper .
-	docker run --rm -i -v $(shell pwd):/paper codecheckpaper R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex")'
+	docker run --rm -i -v $(shell pwd):/paper codecheckpaper R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex", engine="xelatex")'
 
 ##codecheck-paper.pdf: codecheck-paper.Rmd bibliography.bib
 ##	Rscript -e 'rmarkdown::render("$<")'
