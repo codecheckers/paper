@@ -634,57 +634,52 @@ itself was created (not shown here).
 
 \subsection*{Tools and resources}\label{tools}
 
-To run the system, we rely on freely available infrastructure, more 
-specifically GitHub and Zenodo.
-The \texttt{codecheckers} \textbf{GitHub} organisation\footnote{
-\url{https://github.com/codecheckers}} contains projects for managing the
-project website, the community of codecheckers, community discussions,
-forks of checked code repositories, and the main register of 
+We use freely available infrastructure, GitHub and Zenodo, to run our
+system.  The \texttt{codecheckers} \textbf{GitHub}
+organisation\footnote{ \url{https://github.com/codecheckers}} contains
+projects for managing the project website, the codecheckers community
+and its discussions, code repositories, and the main register of
 CODECHECKs. Both the website\footnote{
-\url{https://codecheck.org.uk/}} and the register\footnote{
-\url{https://codecheck.org.uk/register}} are hosted as GitHub
-pages. The register is a single table in CSV format that
-connects the certificate identifier with the repository associated with
-a specific conducted CODECHECK. Each of these repositories, which 
-currently can be hosted on GitHub or Open Science Framework (OSF), 
-contains the CODECHECK metadata file \texttt{codecheck.yml}. The register
-further contains a column for the type of check, e.g.,~community, journal,
-or conference, and the respective GitHub issue where communications and 
-assignments around a specific check are organised. No information is 
-duplicated between the register and the metadata files. When a new
-certificate is entered into the register, an automated process using the
-continuous integration infrastructure of GitHub, GitHub Actions, retrieves
-all metadata files and builds different representations of the register
-for viewing (HTML) and for integration with other services (CSV, JSON).
-\textbf{Zenodo} is an open repository for scientific data and documents. It
-mints DOIs for deposits and ensures long-term availability of all digital
-artefacts related to the project. The CODECHECK community on Zenodo
-\footnote{\url{https://zenodo.org/communities/codecheck/}} includes 
+  \url{https://codecheck.org.uk/}} and the register\footnote{
+  \url{https://codecheck.org.uk/register}} are hosted as GitHub
+pages. The register is a single table in CSV format that connects the
+certificate identifier with the repository associated with a specific
+conducted CODECHECK. Each of these repositories, which currently can
+be hosted on GitHub or Open Science Framework (OSF), contains the
+CODECHECK metadata file \texttt{codecheck.yml}. The register further
+contains a column for the type of check, e.g.,~community, journal, or
+conference, and the respective GitHub issue where communications and
+assignments around a specific check are organised. No information is
+duplicated between the register and the metadata files. The continuous
+integration infrastructure of GitHub, GitHub Actions, is used to
+automate the register for viewing (HTML) and for integration with
+other services (CSV, JSON).  \textbf{Zenodo} is our preferred open repository for
+storing certificates. It mints DOIs for deposits and ensures
+long-term availability of all digital artefacts related to the
+project. The CODECHECK community on Zenodo
+\footnote{\url{https://zenodo.org/communities/codecheck/}} includes
 certificates as well as the regularly archived register
 \cite{codecheck_register_jan2021}.
 
 A \textbf{custom R package}, \texttt{codecheck}\footnote{
-\url{https://github.com/codecheckers/codecheck}}, is used to automate repetitive
-tasks around the authoring of certificates and the management of the register.
-For example, it includes scripts for the deposition of certificates and related 
-files to Zenodo using the R package \texttt{zen4R} \cite{zen4r} and for the
-register update process outlined above.
-Codecheckers may choose to not use the package and rely on their own tools
-for creating the certificate, even a regular word processor.
-This flexibility is deliberate to accomodate different skill sets and unforseen technical advances or challenges.
+  \url{https://github.com/codecheckers/codecheck}}, automates
+repetitive tasks around authoring certificates and managing the
+register.  It includes scripts to deposit certificates and related
+files to Zenodo using the R package \texttt{zen4R} \cite{zen4r} and
+for the register update process outlined above.  Codecheckers can
+ignore this package, and use their own tools for creating
+and depositing the certificate.  This flexibility  accommodates
+different skill sets and unforseen technical advances or challenges.
 
 These tools and resources demonstrate that a CODECHECK process can be
 managed without infrastructure costs on freely available platforms.
-The automation should ensure that more checks can
-be conducted in the future, though having the process be managed by a paid CODECHECK
-editor or further automation, e.g.,~with a bot, could improve turnaround time.
-The only costs are the project's domain, which is negligible.
-This means that the initiative's main resource are the \textbf{humans} needed
-for managing the project and processes and the codecheckers.
-All contributions currently rely on (partly grant-based) public funding
-and volunteering.
-Naturally, similar set-ups are conceivable, such as using GitLab.com or
-a hosted GitLab instance and the GitLab continuous integration.
+The automation should ensure that more checks can be conducted in the
+future, though having the process be managed by a paid CODECHECK
+editor or further automation, e.g.,~with a bot, to reduce turnaround
+time. Our main resource requirements are the \textbf{humans} needed for managing
+the project and processes and the codecheckers.  All contributions
+currently rely on (partly grant-based) public funding and
+volunteering.
 
 \section*{Related work}\label{related-work}
 
