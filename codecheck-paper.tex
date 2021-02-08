@@ -501,40 +501,42 @@ subsumed within peer review.
 
 We have a curated list of 25 certificates available at
 \url{https://codecheck.org.uk/register}.
-Table~\ref{tab:register} lists the certificates completed to date
+Table~\ref{tab:register} lists the certificates
 along with citations to the original papers.
 These CODECHECKs fall into three themes:
 (1) classic and current papers from computational neuroscience,
 (2) COVID-19 modelling preprints, and
 (3) GIScience.
 
-The first theme was the initial set of papers used to explore the concept
-of CODECHECK. 
-The idea was to take very well known historical articles from a 
-specific domain, in this case the work area of SJE, possibly 
-as as a conversation starter for potential collaborating journals.
-This intention was brought to the first CODECHECK (certificate number
-\texttt{2020-001}) performed before publication on an article for the journal
-\emph{GigaScience}, which successfully reproduced the visualisations,
-though not the full machine learning process.
+The first theme was the initial set of papers used to explore the
+concept of CODECHECK.  The idea was to take very well known historical
+articles from a domains of interest to one of the co-authors (SJE).
+Our first CODECHECK (certificate number \texttt{2020-001}) was
+performed before publication on an article for the journal
+\emph{GigaScience}, which visusalized the outputs from a family of
+supervised classification algorithms.
 
-The second theme is rather opportunistic. As the COVID-19 pandemic swept
-over the globe, we hoped to contribute a small part to science's answer
-to the unknown virus. The checks were solicited through community interaction
-%Several COVID-19 models have been done during the time of peer review of these papers,
-or by our initiative rather than requested from journals, but some certificates
-have since then been acknowledged in reviewed papers
-\cite{Davies2020-vj,kucharski_effectiveness_2020}. Unlike many claims in
-popular media at the time,
-% reference missing here TODO SJE, you had a note about some Noorden news piece
-we found the results of Report 9, a model of the UK lockdown procedures,
-to be reproducible (certificate number \texttt{2020-10}).
 
-The third theme represents DN's service as a Reproducibility Reviewer at the AGILE conference series, where the \emph{Reproducible AGILE} Initiative \cite{reproducible_agile} established a process for reproducing workflows at the AGILE conference series independent of CODECHECK \cite{nust_improving_2020}.
-While using slightly different terms and infrastructure (``reproducibility
-reports'' are published on the Open Science Framework (OSF) instead of certificates on Zenodo) the 
-AGILE reproducibility reviews adhere to the CODECHECK principles.
-Furthermore, a small number of checks were completed as part of peer reviews
+The second theme was a response to the COVID-19 pandemic, choosing
+modelling papers to predict outcomes. The checks were solicited
+through community interaction or by our initiative rather than
+requested from journals.  Some certificates were since acknowledged in
+the accepted papers
+\cite{Davies2020-vj,kucharski_effectiveness_2020}. In particular, we
+codechecked the well-known Imperial college model of UK lockdown
+procedures from March 2020(certificate \texttt{2020-10}).  Contrary to
+opinion in the mainstream media, the model results were reproducible
+(CITE NOORDEN).
+
+The third theme represents co-author DN's service as a Reproducibility
+Reviewer at the AGILE conference series, where the \emph{Reproducible
+  AGILE} Initiative \cite{reproducible_agile} independently
+established a process for reproducing workflows at the AGILE
+conference series \cite{nust_improving_2020}.  While using slightly
+different terms and infrastructure (``reproducibility reports'' are
+published on the Open Science Framework (OSF) instead of certificates
+on Zenodo) AGILE reproducibility reviews adhere to CODECHECK
+principles.  A few checks were also completed as part of peer reviews
 for GIScience journals.
 
 \begin{table}
@@ -580,57 +582,48 @@ for GIScience journals.
 
 \subsection*{Annotated certificate and check metadata}\label{annotated-certificate}
 
-At the completion of each CODECHECK, the codechecker writes a certificate stating which outputs from the original article, i.e.,~numbers, figures or tables, could be reproduced.
-This certificate is made openly
-available so that all readers of the article can see which elements
-were reproduced and what limitations or issues were faced.
-The certificate also includes links to the code
-and data used by the codechecker, allowing others to build on the
-work.
-The format of the certificates has evolved slightly during the
-project, as we have learnt to automate different aspects of the
-certification, such as inserting figures into certificate documents
-and managing core metadata surrounding a check.
-The metadata is stored in a machine-readable structured file in YAML,
-the CODECHECK configuration file \texttt{codecheck.yml}\footnote{
-See technical specification of the CODECHECK configuration file at
-\url{https://codecheck.org.uk/spec/config/latest/}.}.
-The configuration file enables current and future automation of workflows and
-meta-analyses.
+At the end of each CODECHECK, the codechecker writes a certificate
+stating which outputs from the original article, i.e.,~numbers,
+figures or tables, could be reproduced.  This certificate is made
+openly available so that all readers of the article can see which
+elements were reproduced and what limitations or issues were found.
+The certificate links to code and data used by the codechecker,
+allowing others to build on the work.  The format of the certificates
+evolved during the project, as we have learnt to automate different
+aspects of the certification, such as inserting figures into
+certificate documents and managing metadata of a check.  The metadata
+is stored in a machine-readable structured file in YAML, the CODECHECK
+configuration file \texttt{codecheck.yml}\footnote{ See technical
+  specification of the CODECHECK configuration file at
+  \url{https://codecheck.org.uk/spec/config/latest/}.}.  The
+configuration file enables current and future automation of workflows
+and meta-analyses.
 
-To demonstrate the typical contents of a certificate and the underlying
-metadata, 
-Figure~\ref{fig:cert} shows the first four out of ten
-pages of the certificate \texttt{2020-012} \cite{cert-2020-012} with
-annotations.
-The referenced article \cite{unwin_report_2020} describes the modelling of COVID-19 across the USA.
-Figure~\ref{fig:cert}A shows the certificate number and its DOI,
-which points to the certificate and any supplemental files on Zenodo.
-The CODECHECK logo is
-added for recognition and to denote successful reproduction.
-Figure~\ref{fig:cert}B provides the key metadata as a table generated
-from the \texttt{codecheck.yml}; in particular it names the paper that
-was checked (title, DOI), the authors, the codechecker, when the check was performed,
-and in which repository related material is
-accessible.
-Figure~\ref{fig:cert}C shows a textual summary of how the CODECHECK was
-performed and any interesting findings.
-Figure~\ref{fig:cert}D (page 2 of the certificate) shows a table that
-lists the outputs that were generated from the check based on the 
-manifest of output files in the CODECHECK.
-The certificate's file table shows the file name, the description stating to
-which figure/table each file should be compared in the original paper, and
-the size of the file.
-Page 3 of the certificate,
-as Figure~\ref{fig:cert}E shows, provides detailed notes from the
-codechecker. In this particular example, the notes document what steps were 
-needed to initialize the environment and run the code and that the execution
-took quite long to run -- about 17~hours. Finally, on page 4 of
-the certificate, we see the first output that was generated by the
-CODECHECK (Figure~\ref{fig:cert}F). In this case, the figure matches
-figure~4 of \cite{unwin_report_2020}.
-Subsequent pages of the certificate show other outputs and the computing
-environment in which the certificate itself was created (not shown here).
+Figure~\ref{fig:cert} shows pages 1--4 (of 10) of a typical
+certificate \texttt{2020-012} \cite{cert-2020-012}.  The referenced
+article \cite{unwin_report_2020} described models of COVID-19 across
+the USA.  Figure~\ref{fig:cert}A shows the certificate number and its
+DOI, which points to the certificate and any supplemental files on
+Zenodo.  The CODECHECK logo is added for recognition and to denote
+successful reproduction.  Figure~\ref{fig:cert}B provides the key
+metadata as a table generated from \texttt{codecheck.yml}; it names
+the paper that was checked (title, DOI), the authors, the codechecker,
+when the check was performed, and in which repository related material
+is accessible.  Figure~\ref{fig:cert}C shows a textual summary of how
+the CODECHECK was performed and any interesting findings.
+Figure~\ref{fig:cert}D (page 2 of the certificate) shows the outputs
+that were generated based on the MANIFEST of output files in the
+CODECHECK.  It shows the file name (Output), the description stating
+to which figure/table each file should be compared in the original
+paper (Comment), and the file size.  Page 3 of the certificate,
+(Figure~\ref{fig:cert}E) gives detailed notes from the codechecker,
+here documenting what steps were needed to run the code and that the
+code took about 17~hours to complete. Finally, page 4 of the
+certificate shows the first output generated by the CODECHECK
+(Figure~\ref{fig:cert}F). In this case, the figure matched figure~4 of
+\cite{unwin_report_2020}.  The remaining pages of the certificate show
+other outputs and the computing environment in which the certificate
+itself was created (not shown here).
 
 \begin{figure}
   \centering
