@@ -792,9 +792,8 @@ community-run independent platform to foster communication on
 reproducibility.  People can report on fully, partiially, or
 un-successful reproductions of articles after publication.
 
-No approach besides CODECHECK spans across journals and is
-intentionally designed to be adopted across journals or events and to
-build a community of codecheckers. CODECHECK shares its
+CODECHECK is uniquely designed to be adopted across journals or events
+and to build a community of codecheckers. CODECHECK shares its
 interdisciplinary nature with other community initiatives concerned
 with reproducibility awareness, education, and support, such as
 ReproHack\footnote{\url{https://reprohack.github.io/reprohack-hq/}},
@@ -819,26 +818,23 @@ maintaining such content.
 \section*{Limitations}\label{limitations}
 
 \textbf{Isn't CODECHECK what peer review should be doing already?} \\
-On the surface, yes.
-However, the general observation is that the
-increasing number of researchers, submissions, and reviews to conduct
-under the pressure to publish puts the scholarly publication system
-under significant strain.
-Miyakawa described how when he as an editor simply requested raw data from authors, this led to almost all of those papers in which data was requested to be withdrawn or rejected \cite{miyakawa_no_2020}.
-Such basic checks to show that
-sufficient data supports the results requires much effort from editors,
-yet they only rely on the availability of data files and the content of the
-paper.
-These availability checks can be enhanced by having more complex CODECHECKs request the code and then execute it, because code is not inert but needs to be run in a specific environment.
-This might fall within idealistic expectations of peer review,
-but is far from common in reality.
-Establishing a CODECHECK
-process is largely an acknowledgement that peer reviewing practices
-have been unable to adapt to the challenges of digitisation of data-based science.
-The concept of a CODECHECK,
-just as the concepts of reproducible research and Open Science,
-may be transitional by nature. If the activities described here as
-being part of a CODECHECK become the norm for scientific reviews and
+On the surface, yes, but peer reviewers are overburdened enough and
+asking them to do more work usring peer review is not likely to
+suceed.  Miyakawa described how when he as an editor simply requested
+raw data from authors during submission, this led to almost all of
+those papers in which data was requested to be withdrawn or rejected
+after peer review \cite{miyakawa_no_2020}.  Such basic checks to show
+that sufficient data supports the results requires effort from
+editors, yet they only rely on the availability of data files and the
+content of the paper.  These availability checks can be enhanced by
+having more complex CODECHECKs request the code and then execute it.
+This might fall within idealistic expectations of peer review, but is
+rare.  Establishing a CODECHECK process is largely an acknowledgement
+that peer reviewing practices have been unable to adapt to the
+challenges of computational papers.  The concept of a CODECHECK, just
+as the concepts of reproducible research and Open Science, may be
+transitional by nature. If the activities described here as being part
+of a CODECHECK become the norm for scientific reviews and
 publications, then the initiative will have succeeded. However, the
 rapidly changing technology used in research leads us to believe that
 a separate role of codechecker and the expertise it brings will be
@@ -846,333 +842,340 @@ beneficial in the long term.
 
 \newpage
 
-\textbf{Should CODECHECK requirements not be more demanding?} \\
-CODECHECK by design does not require authors to provide (and sustain) an
-eternally functional workflow and neither suggests a specific software stack
-or practical approach even if such suggestions, e.g.,~research compendia or ``repro-packs''\footnote{See \url{https://research-compendium.science/} respectively \cite{barba_praxis_2018}.}, are very valuable.
-Creating something that anyone can reproduce has been called a 
-fool's errand\footnote{\url{https://twitter.com/DougBlank/status/1135904909663068165?s=09}}
-and we tend to agree.
-However, the package of data, code, and documentation
-collaboratively created by authors and codecheckers is a snapshot of a 
-working analysis that greatly increases the likelihood of a successful 
-reproduction and the possibility that a workflow can be extended by third parties in the future, as long as they have access
-to suitable resources and matching skill set.
-Concrete implementations of CODECHECK workflows, especially for specific
-disciplines, may reify much more helpful guidelines for authors on how to
-create reproducibility packages.
-The author-friendly ``low bar'' should not stay low forever, but cultural
-change takes time and the encouragement and guidance that CODECHECK,
-as part of the widely accepted peer review concept, can provide may
-eventually allow the bar to be raised as high as possible, e.g.,~with
-executable research compendia \cite{nust_opening_2017}, ``Whole Tales'' \cite{brinckman_computing_2018},
-or continuous analysis \cite{beaulieu-jones_reproducibility_2017-1}.
-However, considering that missing artefacts and lack of documentation
-have repeatedly been identified as key barriers to reproducibility
-(e.g.,~\cite{stagge_assessing_2019,nust_improving_2020}),
-we would not underestimate the power of a simple check.
-For example, ModelDB curation policies ensure that only one figure is manually reproduced \cite{mcdougal_reproducibility_2016}, but that has not limited the usefulness nor success of the platform.
+\textbf{Should CODECHECK requirements be more demanding?} \\
+CODECHECK by design does not require authors to provide (and sustain)
+an eternally functional workflow nor suggests a specific software
+stack or practical approach even if such suggestions, e.g.,~research
+compendia or ``repro-packs''\footnote{See
+  \url{https://research-compendium.science/} respectively
+  \cite{barba_praxis_2018}.}, are valuable.  Creating something
+that anyone can reproduce has been called a fool's
+errand\footnote{\url{https://twitter.com/DougBlank/status/1135904909663068165?s=09}}
+and we tend to agree.  However, the package of data, code, and
+documentation collaboratively created by authors and codecheckers is a
+snapshot of a working analysis that greatly increases the likelihood
+of a successful reproduction and the possibility that a workflow can
+be extended by third parties in the future, as long as they have
+access to suitable resources and matching skill set.  Concrete
+implementations of CODECHECK workflows, especially for specific
+disciplines, may reify much more helpful guidelines for authors on how
+to create reproducibility packages.  Our author-friendly ``low bar''
+should not stay low forever, but cultural change takes time and the
+encouragement and guidance that CODECHECK, as part of the widely
+accepted peer review concept, can provide may eventually allow the bar
+to be raised much higher, e.g.,~with executable research
+compendia \cite{nust_opening_2017}, ``Whole Tales''
+\cite{brinckman_computing_2018}, or continuous analysis
+\cite{beaulieu-jones_reproducibility_2017-1}.  However, considering
+that missing artefacts and lack of documentation have repeatedly been
+identified as key barriers to reproducibility
+(e.g.,~\cite{stagge_assessing_2019,nust_improving_2020}), we would not
+underestimate the power of a simple check.  For example, ModelDB
+curation policies require that only one figure need be manually reproduced
+\cite{mcdougal_reproducibility_2016}, but that has not limited the
+usefulness nor success of the platform.
 
-It should be noted that a codechecker does not fulfil the same role as a
-\emph{statistical reviewer}, as it is applied by some journals in the 
-biomedical domain (cf.~\cite{petrovecki_role_2009,greenwood_how_2015}).
-The statistical reviewer actually evaluates the appropriateness of
-statistical methods \cite{greenwood_how_2015} and can support topical
-reviewers if, e.g.,~complex methods or sophisticated variants of statistical
-tests are applied \cite{petrovecki_role_2009}.
-The codechecker may go equally deep into the review, if they have
-the required expertise and the required time, 
-but they are by no means expected to be able to provide
-such a level of scrutiny. We can imagine a tiered workflow where a 
-codechecker could, just as a conventional reviewer could, recommend a detailed
-statistical review to the editor if they come upon certain issues while
-examining the work from a different perspective.
+A codechecker does not fulfil the same role as a \emph{statistical
+  reviewer}, as it is applied by some journals in the biomedical
+domain (cf.~\cite{petrovecki_role_2009,greenwood_how_2015}).  The
+statistical reviewer evaluates the appropriateness of statistical
+methods \cite{greenwood_how_2015} and can support topical reviewers
+if, e.g.,~complex methods or sophisticated variants of statistical
+tests are applied \cite{petrovecki_role_2009}.  The codechecker may go
+equally deep into the review, but only if they have the expertise and
+time. We can imagine a tiered workflow where a codechecker could, just
+as a conventional reviewer could, recommend a detailed code review
+(see next paragraph) to the editor if they come upon certain issues while
+examining the work.
 
-An important distinction is that a codechecker does not conduct a 
-\emph{code review}. Code reviews are without a doubt extremely valuable in 
-terms of improving reproducibility and reusability, and their proponents 
-even believe they can improve the science \cite{petre_code_2014}.
-Code reviews, however, have quite different structural challenges and 
-require even more resources. That said, a well-reviewed codebase is likely
-to be easier to codecheck, and the awareness of high-quality code raised
-through CODECHECK may lead to more support for code reviewing.
-Initiatives and journals that conduct software reviews independent of 
-a specific publication or workflow include
-ROpenSci\footnote{\url{https://ropensci.org/}},
-PyOpenSci\footnote{\url{https://www.pyopensci.org/}},
-and JOSS\footnote{\url{https://joss.theoj.org/}}.
-Furthermore, the codechecker's task list is intentionally not
-overloaded with related concerns, albeit potentially important ones,
-such as ensuring proper citation of data and software or depositing
-data and software in suitable repositories. Nevertheless,
-we expect codecheckers to often recognise these issues and highlight them.
+A codechecker does not conduct a \emph{code review}. Code reviews are
+valuable to improve reproducibility and reusability, and their
+proponents even believe they can improve the science
+\cite{petre_code_2014}.  Code reviews, however, have quite different
+structural challenges and require even more resources. That said, a
+well-reviewed codebase is likely to be easier to codecheck, and the
+awareness of high-quality code raised through CODECHECK may lead to
+more support for code reviewing.  Initiatives and journals that
+conduct software reviews independent of a specific publication or
+workflow include ROpenSci\footnote{\url{https://ropensci.org/}},
+PyOpenSci\footnote{\url{https://www.pyopensci.org/}}, and
+JOSS\footnote{\url{https://joss.theoj.org/}}.  Furthermore, the
+codechecker's task list is intentionally not overloaded with related
+concerns, albeit potentially important ones, such as ensuring proper
+citation of data and software or depositing data and software in
+suitable repositories. Nevertheless, we expect codecheckers to often
+recognise these issues and highlight them.
 
 \textbf{How are failures during checks handled?}
-We have no established process for the case
-in which a reproduction completey fails.
-This may be a sign that our pre-selection of the examples was biased, since so far all our CODECHECKs succeeded.
-In the case that a journal adopts CODECHECK for all submissions, the open 
-question remains as what to do if a check fails.
-A negative comment in a CODECHECK certificate or a failed check does
-not necessarily mean the paper or the science is bad
-(cf. discussion on negative comments in \cite{everythinghertz123}).
-At the start, we doubt that publicly reporting failures (i.e.,~the code 
-would not run) will increase overall reproducibility, and we recommend not
-sharing that outcome publicly but sharing the latest draft of the 
-certificate with the authors.
-One must be careful how policies on disclosing failures may negatively impact the acceptance by authors, but also how efforts by volunteers may go unnoticed if no report is published.
-The most appropriate way forwards seems to be to give private feedback for failures and public acknowledgement and encouragement for successes.
+
+We have not yet established a process for if a reproduction fails.  This
+may simply reflect our biases in pre-selection of case studies.  In
+the case that a journal adopts CODECHECK for all submissions, the open
+question remains as what to do if a check fails, after exhausting
+efforts between author and codechecker to reproduce the workflow.  A
+negative comment in a CODECHECK certificate or a failed check does not
+necessarily mean the paper or the science is bad (cf. discussion on
+negative comments in \cite{everythinghertz123}).  We doubt that
+publicly reporting failures (i.e.,~the code would not run) will
+increase overall reproducibility, and we recommend sharing the latest
+draft of the certificate only with the authors.  One must be careful
+how policies on disclosing failures may \textbf{negatively impact the
+  acceptance by authors}
+%% SJE: what does this mean?
+, and also how volunteer efforts may go unnoticed if no report is
+published.  The most appropriate way forwards seems to be to give
+private feedback for failures and public acknowledgement and
+encouragement for successes.
 % eLife's new model (see https://osf.io/9cftx/) will publish reports evantually, e.g.,~after preprint has been accepted elsewhere
 Rosenthal et~al. \cite{Rosenthal2016b} discuss such incentives for different actors around the
 implementation of reproducibility. We see CODECHECK as one way for
 organisations to invest in reproducibility by creating incentives
 until reproducible computations become the norm.
 
-\textbf{Who will pay for the compute time?}
-For those papers that take significant compute
-time (days, not minutes), it is unclear who will pay for it.
-The openness of CODECHECK certificates could help to establish community
-peer pressure, or recognition, as submitting authors can be evaluated on their engagement
-as codecheckers. This may lead to a balance of the shared load to reproduce
-computations.
-However, one must carfully consider the sustainability of rerunning computations and the
-environmental impact large calculations, such as training machine learning models, have.
-The challenges of computational resources can also quickly be reduced when
-authors provide a small sample or a synthetic dataset together with the
-expected outputs for this small example, which can equally well demonstrate the 
-usefulness and validity of their workflow.
+\textbf{Who will pay for the compute time?}  For papers that take
+significant compute time (days, not minutes), it is unclear who will
+pay for it. One must carefully consider the sustainability of
+rerunning computations and the environmental impact large
+calculations, such as training machine learning models, have.  A
+pragmatic workaround is to request that authors provide a ``toy''
+example, or small dataset that can be quickly analysed to demonstrate
+that the workflow runs correctly.
 
-\textbf{What about my proprietary software and sensitive data?}
-Authors can currently provide code that requires
-proprietary software. Given the prevalence of proprietary software in
-some disciplines, e.g MATLAB, this seems like a pragmatic choice.
-However, this prohibits publications from benefiting from open infrastructure for reproducibility
-(cf.~\cite{konkol_publishing_2020,perkel_make_2019})
-and requires the codechecker to have access to that particular software.
-Non-open software also considerably hampers reuse, especially by researchers
-from the global south. Therefore, allowing proprietary software is a compromise
-that each implementation of CODECHECK should critically reconsider.
+\textbf{What about my proprietary software and sensitive data?}  Given
+the prevalence of proprietary software, e.g MATLAB, we pragmatically
+decided that we should accept code as long as we could find a machine
+with suitable licences to run it.  However, this prohibits us from
+using open infrastructure for reproducibility
+(cf.~\cite{konkol_publishing_2020,perkel_make_2019}) and requires the
+codechecker to have access to that particular software.  Non-open
+software also considerably hampers reuse, especially by researchers
+from the global south. Therefore, allowing proprietary software is a
+compromise that should be reconsidered.
 
-Solutions for proprietary and sensitive data exists.
-Authors can provide synthetic data (cf. \cite{shannon_opening_2018}), some
-data can effectively be redacted \cite{oloughlin_data_2015}, and publishers or
-independent entities can provide infrastructure for sharing data and workflows
-confidentially \cite{perignon_certify_2019} or with access to derived results
-but not raw data \cite{shannon_opening_2018},
-i.e.,~data enclaves \cite{foster_research_2018},
-or domains of reproducibility \cite{harris_more_2017})
+Solutions for proprietary and sensitive data exists.  Authors can
+provide synthetic data (cf. \cite{shannon_opening_2018}), some data
+can effectively be redacted \cite{oloughlin_data_2015}, and publishers
+or independent entities can provide infrastructure for sharing data
+and workflows confidentially \cite{perignon_certify_2019} or with
+access to derived results but not raw data
+\cite{shannon_opening_2018}, i.e.,~data enclaves
+\cite{foster_research_2018}, or domains of reproducibility
+\cite{harris_more_2017}).
 
-\textbf{Can't someone cheat?} Yes. We don't check that the code is correct or
-sound science,
-just simply that it runs. This ``mechanical'' test is indeed a very low bar.
-Yet, by having the code and (raw) data openly deposited, interested parties can
-then examine the code, and we hope that knowing the code will be open will
-be an incentive for authors to ensure good quality.
-It will also give opportunities
-to future researchers, potentially with new methods, to look for errors.
-This prospective evaluation is a much more effective way to capture cheaters than engaging in an arms race on tools, methods, or resources trying to catch malicious intent now with closed datasets and code; this approach is comparable to storing blood samples of sport champions today to possibly detect doping in the future with more advanced methods (cf. \cite{everythinghertz97}).
-Another comparison that helped us define the scope of a CODECHECK is was that we think of the codechecker as forensic photographer, making sure all the details
-are captured so that an investigator may, now or in the future, scrutinize
-them.
+\textbf{Can't someone cheat?} Yes. We simply check that the code runs,
+not that is correct or sound science. This ``mechanical'' test is
+indeed a low bar.  By having the code and data openly deposited, third
+parties can later examine the code, and we hope that knowing the code
+will be open ensures that authors will not cheat.  It also allows
+researchers, potentially with new methods, to look for errors.  This
+is more effective than engaging in an arms race on building methods to
+detect malicious intent now with closed datasets and code.  This is
+analogous to storing blood samples of sport champions today to
+possibly detect doping in the future with more sensitive methods
+(cf. \cite{everythinghertz97}).  Another comparison that helped us
+define the scope of a CODECHECK is that we think of the codechecker as
+forensic photographer, capturing details so that an investigator may
+later scrutinize them.
 
-\textbf{Who's got time for more peer review?} Agree.
-The time one spends performing CODECHECKs will likely reduce the time an individual has to work as a reviewer.
-However, a CODECHECK is different from peer review.
-First, the \textbf{technical nature} of a CODECHECK can provide a more 
-clearly defined scope and expectations and thereby time budget compared to conventional 
-peer review. 
-For example, authors are told what to provide and the codechecker can be told when to stop.
-The option for the codechecker to ask for clarification or more 
-material can greatly reduce the digging required and thereby
-increase \textbf{efficiency}.
-Second, the specific skill set of a codechecker allows for \textbf{different groups} to take part in the review process.
-ECRs might be attracted to learn more about recent methods, peer review, and reproducibility practices.
-Research software experts (Research Software Engineers, RSE\footnote{\url{https://en.wikipedia.org/wiki/Research_software_engineering}}) who might
-not regularly be involved in writing or reviewing papers might be interested in increasing their connection with scholarly practices.
-An extra codechecker may simplify the matchmaking an editor has to do
-when identifying suitable reviewers for a submission, as technical and
-topical expertise can be provided by different people who do not even have to be traditional peer reviewers.
-In fact, the codechecker could even be a software professional employed by a publisher.
-Third, recall that we expect CODECHECKs not to be anonymous and always
-publicly deposited, which is common practice for reviews of few journals only.
-With code and workflows, there also is a good chance that a codechecker's
-feedback can directly impact and improve the author's 
-work, which may make for a rewarding experience or even provide tangible contributions.
-The public certificates and contributions provide \textbf{peer recognition}.
-Fourth, we also found that the focus on the mechanics of a
-workflow and the ability to interact with the authors can make
-reproductions very \textbf{educational}. It also is a different role and, as such, could
-be a welcome option for researchers to give back their time to the community.
+\textbf{Who's got time for more peer review?} Agree; codechecking
+takes time that could otherwise be used for traditional peer review.
+However, a CODECHECK is different from peer review.  First, the
+\textbf{technical nature} of a CODECHECK sets clear expectations and
+thereby time budget compared to conventional peer review.  For
+example, authors are told what to provide and the codechecker can be
+told when to stop.  Codecheckers can always directly ask the author
+when clarification is required, thereby increasing
+\textbf{efficiency}.  Second, the specific skill set of a codechecker
+allows for \textbf{different groups} to participate in the review
+process.  ECRs might be attracted to learn more about recent methods,
+peer review, and reproducibility practices.  Research software experts
+(Research Software Engineers,
+RSE\footnote{\url{https://en.wikipedia.org/wiki/Research_software_engineering}})
+who might not regularly be involved in writing or reviewing papers
+might be interested in increasing their connection with scholarly
+practices.  An extra codechecker may simplify the matchmaking an
+editor does when identifying suitable reviewers for a submission,
+as technical and topical expertise can be provided by different
+people.  Third, recall that CODECHECKs should always be publicly
+available, unlike peer review reports.  With code and workflows, the
+codechecker's feedback may directly impact and improve the author's
+work.  The public certificates and contributions provide \textbf{peer
+  recognition} for the codechecker.  Fourth, we found that focusing on
+workflow mechanics and interacting with the author makes reproductions
+\textbf{educational}. It also is a different role and, as such, could
+be a welcome option for researchers to give back their time to the
+community.
 
-While such benefits are also part of idealistic peer review, they are mostly hidden behind paraphrased anonymous acknowledgement.
+While such benefits are also part of idealistic peer review, they are
+mostly hidden behind paraphrased anonymous acknowledgement.
 
-\textbf{Do workflows need to be codechecked multiple times?}
-If you check a preprint before peer
-review or a submission to a journal with non-public review, it might
-need checking again as it is modified during peer review.
-This is somewhat unavoidable, and has happened to us (e.g.,~certificate \texttt{2020-012}
-\cite{cert-2020-012} has been revised). This can also be desired tough, if
-the interaction between author, reviewer, and codechecker led to
-improvements. Since checking the manuscript the second time is likely
-to be much less work than the first time, this is largely mitigated by
-open and regular communication. The higher the reproducibility and
-automation, the more aspects of a CODECHECK that may eventually be
-supported by automation, though we believe the human codecheckers
-should remain the decision makers. Automatically detecting whether results
-are ``the same'' is a question intrinsically linked with each unique
-process and quite hard to realise for graphical outputs, such as plots or
-maps.
-That is why we do not require results to be exactly the same for a
-CODECHECK to pass but simply that the code runs and generates the output
-files that the author claims. Stochastic simulations mean that often
-we cannot get exactly the same results, and that even the same versions of libraries
+\textbf{Do workflows need to be codechecked multiple times?}  If a
+paper is checked at the start of peer review, it might need
+re-checking if the paper is modified during peer review.  This is
+somewhat unavoidable, and has happened to us (e.g.,~certificate
+\texttt{2020-012} \cite{cert-2020-012}). This can
+also be desired though, if interactions between author, reviewer,
+and codechecker led to improvements.  Checking the manuscript the
+second time is likely to be much less work than the first time.
+
+
+
+\textbf{What does it mean for a figure to be reproducible?}
+
+Automatically detecting if a codechecker's results are ``the same'' as
+an author's is more challenging than it might appear.  That is why we
+do not require results to be \textit{identical} for a CODECHECK to pass
+but simply that the code runs and generates output files that the
+author claims. Stochastic simulations mean that often we cannot get
+exactly the same results, and that even the same versions of libraries
 can generate outputs that differ by operating system
-\cite{Gronenschild2012-pp}.
-While reproducibility practices can mitigate some of these problems, e.g., by using a seed, the flexibility of the human judgement is still needed.
+\cite{Gronenschild2012-pp}.  While reproducibility practices can
+mitigate some of these problems, e.g., by using a seed, the
+flexibility of the human judgement is still needed, rather than
+bitwise reproducibility.  The codechecker is free to comment on
+visible differences in outputs in their report.
 
-\textbf{Shouldn't the next step be more revolutionary?}
-CODECHECK's approach is to acknowledge the shortcomings around 
-computational reproducibility and to iteratively improve the current
-system of scholarly communication based on journals and conferences.
-It remains to be proven whether this approach is welcomed broadly and whether 
-involving the traditional publishing stakeholders helps to further the cause.
-We have discussed stronger more drastic rules at length, such as only 
-considering fully free and open source software, diamond Open Access journals or community-led no-fee journals,
-and journals with collaborative/open peer review, but we eventually decided
-against them on the level of the principles.
-For the CODECHECK community process\footnote{\url{https://codecheck.org.uk/guide/community-process}}
-and the volunteer codechecker community, these requirements are reconsidered.
+\textbf{Shouldn't the next step be more revolutionary?}  CODECHECK's
+approach is to acknowledge shortcomings around computational
+reproducibility and to iteratively improve the current system.  It
+remains to be proven whether this approach is welcomed broadly and if
+involving publishing stakeholders helps to further the cause.  We have
+discussed more stringent rules at length, e.g. only considering fully
+free and open source software, diamond Open Access journals, but we
+eventually decided against them on the level of the principles.  For
+the CODECHECK community
+process\footnote{\url{https://codecheck.org.uk/guide/community-process}}
+and the volunteer codechecker community, these requirements are
+reconsidered.
 
-We also have deliberated requiring the latest technologial solutions which can
-support reproducibility (cf.~\cite{konkol_publishing_2020}), but we have 
-decided to focus on the human interface and the judgement of experienced
-researchers and developers as a more sustainable and powerful approach.
-The structurelessness of the required data and code gives all types of research the freedom to adopt CODECHECK.
-CODECHECK could be complemented by automated scoring (e.g.,~\cite{menke_rigor_2020}), yet automation and metrics bear new risks.
-Note that the focus of the CODECHECK principles on code execution allows journals
-and publishers to innovate on the financial model and peer review practices
-at their own pace.
+We also have deliberated requiring modern technological solutions to
+support reproducibility (cf.~\cite{konkol_publishing_2020}), but we
+decided to focus on the human interface and the judgement of
+experienced researchers and developers as a more sustainable and
+flexible approach.  All types of research can adopt CODECHECK due to
+its flexible design.  CODECHECK could include automated scoring
+(e.g.,~\cite{menke_rigor_2020}), yet automation and metrics bear new
+risks.  The focus of the CODECHECK principles on code execution allows
+journals and publishers to innovate on financial  models and peer
+review practices at their own pace.
 
 \section*{Conclusions and future work}\label{future-work-and-conclusions}
 
-CODECHECK works!
-We have created a considerable number of certificates to demonstrate it.
-The creation of the certificates and the interactions with authors and
-editors not only improved the principles and the workflow but also
-confirmed the approach taken. This result corroborates findings from
-similar evaluations of reproducible computational research in journals and
-at conferences.
-CODECHECKs increase transparency of the checked papers and can contribute
-to building trust in scientific results.
+CODECHECK works --- we have created a considerable number of
+certificates to demonstrate it.  The creation of certificates and
+interactions with authors and editors shaped the principles and the
+workflow and also confirmed the approach taken. This result
+corroborates findings from similar evaluations of reproducible
+computational research in journals and conferences.  CODECHECKs
+increase transparency of the checked papers and can contribute to
+building trust in scientific results.
 % "science earns trust through transparency" > https://twitter.com/briannosek/status/1290240244101521408
-The set of 
-shared principles and common name, through recognition value,
-will allow researchers
-across publication venues to judge the level of scrutiny that results have
-faced. CODECHECK requires direct acknowledgement of the contribution to the
-scientific community in the role of codechecker, not indirectly via citations 
-of reproductions or informal crediation and closed inner circles.
-Forther, codechecking can be a worthwhile educational activity, especially for
-ECRs.
+The set of shared principles and common name, through recognition
+value, will allow researchers to judge the level of scrutiny that
+results have faced. CODECHECK requires direct acknowledgement of the
+codechecker's contributions, not indirectly via citations of
+reproductions or informal crediation and closed inner circles.
 
-Yet, CODECHECK harbours the same limitations as peer review
-in general and is closely connected to larger disruptions and challenges
+CODECHECK however harbours the same limitations as peer review in
+general and is closely connected to larger disruptions and challenges
 in scholarly communication
-\cite{eglen_recent_2018,tennant_ten_2019,fyfe_mission_2019}, 
-including the tensions between commercial publishing and reviewers' often
-free labour, and a global pandemic that has jumbled up scientific publishing
-and exposed a broader general audience to science, even preliminary 
-results \cite{munafo_what_2020}.
-It is clear that establishing CODECHECK-like systems can be 
-impeded by and must be seen as interconnected with much larger issues in 
-science, such as broken metrics or malpractice triggered by publication
-pressure \cite{piwowar_altmetrics:_2013,nosek_promoting_2015}.
-We certainly do not want the binary attribute of ``code works''
-to become a factor in bibliometric approaches for performance assesments.
+\cite{eglen_recent_2018,tennant_ten_2019,fyfe_mission_2019}, including
+the tensions between commercial publishing and reviewers' often free
+labour, and a global pandemic that has jumbled up scientific
+publishing and exposed a broader general audience to science, even
+preliminary results \cite{munafo_what_2020}.  Establishing CODECHECK
+workflows must be seen as interconnected with much larger issues in
+science, such as broken metrics or malpractice triggered by
+publication pressure
+\cite{piwowar_altmetrics:_2013,nosek_promoting_2015}.  We certainly do
+not want the binary attribute of ``code works'' to become a factor in
+bibliometric approaches for performance assesments.
 % Mittermaier, Peer Review and Bibliometrics: http://hdl.handle.net/2128/22745
 
-While developed for the current ``paper''-centric publication process and
-being compatible with different styles of peer review, the CODECHECK 
-principles would also work well with novel publication paradigms, e.g.,
-peer-reviewed computational notebooks \cite{earthcube_new_2020},
-iterative and granular communication of scientific outputs, 
-articles with live-code \cite{perkel_pioneering_2019-1}
-\footnote{For example, eLife's ERA, see 
-\url{https://elifesciences.org/labs/dc5acbde/welcome-to-a-new-era-of-reproducible-publishing}.},
+While developed for the current ``paper''-centric publication process,
+the CODECHECK principles would also work well with novel publication
+paradigms, e.g., peer-reviewed computational notebooks
+\cite{earthcube_new_2020}, iterative and granular communication of
+scientific outputs, articles with live-code
+\cite{perkel_pioneering_2019-1} \footnote{For example, eLife's ERA,
+  see
+  \url{https://elifesciences.org/labs/dc5acbde/welcome-to-a-new-era-of-reproducible-publishing}.},
 decentralized infrastructure and public reviewer reputation systems
-\cite{tenorio-fornes_towards_2019},
-and completely new visions for scholarly communication and peer 
-review\footnote{Cf., for example, \emph{A modern vision for peer review} by 
-Amy J. Ko: \url{https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07}}.
-An explicit segmentation of research steps could even make the focus 
-of a CODECHECK easier by only checking the ``analysis'' sub-publication.
-The discovery of CODECHECKs could be increased by depositing the reports
-into public databases of reproductions, such as \emph{SciGen.Report}.
-Public researcher profiles, such as ORCID, may consider different
-types of reviewer activity to capture how independent code execution contributes to science.
-Notably, the discussed limitations are largely self-imposed for easier
-acceptance and evolutionary integration, as to not break the current 
-system and increase demands gradually without leaving practitioners behind. 
+\cite{tenorio-fornes_towards_2019}, and completely new visions for
+scholarly communication and peer review\footnote{Cf., for example,
+  \emph{A modern vision for peer review} by Amy J. Ko:
+  \url{https://medium.com/bits-and-behavior/a-modern-vision-for-peer-review-d5f73f0fae07}}.
+An explicit segmentation of research steps could even make the focus
+of a CODECHECK easier by only checking the ``analysis''
+sub-publication.  The discovery of CODECHECKs could be increased by
+depositing the reports into public databases of reproductions, such as
+\emph{SciGen.Report}.  Public researcher profiles, such as ORCID, may
+consider different types of reviewer activity to capture how
+independent code execution contributes to science.  Notably, the
+discussed limitations are largely self-imposed for easier acceptance
+and evolutionary integration, as to not break the current system and
+increase demands gradually without leaving practitioners behind.
 
-If adopted today, a CODECHECK system, even if temporary in a sustainable 
-transition towards more open publication and review practices, can contribute
-to increased trust in the results of research. Introducing CODECHECK
-should be informed by lessons learned from (introducing) open peer review
-(OPR) \cite{ross-hellauer_guidelines_2019}.
-All our conversations with publishers and editors at some point
-touched on the procedural and technical implications of openness, be it 
-that OPR is neither applied by nor familiar to stakeholders, or that process
-management software would not support such open communication.
+A CODECHECK system, even if temporarily adopted as a sustainable
+transition towards more open publication and review practices, can
+contribute to increased trust in research outputs. Introducing
+CODECHECK should be informed by lessons learned from (introducing)
+open peer review (OPR) \cite{ross-hellauer_guidelines_2019}.  Our
+conversations with publishers and editors included procedural and
+technical implications of openness, be it that OPR is neither applied
+by nor familiar to stakeholders, or that process management software
+would not support such open communication.
 
 More reproducible practices initiated by CODECHECKs could lead
-communities or whole disciplines to reach a state where authors provide 
-sufficient material and reviewers have acquired sufficient skills that
-the reviewers will generally conduct a CODECHECK-level of checking;
-only in especially sophisticated cases will a specialised codechecker
-be needed.
-The main challenge for us remains getting journals to embrace the
-idea behind CODECHECK and to realise processes that conform to the principles,
-whether or not they use CODECHECK by name.
-We would be keen to use the flexibility of the principles and cooperate
-with journals to learn more about the advantages and yet unclear
-specific challenges -- Do CODECHECKs really work better with OPR?
-To facilitate the adoption, the CODECHECK badge is, intentionally, not branded beyond the checkmark
-and green colour and simply states ``code works''.
+communities to reach a state where authors provide sufficient material
+and reviewers have acquired sufficient skills that peer reviewers will
+generally conduct a CODECHECK-level of checking; only in especially
+sophisticated cases will a specialised codechecker be needed.  The
+main challenge for us remains getting journals to embrace the idea
+behind CODECHECK and to realise processes that conform to the
+principles, whether or not they use CODECHECK by name.  We would be
+keen to use the flexibility of the principles and cooperate with
+journals to learn more about the advantages and yet unclear specific
+challenges -- e.g do CODECHECKs really work better with OPR?  To
+facilitate the adoption, the CODECHECK badge is, intentionally, not
+branded beyond the checkmark and green colour and simply states ``code
+works''.
 
-Each rollout of CODECHECK should be accompanied by studies to ensure 
-codechecking does not fall into the same gaps as peer review did
-\cite{tennant_limitations_2020}
-and to ensure positive change within the review system.
-This \emph{cultural change}, however, is needed for the valuation of the
-efforts that go into proper evaluation of papers.
-Multiple adopting journals will also help to answer relevant questions on
-the establishing process: What are crucial decisions or pain points? Can
-authors retract code/data once a CODECHECK has started?
-What variants of CODECHECKs will be most common? How will open CODECHECKs
-influence or codevelop with the scope and anonymity of conventional review over time.
+Future CODECHECK versions may be accompanied by studies to ensure
+codechecking does not fall into the same traps as peer review did
+\cite{tennant_limitations_2020} and to ensure positive change within
+the review system.  This \emph{cultural change}, however, is needed
+for the valuation of the efforts that go into proper evaluation of
+papers.  Journals can help us to answer open questions in our system: What are
+crucial decisions or pain points? Can authors retract code/data once a
+CODECHECK has started?  What variants of CODECHECKs will be most
+common? How will open CODECHECKs influence or codevelop with the scope
+and anonymity of conventional review over time?
 
-With the implementation of CODECHECK workflows, the question of training
-codecheckers will become relevant. We expect both a mentoring scheme within
-the CODECHECK community (experienced codecheckers provide on-the-job training
-or serve as fallback advisors) as well as collaboration with reproducible
-research initiatives such as
+The question of training codecheckers is also relevant. We expect a
+mentoring scheme within the CODECHECK community (experienced
+codecheckers will provide on-the-job training or serve as fallback
+advisors). Codecheckers may also be found by collaborating with
+reproducible research initiatives such as
 ReproHack\footnote{\url{https://reprohack.github.io/reprohack-hq/}},
 ReproducibiliTea\footnote{\url{https://reproducibilitea.org/}}
-\cite{fitzgibbon_brewing_2020},
-and Repro4Everyone\footnote{\url{https://repro4everyone.org/}}
-\cite{auer_reproducibility_2020},
-to be able to grow the pool of codecheckers as needed.
-The initial reaction of the scientific community and the spontaneous signing
-up volunteer codecheckers make us optimistic that the time is right for 
-putting scholarly peer review on the path towards facilitating the sharing and execution
-of computational workflows.
+\cite{fitzgibbon_brewing_2020}, and
+Repro4Everyone\footnote{\url{https://repro4everyone.org/}}
+\cite{auer_reproducibility_2020}.  The initial reaction of the
+scientific community to these ideas shows that scholarly peer review
+should continue on the path towards facilitating the sharing and
+execution of computational workflows.
 
 \newpage
 
 \subsection*{Competing interests}
 
-SJE was on the editorial board at the journal \emph{Scientific Data} until January 2021.
-DN is reproducibility chair at the Association of Geographic Information Laboratories in Europe's (AGILE) annual conference.
+
+%% SJE: check again in April! s/is/was
+SJE is on the editorial board at the journal \emph{Scientific Data}
+until March 2021.  DN is reproducibility chair at the Association of
+Geographic Information Laboratories in Europe's (AGILE) annual
+conference.
 
 \subsection*{Grant information}
 
@@ -1189,14 +1192,16 @@ from the German Research Foundation (DFG).
 
 We are grateful to the following individuals for discussions regarding
 the work presented here: Andy Collings, Melissa Harrison, Giuliano
-Maciocci, Naomi Penfold, Emmy Tsang (eLife), Rebecca Kirk (PLOS Computational Biology), Scott
-Edmunds (GigaScience), and Andrew Hufton (Scientific Data). Iain Davies and
-Yuhao (Sebastian) Wang developed code and example certificates.
-We thank Antonio P\'{a}ez (Journal of Geographical Systems) for enabling
-CODECHECKs, Carlos Granell and Frank Ostermann for contributing
-certificates as reproducibility reviewers at the AGILE conference, and 
-all authors of auditable workflows for their participation.
-We thank Celeste R. Brennecka from the Scientific Editing Service, University of M\"unster, for her editorial review. 
+Maciocci, Naomi Penfold, Emmy Tsang (eLife), Rebecca Kirk (PLOS
+Computational Biology), Scott Edmunds (GigaScience), and Andrew Hufton
+(Scientific Data). Iain Davies and Yuhao (Sebastian) Wang developed
+code and example certificates.  We thank Antonio P\'{a}ez (Journal of
+Geographical Systems) for enabling CODECHECKs, Carlos Granell and
+Frank Ostermann for contributing certificates as reproducibility
+reviewers at the AGILE conference, and all authors of auditable
+workflows for their participation.  We thank Celeste R. Brennecka from
+the Scientific Editing Service, University of M\"unster, for her
+editorial review.
 
 \subsection*{Author contributions}
 
