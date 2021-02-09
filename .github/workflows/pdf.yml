@@ -9,20 +9,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    container:
+      # https://github.com/aergus/dockerfiles/blob/master/latex/Dockerfile
+      image: "aergus/latex:2021-02-06"
+      #volumes: GH by default mounts workdir to /__w/, and sets "--workdir /__w/paper/paper"
 
     steps:
       - uses: actions/checkout@v2
       
-      - name: Pull image
-        run: docker pull rocker/verse:4.0.3
-      
-      - name: Build image
-        run: |
-           docker build --tag codecheckpaper .
-
       - name: Render PDF
         run: |
-           docker run --rm -i -v $(pwd):/paper codecheckpaper R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex", engine="xelatex")'
+          make codecheck-paper.pdf
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2

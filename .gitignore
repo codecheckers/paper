@@ -58,3 +58,11 @@ codecheck-paper.aux
 codecheck-paper.blg
 
 README.html
+
+codecheck-paper.out
+
+codecheck-paper.fdb_latexmk
+
+codecheck-paper.fls
+
+codecheck-paper.xdv

@@ -12,4 +12,3 @@ codecheck-paper1.pdf: codecheck-paper.tex bibliography.bib
 
 clean:
 	rm -f codecheck-paper.pdf *.aux *.bbl *.blg
-	docker rmi -f codecheckpaper
