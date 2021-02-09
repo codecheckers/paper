@@ -30,10 +30,14 @@
 \author[2,$\ast$]{Stephen~J~Eglen \orcid{0000-0001-8607-8025} \github{sje30} \twitter{StephenEglen}}
 \affil[1]{Institute for Geoinformatics, University of M\"unster, Germany; \email{daniel.nuest@uni-muenster.de}}
 \affil[2]{Department of Applied Mathematics and Theoretical Physics, University of Cambridge, UK; \email{sje30@cam.ac.uk}}
-\affil[$\ast$]{Contributed equally}
+\affil[$\ast$]{Corresponding authors}
 \affil[$$]{Public project for this article is at \url{https://github.com/codecheckers/paper}.}
 \maketitle
 \begin{abstract}
+%\textbf{Background:}
+%\textbf{Methods:}
+%\textbf{Results:}
+%\textbf{Conclusions:}
   The traditional scientific paper falls short of effectively communicating computational research.
   Since this issue is difficult to address due to lacking incentives, guidance, benefits, recognitions, and reproducibility, we come at this problem from a different angle:
   We propose a system by which the computational workflows underlying research articles are checked.
@@ -43,6 +47,10 @@
   These CODECHECKs show that asking for reproducible workflows during a collaborative review can effectively improve executability.
   While CODECHECK has clear limitations, it may represent a building block in Open Science and publishing ecosystems for improving the reproducibility, appreciation, and, potentially, the quality of non-textual research artefacts.
 \end{abstract}
+
+\section*{Keywords}
+
+reproducible research, Open Science, peer review, reproducibility, code sharing, data sharing, quality control, scholarly publishing
 
 \clearpage
 
@@ -661,10 +669,12 @@ project. The CODECHECK community on Zenodo
 certificates and the regularly archived register
 \cite{codecheck_register_jan2021}.
 
-A \textbf{custom R package}, \texttt{codecheck}\footnote{
-  \url{https://github.com/codecheckers/codecheck}}, automates
+A \textbf{custom R package}, \texttt{codecheck}, automates
 repetitive tasks around authoring certificates and managing the
-register.  It includes scripts to deposit certificates and related
+register. The package is published at
+\url{https://github.com/codecheckers/codecheck} under MIT license
+\cite{stephen_eglen_codecheckerscodecheck_2021}.
+It includes scripts to deposit certificates and related
 files to Zenodo using the R package \texttt{zen4R} \cite{zen4r} and
 for the register update process outlined above.  Codecheckers can
 ignore this package, and use their own tools for creating
@@ -1206,6 +1216,19 @@ editorial review.
 \subsection*{Author contributions}
 
 DN and SJE contributed equally to all aspects of this project.
+
+\subsection{Data availability}
+% https://f1000research.com/for-authors/data-guidelines#addstatement
+
+Repository: Daniel Nüst, Stephen Eglen, & Iain Davies. (2021). codecheckers/register: CODECHECK Register Deposit January 2021 (Version 2021-01) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.4486559
+
+This project contains the following underlying data:
+
+\begin{itemize}
+  \item `register.csv`. List of all CODECHECK certificates with references to repositories and reports.
+\end{itemize}
+
+Data are available under the terms of the \href{https://creativecommons.org/licenses/by-sa/4.0/legalcode}{Creative Commons Attribution Share Alike license} (CC-BY-SA 4.0 International).
 
 {\small\bibliographystyle{unsrtnat}
 \bibliography{bibliography}}
