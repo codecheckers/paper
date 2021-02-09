@@ -16,9 +16,13 @@ jobs:
       - name: Pull image
         run: docker pull rocker/verse:4.0.3
       
-      - name: Render with rocker/verse
+      - name: Build image
         run: |
-           make codecheck-paper-rocker-container
+           docker build --tag codecheckpaper .
+
+      - name: Render PDF
+        run: |
+           docker run --rm -i -v $(pwd):/paper codecheckpaper R -q -e 'setwd("/paper"); tinytex::latexmk("codecheck-paper.tex", engine="xelatex")'
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
