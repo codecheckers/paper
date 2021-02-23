@@ -48,10 +48,16 @@
   While CODECHECK has clear limitations, it may represent a building block in Open Science and publishing ecosystems for improving the reproducibility, appreciation, and, potentially, the quality of non-textual research artefacts.
 \end{abstract}
 
-\section*{Keywords}
+\subsection*{Keywords}
 
 reproducible research, Open Science, peer review, reproducibility, code sharing, data sharing, quality control, scholarly publishing
 
+\subsection*{Abbreviations}
+
+ACM: Association for Computing Machinery; 
+ECRs: Early Career Researchers;
+RCR: Replicated Computational Results;
+TOMS: Transactions on Mathematical Software;
 \clearpage
 
 \section*{Introduction}\label{introduction}
@@ -212,8 +218,8 @@ allows for the codechecker and author to collaboratively improve the
 code and enforces a complete definition of the computing environment;
 but, unless secure infrastructure is provided, e.g.,~by the publisher,
 this requires the code and data to be published openly online.  Note
-that the task of the codechecker is to check the ``mechanics'' of the
-workflow not to evaluate its correctness.  In the context of
+that the task of the codechecker is to check only the ``mechanics'' of the
+workflow.  In the context of
 mathematics, Stodden et~al. \cite{stodden_setting_2013} distinguish
 between \emph{verification} and \emph{validation}; following their
 definition, a CODECHECK ensures verification
@@ -229,40 +235,38 @@ increase transparency, thereby improving practices
 every detail.
 
 \textbf{Step 4:} The codechecker writes a certificate stating how the
-code was run and includes a copy of outputs (e.g.,~data, figures, or
-tables) that were independently generated.  The certificate may
-include further recommendations on how to improve the material.  The
-free text in the certificate can describe what was really checked,
-because each workflow is unique.  Since no specific tool or platform
-should be required, such that no authors are excluded, it would be
-futile for the codechecker to use automation or fixed checklists.
+code was run and includes a copy of outputs (figures or tables) that
+were independently generated.  The certificate may include
+recommendations on how to improve the material.  The free text in the
+certificate can describe exactly what was checked, because each
+workflow is unique.  Since no specific tool or platform is required,
+such that no authors are excluded, it is futile for the
+codechecker to use automation or fixed checklists.
 
 \textbf{Step 5:} The certificate and auxiliary files created during
 the check, e.g.,~a specification of a computing environment, data
 subsets or helper scripts, and the original code and data get
 deposited in an open archive unless restrictions (data size, license
-or sensitivity) apply.  Currently, the codecheckers deposit the
-material on Zenodo themselves, but the publisher may complete this
-step after integrating CODECHECK into its review process.  A badge or
-other visual aid may be added to the deposit and the paper and link to
-the certificate.  Although a badge simplifies the CODECHECK into a
-binary value and risks introducing confusion regarding the extent of
-the check, especially across disciplines and methods, a badge can
-provide recognition value and acknowledges the completed CODECHECK.
-The badge and the actual check are incentives for undertaking the
-effort needed to provide a reproducible workflow.
+or sensitivity) apply.  Currently, codecheckers deposit the material
+on Zenodo themselves, but a publisher may complete this step after
+integrating CODECHECK into its review process.  A badge or other
+visual aid may be added to the deposit and the paper and link to the
+certificate.  Although a badge simplifies the CODECHECK into a binary
+value and risks introducing confusion regarding the extent of the
+check, a badge provides recognition value and acknowledges the
+completed CODECHECK.  The badge and the actual check are incentives
+for undertaking the effort needed to provide a reproducible workflow.
 
 \textbf{Step 6:} The publisher can, depending on the timing, provide
 the certificate to peer-reviewers or editors or publish it and link
-between certificate, paper, and any repositories through
-metadata. Currently, the codechecker creates these connections on
-Zenodo. They appear as links with a relationship type on the Zenodo
-landing page for a record in the right-hand sidebar, e.g., the
-``related identifiers'' and ``alternate identifiers'' of certificate
-\texttt{2020-025} \cite{cert-2020-025}.  The publisher also credits
-the codechecker for their work by depositing the activity in scholarly
-profiles, such as ORCID (see peer review contributions in ORCID
-records,
+between certificate, paper, and any repositories. Currently, the
+codechecker creates these connections on Zenodo. They appear as links
+with a relationship type on the Zenodo landing page for a certificate,
+e.g., the ``related identifiers'' and ``alternate identifiers'' of
+certificate \texttt{2020-025} \cite{cert-2020-025}.  The publisher
+also credits the codechecker's work by depositing the activity
+in scholarly profiles, such as ORCID (see peer review contributions in
+ORCID records,
 \url{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}).
 The publisher also ensures proper publication metadata, e.g.,~links
 from the certificate repository to the published paper or the original
@@ -559,8 +563,8 @@ subsumed within peer review.
 
 \subsection*{Register}\label{register}
 
-We have a curated list of 25 certificates (Table~\ref{tab:register}).
-These CODECHECKs fall into three themes: (1) classic and current
+To date we have created 25 certificates (Table~\ref{tab:register}) 
+falling into three broad themes: (1) classic and current
 papers from computational neuroscience, (2) COVID-19 modelling
 preprints, and (3) GIScience.
 
@@ -703,8 +707,7 @@ and the respective GitHub issue where communications and assignments
 around a specific check are organised. No information is duplicated
 between the register and the metadata files. The continuous
 integration infrastructure of GitHub, GitHub Actions, is used to
-automate the register for viewing (HTML) and for integration with
-other services (CSV, JSON).  \textbf{Zenodo} is our preferred open
+automate generation of the register.  \textbf{Zenodo} is our preferred open
 repository for storing certificates. It mints DOIs for deposits and
 ensures long-term availability of all digital artefacts related to the
 project. The CODECHECK community on Zenodo is available at
@@ -726,7 +729,7 @@ and depositing the certificate.  This flexibility  accommodates
 different skill sets and unforeseen technical advances or challenges.
 
 These tools and resources demonstrate that a CODECHECK process can be
-managed without infrastructure costs on freely available platforms.
+managed on freely available platforms.
 Automation of some aspects may improve turnaround time. Our main
 resource requirements are the \textbf{humans} needed for managing the
 project and processes and the codecheckers.  All contributions
@@ -744,7 +747,7 @@ with the term \texttt{"Replicated Computations Results (RCR) Report"}
 on 2020-12-10).
 % 15: https://academic.microsoft.com/search?q=Replicated%20Computations%20Results%20%22(RCR)%20Report%22&f=&orderBy=0&skip=10&take=10
 and the process is being extended extended to the ACM journal
-\emph{Transactions on Modeling and Computer Simulation (TOMACS)}.
+\emph{Transactions on Modeling and Computer Simulation}.
 %% (cf. \url{https://dl.acm.org/journal/tomacs/author-guidelines}).
 The TOMS RCR follows CODECHECK principles 1-4, although our work was
 independently developed of theirs.  The TOMS editorial
@@ -815,17 +818,16 @@ or YARD (\url{https://isps.yale.edu/research/data/approach}),
 or in communities such as Oxford's code review network (\url{https://github.com/OxfordCodeReviewNet/forum}).
 
 Gavis and Donoho \cite{gavish_universal_2011} propose a new discipline
-and infrastructure for reproducible computational research with its
-own tools and API. Their specific packaging format, provenance record,
-and cryptographic \emph{Verifiable Result Identifier} would indeed
-provide excellent reproducibility. However, the system is also complex
-and since its creation in 2011 we are not aware of any publisher using
-it; also, the system is not open source.  In comparison,
-CODECHECK is less powerful but also much more flexible and less
-dependent on specific tools or infrastructure. If data and code are
-deposited properly, i.e.,~very unlikely to disappear, then the
-certificate's DOI is practically close to the cryptographic
-identifier.
+and infrastructure for reproducible computational research. Their
+specific packaging format, provenance record, and cryptographic
+\emph{Verifiable Result Identifier} would indeed provide excellent
+reproducibility. However, the system is also complex and since its
+creation in 2011 we are not aware of any publisher using it; also, the
+system is not open source.  In comparison, CODECHECK is less powerful
+but also much more flexible and less dependent on specific tools or
+infrastructure. If data and code are deposited properly, i.e.,~very
+unlikely to disappear, then the certificate's DOI is practically close
+to the cryptographic identifier.
 
 Another platform for publishing results of reproductions is
 \emph{SciGen.Report} (\url{https://scigen.report/}).  It is a
@@ -1184,9 +1186,9 @@ ReproHack (\url{https://reprohack.github.io/reprohack-hq/}),
 ReproducibiliTea (\url{https://reproducibilitea.org/},
 \cite{fitzgibbon_brewing_2020}), and
 Repro4Everyone (\url{https://repro4everyone.org/},
-\cite{auer_reproducibility_2020}).  The initial reaction of the
-scientific community to these ideas shows that scholarly peer review
-should continue on the path towards facilitating the sharing and
+\cite{auer_reproducibility_2020}).  The initial reaction of 
+researchers to these ideas shows that scholarly peer review
+should continue on the path towards facilitating sharing and
 execution of computational workflows.
 
 \subsection*{Competing interests}
