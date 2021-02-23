@@ -1,6 +1,6 @@
 
 codecheck-paper.pdf: codecheck-paper.tex bibliography.bib
-	latexmk -xelatex codecheck-paper.tex
+	latexmk -xelatex -synctex=1 codecheck-paper.tex
 
 codecheck-paper1.pdf: codecheck-paper.tex bibliography.bib
 	xelatex -synctex=1 -interaction nonstopmode $<
