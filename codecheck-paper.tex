@@ -22,10 +22,11 @@
 \newcommand{\twitter}[1]{\href{https://twitter.com/#1}{\faTwitter}}
 
 \onehalfspacing
-
+ 
 \begin{document}
-%\title{CODECHECK: An open-science initiative for the independent execution of computations underlying research articles}
-\title{CODECHECK: An Open Science initiative for the independent execution of computations underlying research articles during peer review improves reproducibility}
+\title{CODECHECK: An Open Science initiative for the independent
+  execution of computations underlying research articles during peer
+  review to  improve reproducibility}
 \author[1,$\ast$]{Daniel~N\"{u}st \orcid{0000-0002-0024-5046} \github{nuest} \twitter{nordholmen}}
 \author[2,$\ast$]{Stephen~J~Eglen \orcid{0000-0001-8607-8025} \github{sje30} \twitter{StephenEglen}}
 \affil[1]{Institute for Geoinformatics, University of M\"unster, Germany; \email{daniel.nuest@uni-muenster.de}}
@@ -39,8 +40,7 @@
 %\textbf{Results:}
 %\textbf{Conclusions:}
   The traditional scientific paper falls short of effectively communicating computational research.
-  Since this issue is difficult to address due to lacking incentives, guidance, benefits, recognitions, and reproducibility, we come at this problem from a different angle:
-  We propose a system by which the computational workflows underlying research articles are checked.
+ To help improve this situation, we propose a system by which the computational workflows underlying research articles are checked.
   The CODECHECK system uses open infrastructure and tools and can be integrated into review and publication processes in multiple ways.
   We describe these integrations along multiple dimensions (importance, who, openness, when).
   In collaboration with academic publishers and conferences, we demonstrate CODECHECK with 25 reproductions of diverse scientific publications.
@@ -56,51 +56,74 @@ reproducible research, Open Science, peer review, reproducibility, code sharing,
 
 \section*{Introduction}\label{introduction}
 
-Many areas of scientific research use computations to simulate or analyse their data. These computations are complex and are difficult to explain coherently in a paper \citep{marwick_how_2015}.
-To complement the traditional route of sharing research by writing papers,
-there is a growing demand to share the underlying artefacts, notably 
-code and datasets, so that others can inspect, reproduce or expand that work
-(see Figure~\ref{fig:inverse}).
-Some of the earliest proponents of this initiative were Buckheit and Donoho \cite{buckheit_wavelab_1995}, who coined what has been called \emph{Claerbout's claim} (extending on \citet{claerbout_electronic_1992}):
-\emph{``An article about computational science in a scientific publication 
-is \text{not} the scholarship itself, it is merely \textbf{advertising} of
-the scholarship. The actual scholarship is the complete software development
-environment and the complete set of instructions which generated the 
-figures.''}
+Many areas of scientific research use computations to simulate or
+analyse their data. These complex computations are difficult to
+explain coherently in a paper \citep{marwick_how_2015}.  To complement
+the traditional route of sharing research by writing papers, there is
+a growing demand to share the underlying artefacts, notably code and
+datasets, so that others can inspect, reproduce or expand that work
+(see Figure~\ref{fig:inverse}).  Early proponents of this initiative
+were Buckheit and Donoho
+\cite{buckheit_wavelab_1995,claerbout_electronic_1992}, who noted:
+\emph{``An article about computational science in a scientific
+  publication is \text{not} the scholarship itself, it is merely
+  \textbf{advertising} of the scholarship. The actual scholarship is
+  the complete software development environment and the complete set
+  of instructions which generated the figures.''}
 
-If researchers start sharing more artefacts, how might these artefacts be examined to ensure that they do what they claim?
-For example,
-although  scientific journals now require a data sharing statement that
-outlines what data the authors have (or will) share, journals  implement this differently.
-At one end of the spectrum, journals have been created to accept ``data papers''
-(e.g.,~\href{https://www.nature.com/sdata/}{\emph{Scientific~Data}}, 
-\href{https://essd.copernicus.org/}{\emph{Earth System Science Data}}, 
-\href{https://rmets.onlinelibrary.wiley.com/journal/20496060}{\emph{Geoscience Data Journal}},
-\href{https://bdj.pensoft.net/}{\emph{Biodiversity Data Journal}},
-\href{https://openpsychologydata.metajnl.com/}{\emph{Journal of Open Psychology Data}},
-\href{https://odjar.org/}{\emph{Open Data Journal for Agricultural Research}},
-\href{https://openhealthdata.metajnl.com}{\emph{Journal of Open Health Data}});
-these journals have established rigorous procedures by which
-the data is validated according to standards in each field.
-At the other end of the spectrum, many journals still allow authors to state ``Data available upon reasonable request''.
-Authors, while possibly well intentioned at the time of writing the article, often cannot provide data when requested as data disappears over time \cite{Vines2014-hf}.
+If researchers start sharing more artefacts, how might these artefacts
+be examined to ensure that they do what they claim?  For example,
+although scientific journals now require a data sharing statement that
+outlines what data the authors have (or will) share, journals
+implement this differently.  On one hand, journals have
+been created to accept ``data papers''
+(e.g.,~\href{https://www.nature.com/sdata/}{\emph{Scientific~Data}},
+\href{https://essd.copernicus.org/}{\emph{Earth System Science Data}},
+\href{https://rmets.onlinelibrary.wiley.com/journal/20496060}{\emph{Geoscience
+    Data Journal}}, \href{https://bdj.pensoft.net/}{\emph{Biodiversity
+    Data Journal}},
+\href{https://openpsychologydata.metajnl.com/}{\emph{Journal of Open
+    Psychology Data}}, \href{https://odjar.org/}{\emph{Open Data
+    Journal for Agricultural Research}},
+\href{https://openhealthdata.metajnl.com}{\emph{Journal of Open Health
+    Data}}); these journals have established rigorous procedures by
+which data are validated according to standards in each field.  On
+the other hand, many journals still allow authors to
+state ``Data available upon reasonable request''.  Authors, while
+possibly well intentioned at the time of writing the article, often
+cannot provide data when requested as data disappears over time
+\cite{Vines2014-hf}.
 
-Given that no clear standards yet exist for sharing data, what hope might there be for sharing computer programs?
-Both data and software are required to validate a
-computational analysis; data can be seen as inert whereas
-code requires an environment to be run in.
-This makes software harder to share.
-Our experience is that researchers offer several reasons for why code
-is not shared, e.g.,~``there is no documentation'', ``I cannot maintain it'', or ``I do not want to give away my code to competitors''.
-Our view is that sharing code, wherever possible, is good for the community and the individual \cite{Barnes2010-iv,markowetz_five_2015}.
-Having code and data openly available and archived provides a valuable
-resource for others to learn from, even if the code is broken or lacks documentation.
-However, with a little effort, we believe that if an independent person can execute an analysis, this is worth documenting and that this  reduces the barrier to evaluating non-text research materials.
-Just as data journals' validations of data and all journals' peer review  provides a ``baseline reassurance'', i.e.,~that a paper has been checked by someone with an understanding of the topic \cite{fyfe_mission_2019}, the same baseline could be provided for the workflow underlying a paper.
-With this in mind, we have developed a set of principles and an example workflow that provides a pragmatic way of checking that a paper's code works, i.e., it is reproducible following the Claerbout/Donoho/Peng terminology \cite{barba_terminologies_2018}.
+Given that data are not routinely shared, what hope might there be for
+sharing computer programs?  Both data and software are required to
+validate a computational analysis; data can be seen as inert whereas
+code requires an environment to be run in.  This makes software harder
+to share.  Our experience is that researchers offer several reasons
+for why code is not shared, e.g.,~``there is no documentation'', ``I
+cannot maintain it'', or ``I do not want to give away my code to
+competitors''.  Our view is that sharing code, wherever possible, is
+good for the community and the individual
+\cite{Barnes2010-iv,markowetz_five_2015}.  Having code and data openly
+available, and archived, provides a valuable resource for others to
+learn from, even if the code is broken or lacks documentation.
+However, with a little effort, we believe that if an independent
+person can re-run the programs, this is worth documenting and that
+this reduces the barrier to evaluating non-text research materials.
+Just as data journals' validations of data and all journals' peer
+review provides a ``baseline reassurance'', i.e.,~that a paper has
+been checked by someone with an understanding of the topic
+\cite{fyfe_mission_2019}, the same baseline could be provided for the
+workflow underlying a paper.  With this in mind, we have developed a
+set of principles and an example workflow that provides a pragmatic
+way of checking that a paper's code works, i.e., it is reproducible
+following the Claerbout/Donoho/Peng terminology
+\cite{barba_terminologies_2018}.
 
-Here we offer a thorough description of a process and its variations to integrate a much-needed evaluation of computational reproducibility into peer review, and we demonstrate its feasibility by means of 25 reproductions across scientific disciplines.
-We call this system CODECHECK.
+Here we offer a thorough description of a process and its variations
+to integrate a much-needed evaluation of computational reproducibility
+into peer review, and we demonstrate its feasibility by means of 25
+reproductions across scientific disciplines.  We call this system
+CODECHECK.
 
 \begin{figure}
 % emojis: https://github.com/googlefonts/noto-emoji
@@ -109,15 +132,14 @@ We call this system CODECHECK.
   \centering
   \includegraphics[width=0.7\textwidth]{figs/rr.pdf}
   \caption{The inverse problem in reproducible research. The left
-  half of the diagram shows the diverse range of materials used
+  half of the diagram shows a diverse range of materials used
   within a laboratory. These materials are often then
   condensed for sharing with the outside world via the
   research paper, a static PDF document. Working backwards from the
   PDF to the underlying materials is impossible. This prohibits reuse
   and is not only non-transparent for a specific paper but is also 
   ineffective for science as a whole. By sharing the
-  materials on the left, others outside the lab can reproduce
-  or build on this work.}
+  materials on the left, others outside the lab can enhance this work.}
   \label{fig:inverse}
 \end{figure}
 
@@ -128,10 +150,13 @@ We call this system CODECHECK.
 CODECHECK is best demonstrated by way of our example workflow, and later
 we expand on the underlying principles. The workflow involves three
 groups of people:
-(1) the AUTHOR of a paper providing the code to be checked,
-(2) the PUBLISHER of a journal interested in publishing the author's paper, and
-(3) the CODECHECKER, who checks that the author's code works.
-The six-step workflow we have refined is shown in Figure~\ref{fig:workflow}.
+(1) the \textbf{author} of a paper providing the code to be checked,
+(2) the \textbf{publisher} of a journal interested in publishing the author's paper, and
+(3) the \textbf{codechecker}, who checks that the author's code works.
+The six-step workflow we have refined is shown in
+Figure~\ref{fig:workflow}.  In this article, we also refer to a
+\textbf{peer-reviewer} who is independent of this process, and
+performs the traditional academic review of the content of an article.
 
 \begin{figure}
 % original figure source: https://docs.google.com/drawings/d/1tGOZFNZle-oE1Ynw_tLZFmNcv3wgxD0HPs5bXzDOrng/edit
@@ -150,18 +175,19 @@ The six-step workflow we have refined is shown in Figure~\ref{fig:workflow}.
   \centering
       \includegraphics[width=\textwidth]{figs/codecheck_overview.pdf}
       \caption{The CODECHECK example process implementation.
-        Codechecker act as a detectives: They investigate and record,
-        but do not fix issues.  Numbers in bold refer to the six steps
+        Codecheckers act as detectives: They investigate and record,
+        but do not fix issues.  Numbers in bold refer to steps
         outlined in the text.}
   \label{fig:workflow}
 \end{figure}
 
-\textbf{Step 1:} The author submits their manuscript along with the code and data to the PUBLISHER.
-The code and data need not be openly available at this point.
-However, in many cases the code and data may be published on a code hosting platform,
-such as GitHub or GitLab. Ideally, the AUTHOR is expecting the CODECHECK and
-prepares for it, e.g.,~by asking a colleague to attempt a reproduction or by 
-following the PUBLISHER's guidelines for sharing computational workflows.
+\textbf{Step 1:} The author submits their manuscript along with the
+code and data to the PUBLISHER.  The code and data need not be openly
+available at this point.  However, in many cases the code and data may
+be published on a code hosting platform, such as GitHub or
+GitLab. Ideally, the AUTHOR is expecting the CODECHECK and prepares
+for it, e.g.,~by asking a colleague to attempt a reproduction, and
+providing a set of instructions on how to re-run the workflow.
 
 \textbf{Step 2:} The publisher finds a CODECHECKER to check the
 code. This is analogous to the publisher finding one or more
@@ -176,15 +202,22 @@ updates, or further documentation.
 The burden to provide reproducible material lies with the author.
 The CODECHECKER then tries to run the code again.
 This process iterates until either the CODECHECKER is successful,
-or the CODECHECKER concludes the code can not be executed within the context of a CODECHECK.
+or the CODECHECKER concludes the workflow is not reproducible.
 As part of this process, the CODECHECKER could work entirely locally, relying on their own computing resources, or in the cloud, e.g.,~using the open MyBinder infrastructure \cite{jupyter_binder_2018} or alternatives, some of which are more tailored to scientific publications while others offer commercial options for, e.g.,~publishers (cf. \cite{konkol_publishing_2020}).
 A cloud-based infrastructure allows for the CODECHECKER and author to collaboratively improve the code and enforces a complete definition of the computing environment; but, unless secure infrastructure is provided, e.g.,~by the PUBLISHER, this requires the code and data to be published openly online.
 Note that the task of the CODECHECKER is to check the ``mechanics'' of the workflow not to evaluate its correctness. 
 In the context of mathematics, Stodden et~al. \cite{stodden_setting_2013} distinguish between \emph{verification} and \emph{validation};
 following their definition, a CODECHECK ensures verification
 %\footnote{Note this is a different use from that referred to as the \emph{Verification Reports} article type in the journal \emph{Cortex} \cite{chambers_verification_2020}.},
-of computational results, i.e.,~checking that the code correctly produces the output it claims to create, but not a validation, i.e.,~checking that the code implements the right algorithm to solve the specific research problem.
-Nevertheless, simply attempting to reproduce an output may highlight a submission's shortcomings in meeting a journal's requirements (cf.~\cite{christian_journal_2020}) and may effectively increase transparency, thereby improving practices (cf.~\cite{nosek_scientific_2012}) even if the check does not go into every detail.
+of computational results, i.e.,~checking that code generates the
+output it claims to create, but not a validation, i.e.,~checking that
+the code implements the right algorithm to solve the specific research
+problem.  Nevertheless, simply attempting to reproduce an output may
+highlight a submission's shortcomings in meeting a journal's
+requirements (cf.~\cite{christian_journal_2020}) and may effectively
+increase transparency, thereby improving practices
+(cf.~\cite{nosek_scientific_2012}) even if the check does not go into
+every detail.
 
 \textbf{Step 4:} The CODECHECKER writes a certificate stating how the
 code was run and includes a copy of outputs (e.g.,~data, figures, or
@@ -198,16 +231,16 @@ futile for the CODECHECKER to use automation or fixed checklists.
 \textbf{Step 5:} The certificate and auxiliary files created
 during the check, e.g.,~a specification of a computing environment, data 
 subsets or helper scripts, and the original code and data get deposited in
-an open archive unless restrictions regarding data size, license or 
-sensitivity apply.
+an open archive unless restrictions (data size, license or 
+sensitivity) apply.
 Currently, the CODECHECKERs deposit the material on Zenodo themselves, but the PUBLISHER may complete this step after integrating CODECHECK into its review process.
 A badge or other visual aid may be added to the deposit and the paper and
 link to the certificate.
-Although a badge simplifies the CODECHECK into a binary value and risks introducing confusion regarding the extent of the check, especially across disciplines and methods, a badge can provide recognition value and acknowledgement of the completed CODECHECK.
-The badge and the actual check are incentives for undertaking the effort needed to provide a readily computationally reproducible workflow.
+Although a badge simplifies the CODECHECK into a binary value and risks introducing confusion regarding the extent of the check, especially across disciplines and methods, a badge can provide recognition value and acknowledges the completed CODECHECK.
+The badge and the actual check are incentives for undertaking the effort needed to provide a reproducible workflow.
 
 \textbf{Step 6:} The PUBLISHER can, depending on the timing, provide the
-certificate to peer-reviewers or handling editors or publish it
+certificate to peer-reviewers or editors or publish it
 and link between  certificate, paper, and any repositories 
 through metadata. Currently, the CODECHECKER creates these connections on
 Zenodo. They appear as links with a relationship type on the Zenodo
@@ -215,7 +248,7 @@ landing page for a record in the right-hand sidebar, e.g., the
 ``related identifiers'' and ``alternate identifiers'' 
 of certificate \texttt{2020-025} \cite{cert-2020-025}.
 The PUBLISHER also credits the CODECHECKER for their work by depositing
-the activity appropriately in scholarly profiles, such as ORCID
+the activity in scholarly profiles, such as ORCID
 (see peer review contributions in ORCID records,
 \url{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}).
 The PUBLISHER also ensures proper publication metadata, e.g.,~links from the 
@@ -225,12 +258,10 @@ certificate repository to the published paper or the original code repository.
 
 \subsubsection*{Dimensions of CODECHECK workflows}\label{dimensions-of-workflows}
 
-The example workflow leaves room for variations to this process.
-Here we consider several dimensions in a space of possible CODECHECK workflows(Figure~\ref{fig:dimensions}), to represent relevant aspects for stakeholders.
-These aspects touch on timing, responsibilities, and 
-transparency and will be discussed in the following sections.
-The options on each dimension have their own pros and cons and can,
-for the most part, be freely combined.
+Our workflow is just one of many possibilities of a CODECHECK
+workflow.  Here we consider several dimensions in a space of possible
+CODECHECK workflows(Figure~\ref{fig:dimensions}).  These aspects touch
+on timing, responsibilities, and transparency.
 
 \begin{figure}
 % original figure source: https://docs.google.com/drawings/d/1q2EdW3Ad-IpcD-CeoR1eIFMJW2fF6OVmDhCtCUmLO1k/edit
@@ -252,18 +283,24 @@ policy or initiated by interested authors.
 
 Publishers could introduce a CODECHECK as a \textbf{strict prerequisite}.
 As this can reduce the workload of reviewers, such a check should occur early in the review process.
-Yet, the later in the review process the check happens, the easier is it to allow bidirectional communication between the author and codechecker, e.g., because the author might already be notified of the paper's acceptance and may more freely share materials online closer to the paper's publication date.
-A \textbf{pre-review} CODECHECK means editors could send a submission
+Yet, the later in the review process the check happens, the easier is
+it to allow bidirectional communication between the author and
+codechecker, e.g., because the author might already be notified of the
+paper's acceptance and may be more willing to share materials online closer to the paper's publication date.
+A \textbf{pre-review} CODECHECK means editors would send a submission
 for peer review only if it passes the check, or include the certificate in the submission package provided to peer-reviewers.
-Reviewers may then judge the relevance of the computations for the results of the work, or follow journal guidelines regarding how strictly to apply the check's outcomes in their evaluation.
+Peer-reviewers may then judge the relevance of the computations for the results of the work.
 
-A CODECHECK may also be conducted in \textbf{parallel} to the scientific peer review.
-This puts less burden on the turnaround time for the CODECHECK, yet it only makes the outcomes available during the final consideration by the handling editor.
-The check could also be assigned after suggestion by a reviewer, which would remove the need for submissions to undergo a pre-review screening.
-However, soliciting such a ``specialist review'' is much less
-desirable than having a regular CODECHECK, thus avoiding the situation
-in which some submissions get special treatment. In both cases, the
-editor's decision could be based both on CODECHECK and peer-review reports.
+A CODECHECK may also be conducted in \textbf{parallel} to the academic
+peer review.  This puts less burden on the turnaround time for the
+CODECHECK, yet it only makes the outcomes available during the final
+consideration by the handling editor.  The check could also be
+assigned after suggestion by a reviewer, which would remove the need
+for submissions to undergo a pre-review screening.  However,
+soliciting such a ``specialist review'' is much less desirable than
+having a regular CODECHECK, thus avoiding the situation in which some
+submissions get special treatment. In both cases, the editor's
+decision could be based both on CODECHECK and peer-review reports.
 
 A \textbf{post-acceptance} CODECHECK would have the smallest impact on
 editorial decisions and may simply provide \textbf{extra merit} on top
@@ -351,13 +388,13 @@ right skills and availability to do the work.  Ideally, the
 codechecker has a matching code \emph{and} domain expertise to the
 paper, although a well-documented workflow should be executable by any
 computationally-competent person. Naturally, the more
-prerequisite knowledge the codechecker has, the less time is needed to
-understand the goals and the mechanics of an analysis.  From our
+prerequisite knowledge the codechecker has, the quicker they can
+understand the goals and mechanics of an analysis.  From our
 experiences, the priority should be given to matching technical
 expertise first, as lacking knowledge in setting up a computing
 environment with a particular language or tool is much more of a
 problem than assessing the outcome, e.g.,~comparing created figures
-with the original, without an in-depth understanding of the science.
+with the original, without an in-depth understanding of the domain.
 The depth of the check will mostly be driven by the time required and
 expertise of the checker, though in general, we expect a CODECHECK 
 to consider reproducibility of the results above performance of the code.
@@ -375,17 +412,23 @@ controlled by humans \cite{tibav:42484}, e.g.,~in a laboratory.  If
 however publication of the paper depends on the CODECHECK, a second
 opinion may be required.
 
-We also see a great opportunity to involve \emph{early-career researchers} (ECRs) as codecheckers.
-ECRs arguably have a high interest in learning
-about the latest tools and technologies, as they build up their own
-expertise and specialisation.
-CODECHECK offers a way for ECRs to gain insights into new research and
-highlight the importance of reproduction.  
-\emph{ReScience X}, a journal devoted to reproduction and replication experiments \cite{roesch_new_2020}, shares an interest in this combination.
-ECRs are also often familiar with new technologies, thus also making them likely to author CODECHECK-ready manuscripts.
-A supporting data point for ECRs as early adopters is that they are responsible for 77\% of 141 registered reports that were submitted to leading Neuroscience \cite{chambers_registered_2019}.
-As ECRs are introduced to peer review as codecheckers, they may transition into the role of scientific reviewer over time.
-Overall, we see several opportunities and benefits to setting up a new process for CODECHECKING with a clear commitment to openness and transparency, independent of the current peer review process (see \emph{Openness} dimension).
+We also see a great opportunity to involve \emph{early-career
+  researchers} (ECRs) as codecheckers.  ECRs arguably have a high
+interest in learning about new tools and technologies, to build up
+their own expertise.  CODECHECK offers a way for ECRs to gain insights
+into new research and highlight the importance of reproduction.
+\emph{ReScience X}, a journal devoted to reproduction and replication
+experiments \cite{roesch_new_2020}, shares an interest in this
+combination.  ECRs are also often familiar with new technologies, thus
+also making them likely to author CODECHECK-ready manuscripts.  A
+supporting data point for ECRs as early adopters is that they are
+responsible for 77\% of 141 registered reports that were submitted
+\cite{chambers_registered_2019}.  As ECRs are introduced to peer
+review as codecheckers, they may transition into the role of
+peer-reviewer over time.  Overall, we see several opportunities
+and benefits to setting up a new process for CODECHECKING with a clear
+commitment to openness and transparency, independent of the current
+peer review process (see \emph{Openness} dimension).
 
 The codechecker could be a member of \textbf{editorial staff}; this is
 the most controlled but also resource-intensive option.  Such a
@@ -412,8 +455,8 @@ code, encouraging a sharing culture, and learning from other people's
 mistakes; many are also motivated simply by curiosity.  We see
 benefits to an open shared list of codecheckers across journals rather
 than a private in-house group, as this may allow for better matches
-regarding expertise and more even sharing of the workload.  Overall,
-this community will aim to ensure that CODECHECK is a viable option
+regarding expertise and workload sharing.  
+This community can establish CODECHECK as a viable option
 for independent no-cost Open Access journals.
 
 \section*{Core principles}\label{core-principles}
