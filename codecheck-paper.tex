@@ -470,50 +470,45 @@ process:
 The codechecker follows the author's instructions to run the code. If
 instructions are unclear, or if code does not run, the codechecker
 tells the author. We believe that the job of the codechecker is not to
-fix all these problems but simply to report them and await a fix from
-the author.  The level of documentation that is needed for third
-parties to reproduce a workflow is hard to get right, and
-too often this uncertainty leads researchers to give up and not
-document it at all.  The conversation with a codechecker fixes this
-problem.
+fix these problems but simply to report them to the author and await a
+fix.  The level of documentation required for third parties to
+reproduce a workflow is hard to get right, and too often this
+uncertainty leads researchers to give up and not document it at all.
+The conversation with a codechecker fixes this problem.
 
-\textbf{2. Communication between humans is key.} \\ 
-Some code may
-work without any interaction (e.g., CODECHECK certificate \texttt{2020-013}
-\cite{cert-2020-013}) but more often there are hidden
-dependencies or installations that need adjusting for a particular system.
-Allowing the (human) codechecker to communicate
-directly and openly with each other should make this process as
-constructive as possible. We feel that routing this conversation
-(possibly anonymously) through a publisher would introduce delays and
-reduce the chances for community building.
+\textbf{2. Communication between humans is key.} \\
+Some code may work without any interaction, e.g. \cite{cert-2020-013},
+but often there are hidden dependencies that need adjusting for a
+particular system.  Allowing the codechecker to communicate directly
+and openly with the author make this process as constructive as
+possible; routing this conversation (possibly anonymously) through a
+publisher would introduce delays and inhibit community building.
 
 \textbf{3. Credit is given to codecheckers.} \\
 The value of performing a CODECHECK is comparable to that of a peer
-review, and it may also require a similar amount of time. Therefore,
-the codechecker's activity should be recorded, ideally in the
-published paper.  The public record can be realised by publishing the
-certificate in a citable form (i.e.,~with a DOI, as conducted in the
-community CODECHECK process), by listing codecheckers on the journal's
-website or, ideally, by publishing the checks alongside peer review
-activities in public databases.
+review, and it may require a similar amount of time. Therefore, the
+codechecker's activity should be recorded, ideally in the published
+paper.  The public record can be realised by publishing the
+certificate in a citable form (i.e.,~with a DOI), by
+listing codecheckers on the journal's website or, ideally, by
+publishing the checks alongside peer review activities in public
+databases.
 
 \textbf{4. Workflows must be auditable.} \\
 The codechecker should have sufficient material to validate the
 workflow outputs submitted by the
 authors. Stark~\cite{stark_before_2018} calls this
 ``preproducibility'' and the ICERM report \cite{stodden_setting_2013}
-defines the level ``Auditable Research'' similarly.  Every community
-may establish their own good practices or adapt generic concepts and
+defines the level ``Auditable Research'' similarly.  Communities can
+establish their own good practices or adapt generic concepts and
 practical tools, such as publishing all building blocks of science in
 a research compendium (cf.~\url{https://research-compendium.science/})
-or ``repro-pack'' \cite{barba_praxis_2018}.
-A completed
-check means that code could be executed at least once using the
-provided instructions, and, therefore, all code and data was given and
-could be investigated more deeply or extended in the future.  Ideally,
-this is a ``one~click'' step, but achieving this requires particular
-skills and a sufficient level of documentation for third
+or ``repro-pack'' \cite{barba_praxis_2018}.  A completed check means
+that code could be executed at least once using the provided
+instructions, and, therefore, all code and data was given and could be
+investigated more deeply or extended in the future.  Ideally, this is
+a ``one~click'' step, but achieving this requires particular skills
+and a sufficient level of documentation for third
 parties. Furthermore, automation may lead to people gaming the system
 or reliance on technology, which can often hide important details.
 All such aspects can reduce the understandability of the material, so
@@ -521,16 +516,16 @@ we estimate our approach to codechecking, done without automation and
 with open human communication, to be a simple way to ensure long-term
 transparency and usefulness.  We acknowledge that others have argued
 in favour of bitwise reproducibility because, in the long run, it can
-be automated (e.g., Konrad Hinsen on Twitter,
+be automated (e.g.,
 \url{https://twitter.com/khinsen/status/1242842759733665799}), but
 until then we need CODECHECK's approach.
 
 \textbf{5. Open by default and transitional by disposition.} \\
-By default, unless there are strong reasons to the contrary
+Unless there are strong reasons to the contrary
 (e.g.,~sensitive data on human subjects), all code and data, both from
-author and codechecker, will be made freely available before or when
+author and codechecker, will be made freely available when
 the certificate is published.  Openness is not required for the paper
-itself, to accommodate journals in their transition to sustainable
+itself, to accommodate journals in their transition to
 Open Access models.  The code and data publication should follow
 community good practices.  Ultimately we may find that CODECHECKS are
 subsumed within peer review.
@@ -547,34 +542,27 @@ subsumed within peer review.
 
 \subsection*{Register}\label{register}
 
-We have a curated list of 25 certificates available at
-\url{https://codecheck.org.uk/register}.
-Table~\ref{tab:register} lists the certificates
-along with citations to the original papers.
-These CODECHECKs fall into three themes:
-(1) classic and current papers from computational neuroscience,
-(2) COVID-19 modelling preprints, and
-(3) GIScience.
+We have a curated list of 25 certificates (Table~\ref{tab:register}).
+These CODECHECKs fall into three themes: (1) classic and current
+papers from computational neuroscience, (2) COVID-19 modelling
+preprints, and (3) GIScience.
 
-The first theme was the initial set of papers used to explore the
-concept of CODECHECK.  The idea was to take very well known historical
-articles from a domains of interest to one of the co-authors (SJE).
-Our first CODECHECK (certificate number \texttt{2020-001}) was
-performed before publication on an article for the journal
-\emph{GigaScience}, which visusalized the outputs from a family of
-supervised classification algorithms.
+The first theme was an initial set of papers used to explore the
+concept of CODECHECK.  The idea was to take well-known articles from a
+domain of interest (Neuroscience).  Our first CODECHECK (certificate
+number \texttt{2020-001}) was performed before publication on an
+article for the journal \emph{GigaScience}, which visusalized the
+outputs from a family of supervised classification algorithms.
 
-
-The second theme was a response to the COVID-19 pandemic, choosing
-modelling papers to predict outcomes. The checks were solicited
-through community interaction or by our initiative rather than
-requested from journals.  Some certificates were since acknowledged in
-the accepted papers
-\cite{Davies2020-vj,kucharski_effectiveness_2020}. In particular, we
-codechecked the well-known Imperial college model of UK lockdown
-procedures from March 2020(certificate \texttt{2020-10}).  Contrary to
-opinion in the mainstream media, the model results were reproducible
-(CITE NOORDEN).
+The second theme was a response to the COVID-19 pandemic, selecting
+papers that predicted outcomes. The checks were solicited through
+community interaction or by our initiative rather than requested from
+journals.  Some certificates were since acknowledged in the accepted
+papers \cite{Davies2020-vj,kucharski_effectiveness_2020}. In
+particular, we codechecked the well-known Imperial college model of UK
+lockdown procedures from March 2020,
+demonstrating that the model results were reproducible
+\cite{Chawla2020-hi,cert-2020-010}.
 
 The third theme represents co-author DN's service as a Reproducibility
 Reviewer at the AGILE conference series, where the \emph{Reproducible
@@ -630,16 +618,15 @@ for GIScience journals.
 
 \subsection*{Annotated certificate and check metadata}\label{annotated-certificate}
 
-At the end of each CODECHECK, the codechecker writes a certificate
+After running the workflow, the codechecker writes a certificate
 stating which outputs from the original article, i.e.,~numbers,
 figures or tables, could be reproduced.  This certificate is made
-openly available so that all readers of the article can see which
+openly available so that everyone can see which
 elements were reproduced and what limitations or issues were found.
 The certificate links to code and data used by the codechecker,
 allowing others to build on the work.  The format of the certificates
-evolved during the project, as we have learnt to automate different
-aspects of the certification, such as inserting figures into
-certificate documents and managing metadata of a check.  The metadata
+evolved during the project, as we learnt to automate different
+aspects of the certification.  The metadata
 is stored in a machine-readable structured file in YAML, the CODECHECK
 configuration file \texttt{codecheck.yml}.
 The technical specification of the CODECHECK configuration file is
@@ -647,31 +634,31 @@ published at \url{https://codecheck.org.uk/spec/config/latest/}.  The
 configuration file enables current and future automation of workflows
 and meta-analyses.
 
-Figure~\ref{fig:cert} shows pages 1--4 (of 10) of a typical
-certificate \texttt{2020-012} \cite{cert-2020-012}.  The referenced
-article \cite{unwin_report_2020} described models of COVID-19 across
-the USA.  Figure~\ref{fig:cert}A shows the certificate number and its
-DOI, which points to the certificate and any supplemental files on
-Zenodo.  The CODECHECK logo is added for recognition and to denote
-successful reproduction.  Figure~\ref{fig:cert}B provides the key
-metadata as a table generated from \texttt{codecheck.yml}; it names
-the paper that was checked (title, DOI), the authors, the codechecker,
-when the check was performed, and in which repository related material
-is accessible.  Figure~\ref{fig:cert}C shows a textual summary of how
-the CODECHECK was performed and any interesting findings.
-Figure~\ref{fig:cert}D (page 2 of the certificate) shows the outputs
-that were generated based on the MANIFEST of output files in the
-CODECHECK.  It shows the file name (Output), the description stating
-to which figure/table each file should be compared in the original
-paper (Comment), and the file size.  Page 3 of the certificate,
-(Figure~\ref{fig:cert}E) gives detailed notes from the codechecker,
-here documenting what steps were needed to run the code and that the
-code took about 17~hours to complete. Finally, page 4 of the
-certificate shows the first output generated by the CODECHECK
-(Figure~\ref{fig:cert}F). In this case, the figure matched figure~4 of
-\cite{unwin_report_2020}.  The remaining pages of the certificate show
-other outputs and the computing environment in which the certificate
-itself was created (not shown here).
+Figure~\ref{fig:cert} shows pages 1--4 (of 10) of an example
+certificate to check predictions of COVID-19 spread across the USA
+\cite{cert-2020-012,unwin_report_2020}.  Figure~\ref{fig:cert}A shows
+the certificate number and its DOI, which points to the certificate
+and any supplemental files on Zenodo.  The CODECHECK logo is added for
+recognition and to denote successful reproduction.
+Figure~\ref{fig:cert}B provides the key metadata extracted from
+\texttt{codecheck.yml}; it names the paper that was checked (title,
+DOI), the authors, the codechecker, when the check was performed, and
+where code/data are available.
+Figure~\ref{fig:cert}C shows a textual summary of how the CODECHECK
+was performed and key findings.  Figure~\ref{fig:cert}D
+(page 2 of the certificate) shows the outputs that were generated
+based on the MANIFEST of output files in the CODECHECK.  It shows the
+file name (Output), the description stating to which figure/table each
+file should be compared in the original paper (Comment), and the file
+size.  Page 3 of the certificate, (Figure~\ref{fig:cert}E) gives
+detailed notes from the codechecker, here documenting what steps were
+needed to run the code and that the code took about 17~hours to
+complete. Finally, page 4 of the certificate shows the first output
+generated by the CODECHECK (Figure~\ref{fig:cert}F). In this case, the
+figure matched figure~4 of \cite{unwin_report_2020}.  The remaining
+pages of the certificate show other outputs and the computing
+environment in which the certificate itself was created (not shown
+here).
 
 \begin{figure}
   \centering
@@ -683,27 +670,26 @@ itself was created (not shown here).
 \subsection*{Tools and resources}\label{tools}
 
 We use freely available infrastructure, GitHub and Zenodo, to run our
-system.  The \texttt{codecheckers} \textbf{GitHub}
-organisation at \url{https://github.com/codecheckers} contains
-projects for managing the project website, the codecheckers community
-and its discussions, code repositories, and the main register of
-CODECHECKs. Both the project website \url{https://codecheck.org.uk/}
-and the register at \url{https://codecheck.org.uk/register}
-are hosted as GitHub pages.
-The register database is a single table in CSV format that connects the
-certificate identifier with the repository associated with a specific
-conducted CODECHECK. Each of these repositories, which currently can
-be hosted on GitHub or Open Science Framework (OSF), contains the
-CODECHECK metadata file \texttt{codecheck.yml}. The register further
-contains a column for the type of check, e.g.,~community, journal, or
-conference, and the respective GitHub issue where communications and
-assignments around a specific check are organised. No information is
-duplicated between the register and the metadata files. The continuous
+system.  The \texttt{codecheckers} \textbf{GitHub} organisation at
+\url{https://github.com/codecheckers} contains projects for managing
+the project website, the codecheckers community and its discussions,
+code repositories, and the main register of CODECHECKs. Both the
+project website \url{https://codecheck.org.uk/} and the register at
+\url{https://codecheck.org.uk/register} are hosted as GitHub pages.
+The register database is a single table in CSV format that connects
+the certificate identifier with the repository associated with a
+CODECHECK. Each of these repositories, which currently can be hosted
+on GitHub or Open Science Framework (OSF), contains the CODECHECK
+metadata file \texttt{codecheck.yml}. The register further contains a
+column for the type of check, e.g.,~community, journal, or conference,
+and the respective GitHub issue where communications and assignments
+around a specific check are organised. No information is duplicated
+between the register and the metadata files. The continuous
 integration infrastructure of GitHub, GitHub Actions, is used to
 automate the register for viewing (HTML) and for integration with
-other services (CSV, JSON).  \textbf{Zenodo} is our preferred open repository for
-storing certificates. It mints DOIs for deposits and ensures
-long-term availability of all digital artefacts related to the
+other services (CSV, JSON).  \textbf{Zenodo} is our preferred open
+repository for storing certificates. It mints DOIs for deposits and
+ensures long-term availability of all digital artefacts related to the
 project. The CODECHECK community on Zenodo is available at
 \url{https://zenodo.org/communities/codecheck/}. It holds
 certificates, the regularly archived register
@@ -724,11 +710,9 @@ different skill sets and unforeseen technical advances or challenges.
 
 These tools and resources demonstrate that a CODECHECK process can be
 managed without infrastructure costs on freely available platforms.
-The automation should ensure that more checks can be conducted in the
-future, though having the process be managed by a paid CODECHECK
-editor or further automation, e.g.,~with a bot, to reduce turnaround
-time. Our main resource requirements are the \textbf{humans} needed for managing
-the project and processes and the codecheckers.  All contributions
+Automation of some aspects may improve turnaround time. Our main
+resource requirements are the \textbf{humans} needed for managing the
+project and processes and the codecheckers.  All contributions
 currently rely on (partly grant-based) public funding and
 volunteering.
 
