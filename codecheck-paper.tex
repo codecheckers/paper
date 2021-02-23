@@ -182,32 +182,41 @@ performs the traditional academic review of the content of an article.
 \end{figure}
 
 \textbf{Step 1:} The author submits their manuscript along with the
-code and data to the PUBLISHER.  The code and data need not be openly
+code and data to the publisher.  The code and data need not be openly
 available at this point.  However, in many cases the code and data may
 be published on a code hosting platform, such as GitHub or
-GitLab. Ideally, the AUTHOR is expecting the CODECHECK and prepares
+GitLab. Ideally, the author is expecting the CODECHECK and prepares
 for it, e.g.,~by asking a colleague to attempt a reproduction, and
 providing a set of instructions on how to re-run the workflow.
 
-\textbf{Step 2:} The publisher finds a CODECHECKER to check the
+\textbf{Step 2:} The publisher finds a codechecker to check the
 code. This is analogous to the publisher finding one or more
 peer-reviewers to evaluate the paper, except we suggest that the
-CODECHECKER and the author talk directly to each other.
+codechecker and the author talk directly to each other.
 
-\textbf{Step 3:} The CODECHECKER runs the code, based on instructions provided by
-the author. They check if some or all of the results from the paper can be
-reproduced. If there are
-any problems running the code, the CODECHECKER asks the AUTHOR for help,
-updates, or further documentation.
-The burden to provide reproducible material lies with the author.
-The CODECHECKER then tries to run the code again.
-This process iterates until either the CODECHECKER is successful,
-or the CODECHECKER concludes the workflow is not reproducible.
-As part of this process, the CODECHECKER could work entirely locally, relying on their own computing resources, or in the cloud, e.g.,~using the open MyBinder infrastructure \cite{jupyter_binder_2018} or alternatives, some of which are more tailored to scientific publications while others offer commercial options for, e.g.,~publishers (cf. \cite{konkol_publishing_2020}).
-A cloud-based infrastructure allows for the CODECHECKER and author to collaboratively improve the code and enforces a complete definition of the computing environment; but, unless secure infrastructure is provided, e.g.,~by the PUBLISHER, this requires the code and data to be published openly online.
-Note that the task of the CODECHECKER is to check the ``mechanics'' of the workflow not to evaluate its correctness. 
-In the context of mathematics, Stodden et~al. \cite{stodden_setting_2013} distinguish between \emph{verification} and \emph{validation};
-following their definition, a CODECHECK ensures verification
+\textbf{Step 3:} The codechecker runs the code, based on instructions
+provided by the author. They check if some or all of the results from
+the paper can be reproduced. If there are any problems running the
+code, the codechecker asks the author for help, updates, or further
+documentation.  The burden to provide reproducible material lies with
+the author.  The codechecker then tries to run the code again.  This
+process iterates until either the codechecker is successful, or the
+codechecker concludes the workflow is not reproducible.  As part of
+this process, the codechecker could work entirely locally, relying on
+their own computing resources, or in the cloud, e.g.,~using the open
+MyBinder infrastructure \cite{jupyter_binder_2018} or alternatives,
+some of which are more tailored to scientific publications while
+others offer commercial options for, e.g.,~publishers
+(cf. \cite{konkol_publishing_2020}).  A cloud-based infrastructure
+allows for the codechecker and author to collaboratively improve the
+code and enforces a complete definition of the computing environment;
+but, unless secure infrastructure is provided, e.g.,~by the publisher,
+this requires the code and data to be published openly online.  Note
+that the task of the codechecker is to check the ``mechanics'' of the
+workflow not to evaluate its correctness.  In the context of
+mathematics, Stodden et~al. \cite{stodden_setting_2013} distinguish
+between \emph{verification} and \emph{validation}; following their
+definition, a CODECHECK ensures verification
 %\footnote{Note this is a different use from that referred to as the \emph{Verification Reports} article type in the journal \emph{Cortex} \cite{chambers_verification_2020}.},
 of computational results, i.e.,~checking that code generates the
 output it claims to create, but not a validation, i.e.,~checking that
@@ -219,40 +228,45 @@ increase transparency, thereby improving practices
 (cf.~\cite{nosek_scientific_2012}) even if the check does not go into
 every detail.
 
-\textbf{Step 4:} The CODECHECKER writes a certificate stating how the
+\textbf{Step 4:} The codechecker writes a certificate stating how the
 code was run and includes a copy of outputs (e.g.,~data, figures, or
 tables) that were independently generated.  The certificate may
 include further recommendations on how to improve the material.  The
 free text in the certificate can describe what was really checked,
 because each workflow is unique.  Since no specific tool or platform
 should be required, such that no authors are excluded, it would be
-futile for the CODECHECKER to use automation or fixed checklists.
+futile for the codechecker to use automation or fixed checklists.
 
-\textbf{Step 5:} The certificate and auxiliary files created
-during the check, e.g.,~a specification of a computing environment, data 
-subsets or helper scripts, and the original code and data get deposited in
-an open archive unless restrictions (data size, license or 
-sensitivity) apply.
-Currently, the CODECHECKERs deposit the material on Zenodo themselves, but the PUBLISHER may complete this step after integrating CODECHECK into its review process.
-A badge or other visual aid may be added to the deposit and the paper and
-link to the certificate.
-Although a badge simplifies the CODECHECK into a binary value and risks introducing confusion regarding the extent of the check, especially across disciplines and methods, a badge can provide recognition value and acknowledges the completed CODECHECK.
-The badge and the actual check are incentives for undertaking the effort needed to provide a reproducible workflow.
+\textbf{Step 5:} The certificate and auxiliary files created during
+the check, e.g.,~a specification of a computing environment, data
+subsets or helper scripts, and the original code and data get
+deposited in an open archive unless restrictions (data size, license
+or sensitivity) apply.  Currently, the codecheckers deposit the
+material on Zenodo themselves, but the publisher may complete this
+step after integrating CODECHECK into its review process.  A badge or
+other visual aid may be added to the deposit and the paper and link to
+the certificate.  Although a badge simplifies the CODECHECK into a
+binary value and risks introducing confusion regarding the extent of
+the check, especially across disciplines and methods, a badge can
+provide recognition value and acknowledges the completed CODECHECK.
+The badge and the actual check are incentives for undertaking the
+effort needed to provide a reproducible workflow.
 
-\textbf{Step 6:} The PUBLISHER can, depending on the timing, provide the
-certificate to peer-reviewers or editors or publish it
-and link between  certificate, paper, and any repositories 
-through metadata. Currently, the CODECHECKER creates these connections on
+\textbf{Step 6:} The publisher can, depending on the timing, provide
+the certificate to peer-reviewers or editors or publish it and link
+between certificate, paper, and any repositories through
+metadata. Currently, the codechecker creates these connections on
 Zenodo. They appear as links with a relationship type on the Zenodo
-landing page for a record in the right-hand sidebar, e.g., the 
-``related identifiers'' and ``alternate identifiers'' 
-of certificate \texttt{2020-025} \cite{cert-2020-025}.
-The PUBLISHER also credits the CODECHECKER for their work by depositing
-the activity in scholarly profiles, such as ORCID
-(see peer review contributions in ORCID records,
+landing page for a record in the right-hand sidebar, e.g., the
+``related identifiers'' and ``alternate identifiers'' of certificate
+\texttt{2020-025} \cite{cert-2020-025}.  The publisher also credits
+the codechecker for their work by depositing the activity in scholarly
+profiles, such as ORCID (see peer review contributions in ORCID
+records,
 \url{https://support.orcid.org/hc/en-us/articles/360006971333-Peer-Review}).
-The PUBLISHER also ensures proper publication metadata, e.g.,~links from the 
-certificate repository to the published paper or the original code repository.
+The publisher also ensures proper publication metadata, e.g.,~links
+from the certificate repository to the published paper or the original
+code repository.
 
 \subsection*{Variations}\label{variations}
 
@@ -718,48 +732,43 @@ volunteering.
 
 \section*{Related work}\label{related-work}
 
-The journal \emph{ACM Transactions on Mathematical Software (TOMS)} 
-recently established a ``Replicated Computational Results'' (RCR) review process
-\cite{heroux_editorial_2015}, where ``replicable'' is the same as our
-use of ``reproducible''.  
-
-Fifteen RCR Reports have been published so far (search on 
-\url{https://search.crossref.org/} with the term
-\texttt{"Replicated Computations Results (RCR) Report"} on 2020-12-10).
+The journal \emph{ACM Transactions on Mathematical Software (TOMS)}
+recently established a ``Replicated Computational Results'' (RCR)
+review process \cite{heroux_editorial_2015}, where ``replicable'' is
+the same as our use of ``reproducible''.  Fifteen RCR Reports have
+been published so far (search on \url{https://search.crossref.org/}
+with the term \texttt{"Replicated Computations Results (RCR) Report"}
+on 2020-12-10).
 % 15: https://academic.microsoft.com/search?q=Replicated%20Computations%20Results%20%22(RCR)%20Report%22&f=&orderBy=0&skip=10&take=10
 and the process is being extended extended to the ACM journal
-\emph{Transactions on Modeling and Computer Simulation
-  (TOMACS)} (cf. \url{https://dl.acm.org/journal/tomacs/author-guidelines}).
+\emph{Transactions on Modeling and Computer Simulation (TOMACS)}.
+%% (cf. \url{https://dl.acm.org/journal/tomacs/author-guidelines}).
 The TOMS RCR follows CODECHECK principles 1-4, although our work was
-independently developed of theirs.  Here, we discuss variants of
-CODECHECK, while TOMS RCR realises one particular workflow for
-reproducibility reviews for one particular journal. The TOMS editorial
+independently developed of theirs.  The TOMS editorial
 \cite{heroux_editorial_2015} shares similar concerns about selection
 of reviewers, as we discussed above. Unlike existing CODECHECK
-certificates, the RCR reports, which are similar to CODECHECK
-certificates, undergo editorial review, but this could eventually
-become part of the CODECHECK processes at journals.  The publication
-of the RCR report is seen as a reward for the efforts of the
-reproducing person, while the potential for this motive to be a
-conflict of interest is acknowledged.  TOMS also recognises reviewer
-activity in a partnership with Publons
-(see \url{https://authors.acm.org/author-services/publons}).
-It is unclear if the author of an RCR report receives both recognitions.
-CODECHECK, however, specifically aims to give codecheckers
-recognition as reviewers.  In our view, the reviewer role removes the
-possible conflict of interest while keeping the public
-acknowledgement.  Specific to the field of mathematics, the RCR is
-also expected to apply a review of the software itself if the system
-it runs on cannot be evaluated by an independent party.  The TOMS RCR
-creators concur with the importance of communication, expect
-collaboration between author and RCR reviewers, share the
-considerations around reviewer selection, and also put trust in
-reviewer judgement over numerical bit-wise perfection.  A key
-difference is that for TOMS RCR, authors opt-in with an \emph{RCR
-  Review Request} and the RCR reports are published in the TOMS
-journal next to the actual papers.
-%% SJE: think this could be tightened a bit, and some of it I don't
-%% fully understand.
+certificates, the RCR reports undergo editorial review.  Publication
+of the RCR report recognises the efforts of the reproducing person,
+while the potential for this motive to be a conflict of interest is
+acknowledged.  TOMS also recognises reviewer activity in a partnership
+with Publons (see
+\url{https://authors.acm.org/author-services/publons}).
+
+This activity in the ACM journals can be seen as one possible workflow
+within a CODECHECK system, and clearly shares much in spirit.
+CODECHECK, however, specifically aims to give codecheckers recognition
+as reviewers.  In our view, the reviewer role removes the possible
+conflict of interest while keeping the public acknowledgement.
+Specific to the field of mathematics, the RCR is also expected to
+apply a review of the software itself if the system it runs on cannot
+be evaluated by an independent party.  The TOMS RCR creators concur
+with the importance of communication, expect collaboration between
+author and RCR reviewers, share the considerations around reviewer
+selection, and also put trust in reviewer judgement over numerical
+bit-wise perfection.  A key difference is that for TOMS RCR, authors
+opt-in with an \emph{RCR Review Request} and the RCR reports are
+published in the TOMS journal next to the actual papers.
+
 
 Several journals provide special article types for reproductions of
 published papers.  \emph{Information Systems} has an invitation only
@@ -782,18 +791,17 @@ replication of results and are very well designed/reasoned
 certificates could also be published as a special article type within
 journals.
 
-Going beyond article types and a specific journal, the journal
-\emph{ReScience C} (\url{https://rescience.github.io/}) publishes only
-replications, also
+Going beyond individual articles, the journal \emph{ReScience C}
+(\url{https://rescience.github.io/}) publishes only replications, also
 requiring open code and replication by a third party. ReScience also
 relies on free infrastructure (GitHub and Zenodo).
 
-For research with very high stakes, where reproduction would be too weak and
+For research with high stakes, where reproduction would be too weak and
 post-publication replication possibly too late because of policy impact,
 Benjamin-Chung et~al. \cite{benjamin-chung_internal_2020} propose
 \emph{internal replication}.
 A workflow that has undergone internal
-replication would very likely be of high quality and relatively easy to check.
+replication would likely be of high quality and relatively easy to check.
 Similarly, internal CODECHECKs may be used, with the same limitations such
 as group think \cite{benjamin-chung_internal_2020},
 to ensure reproducibility before submission.
@@ -810,7 +818,7 @@ own tools and API. Their specific packaging format, provenance record,
 and cryptographic \emph{Verifiable Result Identifier} would indeed
 provide excellent reproducibility. However, the system is also complex
 and since its creation in 2011 we are not aware of any publisher using
-it; also, the system is not open source itself.  In comparison,
+it; also, the system is not open source.  In comparison,
 CODECHECK is less powerful but also much more flexible and less
 dependent on specific tools or infrastructure. If data and code are
 deposited properly, i.e.,~very unlikely to disappear, then the
@@ -848,28 +856,24 @@ maintaining such content.
 
 \section*{Limitations}\label{limitations}
 
-\textbf{Isn't CODECHECK what peer review should be doing already?}
-On the surface, yes, but peer reviewers are overburdened enough and
+\textbf{Isn't CODECHECK what peer review should be doing already?}  On
+the surface, yes, but peer reviewers are overburdened enough and
 asking them to do more work around peer review is not likely to
-succeed.  Miyakawa described how when he as an editor simply requested
-raw data from authors during submission, this led to almost all of
-those papers in which data was requested to be withdrawn or rejected
-after peer review \cite{miyakawa_no_2020}.  Such basic checks to show
-that sufficient data supports the results requires effort from
+succeed.  When an editor (Tsuyoshi Miyakawa) requested raw data from
+n=41 authors before reviewing, 21 authors withdrew their manuscripts;
+19 of the 20 remaining articles were rejected after peer review
+\cite{miyakawa_no_2020}.  Such basic checks require effort from
 editors, yet they only rely on the availability of data files and the
 content of the paper.  These availability checks can be enhanced by
 having more complex CODECHECKs request the code and then execute it.
 This might fall within idealistic expectations of peer review, but is
-rare.  Establishing a CODECHECK process is largely an acknowledgement
-that peer reviewing practices have been unable to adapt to the
-challenges of computational papers.  The concept of a CODECHECK, just
-as the concepts of reproducible research and Open Science, may be
+rare.  Establishing a CODECHECK process acknowledges that peer
+reviewing practices have been unable to adapt to the challenges of
+computational papers.  The concept of a CODECHECK, just as the
+concepts of reproducible research and Open Science, may be
 transitional by nature. If the activities described here as being part
-of a CODECHECK become the norm for scientific reviews and
-publications, then the initiative will have succeeded. However, the
-rapidly changing technology used in research leads us to believe that
-a separate role of codechecker and the expertise it brings will be
-beneficial in the long term.
+of a CODECHECK are integrated into the publication process the
+initiative will have succeeded.
 
 \textbf{Should CODECHECK requirements be more demanding?}
 CODECHECK by design does not require authors to provide (and sustain)
@@ -877,13 +881,12 @@ an eternally functional workflow nor suggests a specific software
 stack or practical approach.
 Creating something
 that anyone can reproduce has been called a fool's
-errand (Douglas Blank on Twitter,
-\url{https://twitter.com/DougBlank/status/1135904909663068165})
+errand (\url{https://twitter.com/DougBlank/status/1135904909663068165})
 and we tend to agree.  However, the package of data, code, and
 documentation collaboratively created by authors and codecheckers is a
 snapshot of a working analysis that greatly increases the likelihood
 of a successful reproduction and the possibility that a workflow can
-be extended by third parties in the future, as long as they have
+be extended by third parties in the future, if they have
 access to suitable resources and matching skill set.  Concrete
 implementations of CODECHECK workflows, especially for specific
 disciplines, may reify much more helpful guidelines for authors on how
@@ -918,45 +921,41 @@ examining the work.
 
 A codechecker does not conduct a \emph{code review}. Code reviews are
 valuable to improve reproducibility and reusability, and their
-proponents even believe they can improve the science
+proponents even believe they can improve the research
 \cite{petre_code_2014}.  Code reviews, however, have quite different
 structural challenges and require even more resources. That said, a
 well-reviewed codebase is likely to be easier to codecheck, and the
 awareness of high-quality code raised through CODECHECK may lead to
 more support for code reviewing.  Initiatives and journals that
 conduct software reviews independent of a specific publication or
-workflow include ROpenSci (\url{https://ropensci.org/}),
-PyOpenSci (\url{https://www.pyopensci.org/}), and
-JOSS (\url{https://joss.theoj.org/}).  Furthermore, the
-codechecker's task list is intentionally not overloaded with related
-concerns, albeit potentially important ones, such as ensuring proper
-citation of data and software or depositing data and software in
-suitable repositories. Nevertheless, we expect codecheckers to often
-recognise these issues and highlight them.
+workflow include ROpenSci (\url{https://ropensci.org/}), PyOpenSci
+(\url{https://www.pyopensci.org/}), and JOSS
+(\url{https://joss.theoj.org/}).  Furthermore, the codechecker's task
+list is intentionally not overloaded with related issues such as
+ensuring proper citation of data and software or depositing material
+in suitable repositories. Nevertheless, codecheckers are free to
+highlight these issues.
 
 \textbf{How are failures during checks handled?}
-We have not yet established a process for if a reproduction fails.  This
-may simply reflect our biases in pre-selection of case studies.  In
-the case that a journal adopts CODECHECK for all submissions, the open
-question remains as what to do if a check fails, after exhausting
-efforts between author and codechecker to reproduce the workflow.  A
-negative comment in a CODECHECK certificate or a failed check does not
-necessarily mean the paper or the science is bad (cf. discussion on
-negative comments in \cite{everythinghertz123}).  We doubt that
-publicly reporting failures (i.e.,~the code would not run) will
-increase overall reproducibility, and it may prohibit authors from
-sharing their best efforts, which is always more desirable than
-nothing shared. Therefore, we recommend sharing the latest
-draft of the certificate only with the authors, even if that
-means that volunteer efforts may go unnoticed if no report is
-published.  The most appropriate way forwards seems to be to give
-private feedback for failures, public acknowledgment and
-encouragement for successes, and recognise codecheckers as reviewers.
+
+We do not yet have a process for denoting if a reproduction fails, as
+our case-studies were all successful.  In the case that a journal
+adopts CODECHECK for all submissions, the question remains as what to
+do if a check fails, after exhausting efforts between author and
+codechecker to reproduce the workflow.  A negative comment in a
+CODECHECK certificate or a failed check does not necessarily mean the
+paper or research is bad (cf. discussion on negative comments in
+\cite{everythinghertz123}).  We doubt that publicly reporting failures
+(i.e.,~the code would not run) will increase overall reproducibility,
+and may prohibit authors from sharing their work, which is always more
+desirable than nothing shared. Therefore, we recommend sharing interim
+reproduction efforts only with the authors, even if that means that volunteer
+efforts may go unnoticed if no certificate is published.  
 % eLife's new model (see https://osf.io/9cftx/) will publish reports eventually, e.g.,~after preprint has been accepted elsewhere
-Rosenthal et~al. \cite{Rosenthal2016b} discuss such incentives for different actors around the
-implementation of reproducibility. We see CODECHECK as one way for
-organisations to invest in reproducibility by creating incentives
-until reproducible computations become the norm.
+Rosenthal et~al. \cite{Rosenthal2016b} discuss such incentives for
+different actors around the implementation of reproducibility. We see
+CODECHECK as one way for organisations to invest in reproducibility by
+creating incentives until reproducible computations become the norm.
 
 \textbf{Who will pay for the compute time?}  For papers that take
 significant compute time (days, not minutes), it is unclear who will
@@ -990,7 +989,7 @@ access to derived results but not raw data
 
 \textbf{Can't someone cheat?} Yes. We simply check that the code runs,
 not that is correct or sound science. This ``mechanical'' test is
-indeed a low bar.  By having the code and data openly deposited, third
+indeed a low bar.  By having code and data openly deposited, third
 parties can later examine the code, and we hope that knowing the code
 will be open ensures that authors will not cheat.  It also allows
 researchers, potentially with new methods, to look for errors.  This
@@ -1014,9 +1013,8 @@ when clarification is required, thereby increasing
 \textbf{efficiency}.  Second, the specific skill set of a codechecker
 allows for \textbf{different groups} to participate in the review
 process.  ECRs might be attracted to learn more about recent methods,
-peer review, and reproducibility practices.  Research software experts
-(Research Software Engineers,
-RSE, see \url{https://en.wikipedia.org/wiki/Research_software_engineering})
+peer review, and reproducibility practices.  Research Software
+Engineers (RSE) %% , see \url{https://en.wikipedia.org/wiki/Research_software_engineering})
 who might not regularly be involved in writing or reviewing papers
 might be interested in increasing their connection with scholarly
 practices.  An extra codechecker may simplify the matchmaking an
@@ -1038,8 +1036,7 @@ mostly hidden behind paraphrased anonymous acknowledgement.
 \textbf{Do workflows need to be codechecked multiple times?}  If a
 paper is checked at the start of peer review, it might need
 re-checking if the paper is modified during peer review.  This is
-somewhat unavoidable, and has happened to us (e.g.,~certificate
-\texttt{2020-012} \cite{cert-2020-012}). This can
+inevitable, and happened to us \cite{cert-2020-012}. This can
 also be desired though, if interactions between author, reviewer,
 and codechecker led to improvements.  Checking the manuscript the
 second time is likely to be much less work than the first time.
@@ -1047,11 +1044,11 @@ second time is likely to be much less work than the first time.
 \textbf{What does it mean for a figure to be reproducible?}
 Automatically detecting if a codechecker's results are ``the same'' as
 an author's is more challenging than it might appear.  That is why we
-do not require results to be \textit{identical} for a CODECHECK to pass
-but simply that the code runs and generates output files that the
-author claims. Stochastic simulations mean that often we cannot get
-exactly the same results, and that even the same versions of libraries
-can generate outputs that differ by operating system
+do not require results to be \textit{identical} for a CODECHECK to
+pass but simply that the code runs and generates output files that the
+author claims. Stochastic simulations mean that often we will get
+different results, and even the same versions of libraries can
+generate outputs that differ by operating system
 \cite{Gronenschild2012-pp}.  While reproducibility practices can
 mitigate some of these problems, e.g., by using a seed, the
 flexibility of the human judgement is still needed, rather than
@@ -1067,20 +1064,20 @@ discussed more stringent rules at length, e.g. only considering fully
 free and open source software, diamond Open Access journals, but we
 eventually decided against them on the level of the principles.  For
 the CODECHECK community
-process, which is documented online at
+process, documented at
 \url{https://codecheck.org.uk/guide/community-process},
-and the volunteer codechecker community, these requirements are
+and the volunteer codechecker community, these requirements can be 
 reconsidered.
 
-We also have deliberated requiring modern technological solutions to
-support reproducibility (cf.~\cite{konkol_publishing_2020}), but we
-decided to focus on the human interface and the judgement of
-experienced researchers and developers as a more sustainable and
-flexible approach.  All types of research can adopt CODECHECK due to
-its flexible design.  CODECHECK could include automated scoring
+We have deliberated requiring modern technologies to support
+reproducibility (cf.~\cite{konkol_publishing_2020}), 
+focusing instead on the human interface and the judgement of experienced
+researchers and developers as a more sustainable and flexible
+approach.  All types of research can adopt CODECHECK due to its
+flexible design.  CODECHECK could include automated scoring
 (e.g.,~\cite{menke_rigor_2020}), yet automation and metrics bear new
 risks.  The focus of the CODECHECK principles on code execution allows
-journals and publishers to innovate on financial  models and peer
+journals and publishers to innovate on financial models and peer
 review practices at their own pace.
 
 \section*{Conclusions and future work}\label{future-work-and-conclusions}
@@ -1105,11 +1102,11 @@ general and is closely connected to larger disruptions and challenges
 in scholarly communication
 \cite{eglen_recent_2018,tennant_ten_2019,fyfe_mission_2019}, including
 the tensions between commercial publishing and reviewers' often free
-labour, and a global pandemic that has jumbled up scientific
-publishing and exposed a broader general audience to science, even
-preliminary results \cite{munafo_what_2020}.  Establishing CODECHECK
+labour, and a global pandemic that has jumbled up academic
+publishing and exposed a broader general audience to preprints
+\cite{munafo_what_2020}.  Establishing CODECHECK
 workflows must be seen as interconnected with much larger issues in
-science, such as broken metrics or malpractice triggered by
+research, such as broken metrics or malpractice triggered by
 publication pressure
 \cite{piwowar_altmetrics:_2013,nosek_promoting_2015}.  We certainly do
 not want the binary attribute of ``code works'' to become a factor in
@@ -1131,7 +1128,7 @@ in \emph{A modern vision for peer review}
 An explicit segmentation of research steps could even make the focus
 of a CODECHECK easier by only checking the ``analysis''
 sub-publication.  The discovery of CODECHECKs could be increased by
-depositing the reports into public databases of reproductions, such as
+depositing certificates into public databases of reproductions, such as
 \emph{SciGen.Report}.  Public researcher profiles, such as ORCID, may
 consider different types of reviewer activity to capture how
 independent code execution contributes to science.  Notably, the
@@ -1143,11 +1140,12 @@ A CODECHECK system, even if temporarily adopted as a sustainable
 transition towards more open publication and review practices, can
 contribute to increased trust in research outputs. Introducing
 CODECHECK should be informed by lessons learned from (introducing)
-open peer review (OPR) \cite{ross-hellauer_guidelines_2019}.  Our
+open peer review (OPR) \cite{ross-hellauer_guidelines_2019}.  \textbf{Our
 conversations with publishers and editors included procedural and
 technical implications of openness, be it that OPR is neither applied
 by nor familiar to stakeholders, or that process management software
-would not support such open communication.
+would not support such open communication. WHAT DOES THIS SENTENCE
+MEAN??  JUST DELETE?}
 
 More reproducible practices initiated by CODECHECKs could lead
 communities to reach a state where authors provide sufficient material
@@ -1159,7 +1157,7 @@ behind CODECHECK and to realise processes that conform to the
 principles, whether or not they use CODECHECK by name.  We would be
 keen to use the flexibility of the principles and cooperate with
 journals to learn more about the advantages and yet unclear specific
-challenges -- e.g do CODECHECKs really work better with OPR?  To
+challenges -- e.g do CODECHECKs really work better with open peer review?  To
 facilitate the adoption, the CODECHECK badge is, intentionally, not
 branded beyond the checkmark and green colour and simply states ``code
 works''.
@@ -1246,7 +1244,7 @@ Data are available under the terms of the \href{https://creativecommons.org/lice
 
 \end{document} 
 
-% LocalWords:  CODECHECK CODECHECKER Zenodo ORCID ECRs codecheck codechecker
+% LocalWords:  CODECHECK codechecker Zenodo ORCID ECRs codecheck codechecker
 
 % Local Variables:
 % TeX-engine: xetex
