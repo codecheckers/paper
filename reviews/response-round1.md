@@ -27,11 +27,11 @@ key comments, requiring responses, are below.  Indented are our responses.
 1. How does CODECHECK compare to ACM Artifact reviews badges?
 (https://www.acm.org/publications/policies/artifact-review-and-badging-current)
  
-    These badges, introduced in August 2020, show whether code is
-    available (different levels) and reproduces same results.  In
-    principle CODECHECKER could award these badges (artifacts
-    evaluated, functional).  We have made a note to this effect in the
-    manuscript (Related work, end of paragraph 1.)
+> These badges, introduced in August 2020, show whether code is
+> available (different levels) and reproduces same results.  In
+> principle CODECHECKER could award these badges (artifacts evaluated,
+> functional).  We have made a note to this effect in the manuscript
+> (Related work, end of paragraph 1.)
  
 2. What would be the incentive for someone to code check the code? Being
 aware of the increasing difficulty in finding reviewers, I don't think
