@@ -1,22 +1,11 @@
-<https://doi.org/10.5256/f1000research.54932.r82470>
-
-We thank the reviewers for their comments on our manuscript.  The
-comments are below.  Indented are our responses.
+We thank the reviewers for their comments on our manuscript.  Their
+key comments, requiring responses, are below.  Indented are our responses.
 
 
 ## Reviewer 1
 
-In this article, authors propose to implement a procedure to check for
-the code accompanying a submission to a journal. To do so, they
-describe a pipeline made of 6 steps that ultimately lead to the
-delivery of a code check certificate meaning that someone external to
-the author's lab has managed to re-run the code. At this point, no
-checking that the results are correct is necessary. The authors
-already issued several codecheck certificates in different
-disciplines. I find the idea really nice and certainly necessary but
-I've a few questions (even though some of them are already addressed
-in the "limitations" section). Given the structure of the paper, I'll
-just list my questions here:
+<https://doi.org/10.5256/f1000research.54932.r82470>
+
 
 
 1. How does CODECHECK compare to ACM Artifact reviews badges?
@@ -172,7 +161,7 @@ to start somewhere.
     to adopt but that (b) we should start somewhere.
 
 ## Reviewer 2
-
+<https://f1000research.com/articles/10-253/v1#referee-response-82472>
 
 1. Is there any community feedback on the transparency and
 reusability of research published with CODECHECK certificates?
