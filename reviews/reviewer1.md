@@ -170,3 +170,25 @@ to start somewhere.
 
     We share your realistic assessment that (a) journals may be slow
     to adopt but that (b) we should start somewhere.
+
+## Reviewer 2
+
+
+1. Is there any community feedback on the transparency and
+reusability of research published with CODECHECK certificates?
+
+This is perhaps too big of an ask this early in the
+initiative as research reuse and citations are independent factors of
+the publication and peer review of this specific paper - but I’d still
+be interested in any insights the authors have to offer on this topic.
+
+
+    This is an excellent question.  It is perhaps too early for us to
+	assess this given most certificates are under a year old, but we
+	are not aware of any reuse yet of the codecheck-deposited
+	material.  However, we certainly think it interesting to try and
+	monitor this over a longer (3-5 year) timescale if possible.   As
+	well as looking for citations of certificates, we could also check
+	for forks of our repositories, and download statistics from
+	Zenodo.
+
