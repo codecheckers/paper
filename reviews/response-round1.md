@@ -1,3 +1,13 @@
+
+## Prelim for F1000R
+
+We have written a detailed 'response to reviewers' document which is
+available at:
+
+However, in brief, we have added text to the manuscript, to the
+"limitations" and "future work" to address key issues made by the reviewers.
+
+
 We thank the reviewers for their comments on our manuscript.  Their
 key comments, requiring responses, are below.  Indented are our responses.
 
@@ -179,5 +189,5 @@ be interested in any insights the authors have to offer on this topic.
 	monitor this over a longer (3-5 year) timescale if possible.   As
 	well as looking for citations of certificates, we could also check
 	for forks of our repositories, and download statistics from
-	Zenodo.
+	Zenodo.  We note this as a good closing point for our article.
 
