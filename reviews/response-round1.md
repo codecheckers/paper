@@ -7,7 +7,8 @@ available at
 
 However, in brief, we have added text to the manuscript, to the
 "limitations" and "future work" to address key issues made by the
-reviewers.  We
+reviewers.  These edits have resulted in a few additional sentences in
+our article; no changes to figures/tables or references were required.
 
 
 # Response to reviewers
