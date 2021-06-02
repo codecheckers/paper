@@ -7,9 +7,14 @@ available at
 
 However, in brief, we have added text to the manuscript, to the
 "related work", "limitations" and "future work" to address key issues
-made by the reviewers.  These edits have resulted in a few additional
+made by the reviewers and by one public comment.
+These edits have resulted in a few additional
 sentences in our article; no changes to figures/tables or references
 were required.
+
+Furthermore, we noticed an inconsistent use of the terms "workflow" 
+and "process", and decided to use "CODECHECK workflow", "computational workflow", and 
+"publication/review process" more consistently in the revision of the manuscript.
 
 
 # Response to reviewers
@@ -146,7 +151,8 @@ again is dependent on the journal's workflow.
 
 Great idea. we could add the certificate number to the URL, or add
 the certificate number.  We will try to implement this when
-revising our workflows.
+revising our workflows.  Nevertheless, the point in time and software
+stack should be documented via the certificate already now.
 
  
 > 12. For specialized journals, you could consider to offer a common
@@ -155,7 +161,8 @@ revising our workflows.
 > to add missing dependencies. For example, in neuroscience, a Neuro
 > Debian would probably suit the needs of a large number of models.
 
-Yes. We will certainly bear this in mind in future work.
+Yes. We will certainly bear this in mind in future work, especially
+for author guidelines.
 
 
 > 13. As editor-in-chief of ReScience C, I would like to inform
