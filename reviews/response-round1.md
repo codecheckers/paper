@@ -16,6 +16,9 @@ Furthermore, we noticed an inconsistent use of the terms "workflow"
 and "process", and decided to use "CODECHECK workflow", "computational workflow", and 
 "publication/review process" more consistently in the revision of the manuscript.
 
+We have used a macro, \rev{...} to record our edits in this revision.
+If you wish to see the edits in italics, please change the definition
+in the preamable of the latex file.
 
 # Response to reviewers
 
