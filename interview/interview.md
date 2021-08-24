@@ -106,8 +106,10 @@ sensible approach to demonstrating reproducibility of research
 articles.  However, to develop it at scale, we need several resources:
 1. Compute resource to allow codecheckers to re-run compute-intensive
 jobs.  Currently we have been making use of compute resource available
-locally to code-checkcers. 2. An editor, either full or part-time to
-help coordinate activities.  3.  More volunteer codecheckers always
-welcome.  Collaboration between researchers and publishing industry,
+locally to code-checkcers. 
+2. An editor, either full or part-time to help coordinate activities.  
+3.  More volunteer codecheckers are always welcome.
+
+Collaboration between researchers and publishing industry,
 perhaps via jointly grants, would help greatly in this regard.
 
